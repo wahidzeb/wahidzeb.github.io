@@ -6,6 +6,23 @@
    A quiet "Install app" link is also added to the footer whenever install is possible. */
 (() => {
   "use strict";
+  // GA4 custom events (safe: never throws if gtag is missing or blocked)
+  const zt = (n, p) => { try { window.gtag && gtag("event", n, p || {}); } catch (e) {} };
+  const NOT_GAME = /^(about|contact|privacy|terms|games|img|fonts)$/;
+  document.addEventListener("click", (e) => {
+    const a = e.target && e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    let u; try { u = new URL(a.href, location.href); } catch (err) { return; }
+    if (u.protocol !== "http:" && u.protocol !== "https:") return;
+    if (u.host !== location.host) { zt("outbound_click", { link_url: u.href, link_domain: u.host, outbound: true }); return; }
+    const g = u.pathname.match(/^\/games\/([a-z0-9-]+)\/?$/), m = u.pathname.match(/^\/([a-z0-9-]+)\/?$/);
+    const where = location.pathname === "/" ? "hub" : "guide";
+    if (m && !NOT_GAME.test(m[1])) {
+      const card = a.closest(".card");
+      zt("select_content", { content_type: "game", content_id: m[1], game_id: m[1], link_location: where });
+      zt("game_click", { game_id: m[1], link_location: where, link_type: card ? (a.classList.contains("play") ? "play_button" : "thumbnail") : "link" });
+    } else if (g) zt("select_content", { content_type: "guide", content_id: g[1], game_id: g[1], link_location: where });
+  }, true);
   if ("serviceWorker" in navigator) {
     addEventListener("load", () => { navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {}); });
   }
@@ -13,7 +30,11 @@
                set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
   const standalone = matchMedia("(display-mode: standalone)").matches || matchMedia("(display-mode: fullscreen)").matches ||
                      matchMedia("(display-mode: minimal-ui)").matches || navigator.standalone === true;
-  if (standalone) { ls.set("zg_installed", "1"); return; }
+  if (standalone) {
+    ls.set("zg_installed", "1");
+    try { if (!sessionStorage.getItem("zg_launch")) { sessionStorage.setItem("zg_launch", "1"); zt("pwa_launch", { display_mode: navigator.standalone === true ? "ios_standalone" : "standalone" }); } } catch (e) {}
+    return;
+  }
 
   // count visits (one per browser session)
   let visits = +(ls.get("zg_visits") || 0);
@@ -52,8 +73,9 @@ color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
     if (snooze) ls.set("zg_install_snooze", String(Date.now() + 30 * DAY));
     if (card) { const c = card; card = null; c.classList.remove("on"); setTimeout(() => c.remove(), 500); }
   }
-  function show() {
+  function show(trigger) {
     if (card || standalone) return;
+    zt("pwa_prompt_shown", { platform: deferred ? "android" : "ios", trigger: trigger === "link" ? "footer_link" : "auto" });
     if (!document.getElementById("zg-inst-css")) {
       const s = document.createElement("style"); s.id = "zg-inst-css"; s.textContent = css; document.head.appendChild(s);
     }
@@ -63,13 +85,14 @@ color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
       ? `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Get the Zaib Games app</b><span>One tap from your home screen. Games you've played work offline.</span></div><button class="go" type="button">Install</button><button class="x" type="button" aria-label="Not now">×</button>`
       : `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Add Zaib Games to your Home Screen</b><span>Tap ${SHARE} <b style="display:inline">Share</b>, then ${ADD} <b style="display:inline">Add to Home Screen</b>.</span></div><button class="x" type="button" aria-label="Close">×</button>`;
     document.body.appendChild(card);
-    card.querySelector(".x").onclick = () => hide(true);
+    card.querySelector(".x").onclick = () => { zt("pwa_prompt_dismiss", { platform: deferred ? "android" : "ios" }); hide(true); };
     const go = card.querySelector(".go");
     if (go) go.onclick = async () => {
       const d = deferred; if (!d) return hide(false);
       deferred = null; hide(false);
+      zt("pwa_install_click", { platform: "android" });
       d.prompt();
-      try { const r = await d.userChoice; if (r && r.outcome === "dismissed") ls.set("zg_install_snooze", String(Date.now() + 30 * DAY)); } catch (e) {}
+      try { const r = await d.userChoice; zt("pwa_install_choice", { outcome: (r && r.outcome) || "unknown" }); if (r && r.outcome === "dismissed") ls.set("zg_install_snooze", String(Date.now() + 30 * DAY)); } catch (e) {}
       updateLink();
     };
     requestAnimationFrame(() => requestAnimationFrame(() => card && card.classList.add("on")));
@@ -80,18 +103,18 @@ color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
     if (!nav) return;
     if (can && !link) {
       link = document.createElement("a"); link.href = "#install"; link.textContent = "Install app";
-      link.onclick = (e) => { e.preventDefault(); show(); };
+      link.onclick = (e) => { e.preventDefault(); show("link"); };
       nav.appendChild(link);
     } else if (!can && link) { link.remove(); link = null; }
   }
-  const autoShow = () => { if (!snoozed() && ls.get("zg_installed") !== "1") setTimeout(show, delay); };
+  const autoShow = () => { if (!snoozed() && ls.get("zg_installed") !== "1") setTimeout(() => show("auto"), delay); };
 
   addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault(); deferred = e;
     ls.set("zg_installed", "0");
     updateLink(); autoShow();
   });
-  addEventListener("appinstalled", () => { ls.set("zg_installed", "1"); deferred = null; hide(false); updateLink(); });
+  addEventListener("appinstalled", () => { zt("pwa_installed", { platform: isIOS ? "ios" : "android" }); ls.set("zg_installed", "1"); deferred = null; hide(false); updateLink(); });
 
   if (isIOSSafari) {
     const go = () => { updateLink(); autoShow(); };
