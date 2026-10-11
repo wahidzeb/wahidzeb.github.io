@@ -1,0 +1,41 @@
+{
+  "id": "/",
+  "name": "Games by Zaib",
+  "short_name": "Zaib Games",
+  "description": "Free arcade games made for your phone: racing, zombies, football, badminton, platformers, puzzles and more. Tap and play instantly.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "theme_color": "#0b0820",
+  "background_color": "#0b0820",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "/img/pwa/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/img/pwa/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/img/pwa/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/img/pwa/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Horde Breaker", "short_name": "Horde Breaker", "description": "Zombie survival shooter", "url": "/horde-breaker/?source=pwa-shortcut",
+      "icons": [{ "src": "/img/pwa/sc-horde-breaker.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Goal Frenzy", "short_name": "Goal Frenzy", "description": "Fast arcade football", "url": "/goal-frenzy/?source=pwa-shortcut",
+      "icons": [{ "src": "/img/pwa/sc-goal-frenzy.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Bus Bonanza", "short_name": "Bus Bonanza", "description": "Color bus parking puzzle", "url": "/bus-bonanza/?source=pwa-shortcut",
+      "icons": [{ "src": "/img/pwa/sc-bus-bonanza.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Fin Frenzy", "short_name": "Fin Frenzy", "description": "Hungry shark arcade game", "url": "/fin-frenzy/?source=pwa-shortcut",
+      "icons": [{ "src": "/img/pwa/sc-fin-frenzy.png", "sizes": "192x192", "type": "image/png" }] }
+  ],
+  "screenshots": [
+    { "src": "/img/pwa/shot-narrow-hub.webp", "sizes": "824x1784", "type": "image/webp", "form_factor": "narrow", "label": "Games by Zaib: pick a game and play instantly" },
+    { "src": "/img/pwa/shot-narrow-bus.webp", "sizes": "824x1784", "type": "image/webp", "form_factor": "narrow", "label": "Bus Bonanza: color bus parking puzzle" },
+    { "src": "/img/pwa/shot-narrow-shuttle.webp", "sizes": "824x1784", "type": "image/webp", "form_factor": "narrow", "label": "Shuttle Smash: 3D badminton" },
+    { "src": "/img/pwa/shot-wide-hub.webp", "sizes": "1280x720", "type": "image/webp", "form_factor": "wide", "label": "Games by Zaib on desktop" },
+    { "src": "/img/horde-breaker.webp", "sizes": "600x375", "type": "image/webp", "form_factor": "wide", "label": "Horde Breaker: zombie survival shooter" },
+    { "src": "/img/goal-frenzy.webp", "sizes": "600x375", "type": "image/webp", "form_factor": "wide", "label": "Goal Frenzy: arcade football" },
+    { "src": "/img/fin-frenzy.webp", "sizes": "600x375", "type": "image/webp", "form_factor": "wide", "label": "Fin Frenzy: be a hungry shark" }
+  ]
+}

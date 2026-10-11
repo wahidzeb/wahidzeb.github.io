@@ -272,6 +272,12 @@ def page(path, title, desc, body, og_image="/img/og.jpg"):
 <link rel="canonical" href="{url}">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Zaib Games">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<script src="/pwa.js" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Games by Zaib">
 <meta property="og:title" content="{e(title)}">
