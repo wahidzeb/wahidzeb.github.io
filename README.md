@@ -10,6 +10,7 @@ Home / launcher page for Zaib's browser games — live at **https://zaibgames.co
 | Goal Frenzy | Arcade football | https://zaibgames.com/goal-frenzy/ |
 | Shuttle Smash | Badminton (1P / 2P) | https://zaibgames.com/shuttle-smash/ |
 | Kedimz Adventure | Platformer | https://zaibgames.com/kedimz-adventure/ |
+| Block Glide | Color block sliding puzzle | https://zaibgames.com/block-glide/ |
 | Neon Dash | One-tap neon runner | https://zaibgames.com/neon-dash/ |
 | Kedim Therapist | Cozy cat-therapist comedy | https://zaibgames.com/kedim-therapist/ |
 

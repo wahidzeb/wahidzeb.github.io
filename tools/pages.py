@@ -244,6 +244,23 @@ dict(slug="kedim-therapist", name="Kedim Therapist", genre="Casual", color="#f97
             "Endless walk-in clinic and a daily patient with streaks",
             "Typewriter speech bubbles with animal babble voices, and lo-fi music and sound effects made with WebAudio",
             "Plays in portrait or landscape, pauses when you switch tabs, and saves progress on your device"]),
+dict(slug="block-glide", name="Block Glide", genre="Puzzle", color="#8b5cf6",
+  tagline="Slide soft clay blocks through matching color gates and clear the board.",
+  about=["Block Glide is a cozy color block sliding puzzle for phones and desktop browsers. The board is packed with chunky clay blocks in tetromino-like shapes, and the walls around it have colored gates. Drag a block to a gate of its own color and it slides out of the board.",
+         "There are 160 levels across 8 themed chapters. A solver bot has checked that every one can be cleared within its timer or move limit. There is also a fresh Daily Challenge each day with a streak counter. Spend the coins you win on block skins, color themes and boosters."],
+  how=["Drag a block to slide it around the grid. Blocks can't pass through other blocks or walls, so you often have to move a few out of the way first.",
+       "When a block touches a gate of the same color and fits inside the gate's width, it whooshes out. Clear several in a row for a combo.",
+       "Clear every block to win. Most levels have a timer, which starts on your first move, or a move counter. Finishing with plenty left earns 3 stars.",
+       "Watch for the new mechanics: arrow blocks that only slide one way, ice blocks that thaw as you clear others, two-color layered blocks, locks that open when the key block leaves, board stars worth coins, swirl blocks you tap to rotate, gates that change color, and bombs that count down with each move.",
+       "Boosters: Hammer smashes one block, Freeze stops the timer for 12 seconds, Vacuum removes every block of one color, Undo takes back a move, and Extra adds 5 moves or 15 seconds."],
+  controls=[("Move a block","Drag it","Mouse drag"),("Rotate a swirl block","Tap it","Click"),("Boosters","Buttons along the bottom (right side in landscape)","1-5, U or Z for Undo"),("Pause / restart","II button","P / Esc, R")],
+  features=["160 levels in 8 chapters, each checked by a solver bot, with a level map and up to 3 stars per level",
+            "Arrow, ice, layered, locked, rotating and bomb blocks, shifting gates and collectible stars",
+            "A Daily Challenge generated in your browser, a streak counter, a 7-day gift calendar and 14 achievements",
+            "5 boosters: Hammer, Freeze, Vacuum, Undo and Extra moves/time",
+            "Shop with 6 block skins (including Block Buddies with blinking faces) and 6 color themes",
+            "Soft 3D clay blocks, snappy dragging with a ghost preview, particle exits, combos, confetti, and music and sound effects made in code",
+            "Tutorial hand hints, color-blind symbols, sound, music, vibration and graphics settings, with progress saved on your device"]),
 ]
 # ---------------------------------------------------------------- layout
 CSS = """@font-face{font-family:"Zaib Display";src:url(/fonts/lilita-subset.woff) format("woff");font-display:swap}
