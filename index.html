@@ -125,6 +125,12 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,13vw,104px);l
 .ad-slot{margin:26px auto 0;max-width:728px;min-height:90px;border-radius:14px;border:1px dashed rgba(255,255,255,.14);
   background:rgba(255,255,255,.025);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.22);
   font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+/* === AD SLOT: DISABLED (AdSense review pending) ===
+   The empty #ad-slot is hidden completely (display:none, no reserved box, no label).
+   RE-ENABLE LATER: put the real ad unit inside #ad-slot, then add class "ads-on" to <body> (or delete this rule).
+   PLACEMENT RULE: a re-enabled ad must sit at least ~150px away from Play/primary buttons
+   (AdSense accidental-click policy) - adjust spacing before turning it on. */
+body:not(.ads-on) .ad-slot{display:none!important}
 footer{text-align:center;color:rgba(183,176,216,.7);font-size:13px;margin-top:26px;padding-bottom:6px}
 footer b{color:#e9d5ff}
 
@@ -158,7 +164,8 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
 
   <section class="games" id="games" aria-label="Games"></section>
 
-  <!-- Ad banner slot: intentionally empty. Drop an ad unit inside #ad-slot later. -->
+  <!-- Ad banner slot: intentionally empty and HIDDEN via CSS (see "AD SLOT: DISABLED" rule). Drop an ad unit inside #ad-slot later,
+       add class "ads-on" to <body>, and keep it at least ~150px away from Play buttons. -->
   <aside class="ad-slot" id="ad-slot" aria-hidden="true"></aside>
 
   <section class="info" aria-labelledby="info-h">
