@@ -40,4 +40,4 @@ Each game lives in its own repo (project site); this repo is only the root user 
 plus `sitemap.xml` and `robots.txt`. To add a guide for a new game, add an entry to `GAME_INFO` in
 `tools/pages.py`; it also appears in the hub's "About the games" section after you copy the block
 pattern in `index.template.html`. Game URLs in the `GAMES` array are added to the sitemap automatically.
-No ad code or `ads.txt` yet. Keep the `CNAME` file.
+`ads.txt` (AdSense) and the `google-adsense-account` verification meta tag are present; no ad units or auto-ads script yet. Keep the `CNAME` and `ads.txt` files.
