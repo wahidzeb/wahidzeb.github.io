@@ -160,8 +160,27 @@ GAME_INFO = [
             "Shop with rocket upgrades, 12 costumes and 7 rocket skins",
             "Easy, Normal and Hard difficulty with warnings before every hazard",
             "Progress saved on your device"]),
+ dict(slug="fin-frenzy", name="Fin Frenzy", genre="Arcade", color="#06b6d4",
+  tagline="Be the shark: eat fish, grow bigger and battle ocean bosses.",
+  about=["Fin Frenzy is an underwater arcade game for phones and desktop browsers. You play a hungry shark that starts small and grows by eating fish. Your hunger bar keeps dropping, so you have to keep eating, while avoiding predators, mines, jellyfish and harpoons.",
+         "Dive through five zones: Coral Reef, Shipwreck Bay, Arctic Ice, Deep Sea and The Abyss, where the only light comes from glowing creatures. Each zone has five levels and ends with a boss fight. Earn coins to unlock new sharks from the Hammerhead to the Megalodon and fit them with gadgets like a jetpack and a laser visor."],
+  how=["Drag anywhere on the screen to steer with a floating joystick, or switch to follow-finger mode in Settings.",
+       "Swim into fish that are smaller than you to eat them. Auto-bite is on by default. Bigger fish glow red: stay away until you have grown.",
+       "Keep the hunger bar full. Eating quickly builds a combo, and filling the Frenzy meter makes you faster and lets you eat almost anything for a short time.",
+       "Tap BOOST (or double-tap) for a burst of speed and BITE for a strong bite. Boost uses stamina, which refills on its own.",
+       "Pick up power-ups such as Magnet, Bubble Shield, Jet Boost, Laser, Mega Bite, Heal and Gold Rush.",
+       "Complete each level's goal to earn up to 3 stars. In boss levels, eat and grow first, then bite the boss when it is tired or stunned to deal critical damage."],
+  controls=[("Swim","Drag anywhere (floating joystick) or follow your finger","WASD / Arrow keys"),("Boost","BOOST button or double-tap","Space / Shift"),
+            ("Bite","BITE button (auto-bite is on by default)","X / J"),("Pause","II button","P / Esc")],
+  features=["5 ocean zones with 25 levels, each with a different goal, plus an Endless mode for each zone that saves your best score",
+            "5 bosses: King Crab, The Iron Tide submarine, Frost Narwhal, Giant Squid and Abyss Angler",
+            "6 sharks to unlock and upgrade: Reef Shark, Hammerhead, Mako, Tiger Shark, Great White and Megalodon",
+            "Gadgets with 5 upgrade levels each: Jetpack, Laser Visor, Coin Magnet, Armor Plates, Big Belly and Frenzy Charm",
+            "Combos, Frenzy mode, Gold Rush, treasure chests, missions and Lucky Shell revives",
+            "Light rays, caustics, parallax scenery and glowing deep-sea creatures, all drawn in code",
+            "Stick or follow-finger controls, left-handed layout, graphics quality, sound, music and vibration settings",
+            "Progress saved on your device"]),
 ]
-
 # ---------------------------------------------------------------- layout
 CSS = """@font-face{font-family:"Zaib Display";src:url(/fonts/lilita-subset.woff) format("woff");font-display:swap}
 :root{--bg:#0b0820;--line:rgba(255,255,255,.12);--txt:#f4f1ff;--mut:#b7b0d8;--a1:#a855f7;--a2:#22d3ee;--a3:#f472b6;
