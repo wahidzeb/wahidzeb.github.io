@@ -1,6 +1,6 @@
 # Games by Zaib
 
-Home / launcher page for Jahan Zaib's browser games — live at **https://zaibgames.com/**
+Home / launcher page for Zaib's browser games — live at **https://zaibgames.com/**
 
 | Game | Genre | Link |
 |---|---|---|

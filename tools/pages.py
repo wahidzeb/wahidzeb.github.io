@@ -9,7 +9,7 @@ import html, os, re, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://zaibgames.com"
 EMAIL = "wahid.zeb@gmail.com"
-OWNER = "Jahan Zaib"
+OWNER = "Zaib"
 GA_TAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WE2FDHVM9"></script>
 <script>
@@ -336,8 +336,8 @@ def about():
     items = "".join(f'<li><a href="/games/{g["slug"]}/">{e(g["name"])}</a>: {e(g["tagline"])}</li>' for g in GAME_INFO)
     body = f"""<h1>About Games by Zaib</h1>
 <p class="lead">Games by Zaib is a small independent collection of free arcade games that you can play instantly in your web browser, made with phones in mind.</p>
-<h2>Who makes the games</h2>
-<p>Every game on this site is designed and built by me, {OWNER}, an independent developer based in Malaysia. I make the kind of quick, colourful games I like to play on my phone: easy to pick up, with enough depth (levels, upgrades and unlocks) to keep coming back.</p>
+<h2>About the studio</h2>
+<p>Games by Zaib is an independent studio making free, colourful browser games. The focus is on quick, fun games that are easy to pick up on a phone, with enough depth (levels, upgrades and unlocks) to keep you coming back.</p>
 <h2>How the games work</h2>
 <p>Each game is a single web page written in HTML5 and JavaScript. There is nothing to download or install and no account to create. The games work on phones, tablets and computers, with touch, keyboard and mouse controls. Music and sound effects are generated in the browser, and your progress is stored locally on your device.</p>
 <p>The characters, art, music and code in these games are original work. Teams, clubs and rivals that appear in the sports games are fictional.</p>
@@ -348,7 +348,7 @@ def about():
 <p>All games are free. To help cover the cost of making new games, this site may show advertising in the future, as described in the <a href="/privacy/">Privacy Policy</a>.</p>
 <h2>Get in touch</h2>
 <p>Found a bug, have an idea, or want to say hi? Visit the <a href="/contact/">contact page</a> or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>"""
-    page("/about/", "About | Games by Zaib", f"Games by Zaib is a collection of free browser arcade games made by independent developer {OWNER} in Malaysia.", body)
+    page("/about/", "About | Games by Zaib", f"Games by Zaib is a collection of free browser arcade games made by independent studio Games by Zaib.", body)
 
 def contact():
     body = f"""<h1>Contact</h1>
@@ -363,13 +363,13 @@ def contact():
 <li>a screenshot, if you can</li></ul>
 <h2>Privacy requests</h2>
 <p>For any question about your privacy or the data described in our <a href="/privacy/">Privacy Policy</a>, email the same address with "Privacy" in the subject line.</p>
-<p class="small">Games by Zaib is run by {OWNER}, Malaysia.</p>"""
-    page("/contact/", "Contact | Games by Zaib", f"Contact {OWNER}, the developer of Games by Zaib: feedback, bug reports and enquiries.", body)
+<p class="small">Games by Zaib is an independent game studio.</p>"""
+    page("/contact/", "Contact | Games by Zaib", f"Contact Games by Zaib: feedback, bug reports and enquiries.", body)
 
 def privacy():
     body = f"""<h1>Privacy Policy</h1>
 <p class="small">Last updated: {UPDATED}</p>
-<p>This Privacy Policy explains how Games by Zaib (<a href="{SITE}/">zaibgames.com</a>, "the site", "we", "us"), run by {OWNER} in Malaysia, handles information when you visit the site and play its games. By using the site you agree to this policy.</p>
+<p>This Privacy Policy explains how Games by Zaib (<a href="{SITE}/">zaibgames.com</a>, "the site", "we", "us") handles information when you visit the site and play its games. By using the site you agree to this policy.</p>
 
 <h2>Summary</h2>
 <ul><li>You can play every game without an account. We do not ask for your name, email address or any other account details.</li>
@@ -407,7 +407,7 @@ def privacy():
 <p>Our games are family-friendly and suitable for a general audience, but the site is not directed specifically at children under 13 (or the minimum age in your country). We do not knowingly collect personal information from children. Children should ask a parent or guardian before using the internet and emailing anyone, including us. If you are a parent or guardian and believe your child has sent us personal information, contact us and we will delete it.</p>
 
 <h2>Your rights</h2>
-<p>Depending on where you live, including under Malaysia's Personal Data Protection Act 2010, you may have the right to access, correct or delete personal data we hold about you. Since we only hold data you email to us, contact us at the address below to make a request.</p>
+<p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you. Since we only hold data you email to us, contact us at the address below to make a request.</p>
 
 <h2>Third-party links</h2>
 <p>The site may link to other websites. We are not responsible for their content or privacy practices, so please review their privacy policies.</p>
@@ -416,13 +416,13 @@ def privacy():
 <p>We may update this policy, for example when we start showing ads or add new features. The "Last updated" date at the top shows when it last changed.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy? Email <a href="mailto:{EMAIL}">{EMAIL}</a> or visit the <a href="/contact/">contact page</a>.<br>{OWNER}, Games by Zaib, Malaysia.</p>"""
+<p>Questions about this policy? Email <a href="mailto:{EMAIL}">{EMAIL}</a> or visit the <a href="/contact/">contact page</a>.<br>Games by Zaib</p>"""
     page("/privacy/", "Privacy Policy | Games by Zaib", "Privacy Policy for Games by Zaib: local game saves, advertising cookies (including Google), opt-out links and contact details.", body)
 
 def terms():
     body = f"""<h1>Terms of Use</h1>
 <p class="small">Last updated: {UPDATED}</p>
-<p>These terms apply to your use of Games by Zaib at zaibgames.com ("the site"), run by {OWNER}. By using the site you agree to them. If you do not agree, please do not use the site.</p>
+<p>These terms apply to your use of Games by Zaib at zaibgames.com ("the site"). By using the site you agree to them. If you do not agree, please do not use the site.</p>
 <h2>Using the games</h2>
 <p>The games are free to play for personal, non-commercial entertainment. You agree not to:</p>
 <ul><li>copy, modify, redistribute, resell or re-host the games or their code, art or music without written permission</li>
@@ -430,7 +430,7 @@ def terms():
 <li>attempt to disrupt, overload or attack the site, or interfere with any advertising shown on it, including by generating invalid ad clicks or impressions</li>
 <li>use the site in any way that breaks the law</li></ul>
 <h2>Intellectual property</h2>
-<p>The games, including their code, characters, artwork, music, sound effects and text, are the work of {OWNER} and are protected by copyright. All rights are reserved except where stated. Any teams, clubs, players or rivals in the games are fictional. Some text fonts are used under their open licences.</p>
+<p>The games, including their code, characters, artwork, music, sound effects and text, are the work of Games by Zaib and are protected by copyright. All rights are reserved except where stated. Any teams, clubs, players or rivals in the games are fictional. Some text fonts are used under their open licences.</p>
 <h2>In-game items</h2>
 <p>Coins, upgrades and other in-game items are earned through play only. They have no real-world monetary value, cannot be bought, sold or exchanged, and may be lost if your browser data is cleared.</p>
 <h2>Advertising</h2>
@@ -438,7 +438,7 @@ def terms():
 <h2>No warranty</h2>
 <p>The site and games are provided "as is" and "as available", without warranties of any kind. We do not guarantee that they will always be available, error-free or compatible with your device, or that saved progress will be kept.</p>
 <h2>Limitation of liability</h2>
-<p>To the fullest extent permitted by law, {OWNER} is not liable for any indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the site or games.</p>
+<p>To the fullest extent permitted by law, Games by Zaib is not liable for any indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the site or games.</p>
 <h2>Health note</h2>
 <p>Take regular breaks while playing. Some games contain flashing effects and screen shake; most games let you reduce effects in their settings.</p>
 <h2>Changes</h2>
@@ -447,7 +447,7 @@ def terms():
 <p>These terms are governed by the laws of Malaysia.</p>
 <h2>Contact</h2>
 <p>Email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>"""
-    page("/terms/", "Terms of Use | Games by Zaib", "Terms of Use for Games by Zaib, free browser games by Jahan Zaib.", body)
+    page("/terms/", "Terms of Use | Games by Zaib", "Terms of Use for Games by Zaib, free browser games by Zaib.", body)
 
 # ---------------------------------------------------------------- sitemap/robots
 def game_paths():
