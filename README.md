@@ -11,6 +11,7 @@ Home / launcher page for Zaib's browser games — live at **https://zaibgames.co
 | Shuttle Smash | Badminton (1P / 2P) | https://zaibgames.com/shuttle-smash/ |
 | Kedimz Adventure | Platformer | https://zaibgames.com/kedimz-adventure/ |
 | Neon Dash | One-tap neon runner | https://zaibgames.com/neon-dash/ |
+| Kedim Therapist | Cozy cat-therapist comedy | https://zaibgames.com/kedim-therapist/ |
 
 Each game lives in its own repo (project site); this repo is only the root user site.
 
