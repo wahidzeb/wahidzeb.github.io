@@ -10,6 +10,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://zaibgames.com"
 EMAIL = "wahid.zeb@gmail.com"
 OWNER = "Jahan Zaib"
+GA_TAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0WE2FDHVM9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0WE2FDHVM9');
+</script>"""
 UPDATED = "11 October 2026"
 LASTMOD = "2026-10-11"
 e = html.escape
@@ -253,6 +261,7 @@ def page(path, title, desc, body, og_image="/img/og.jpg"):
     doc = f"""<!doctype html>
 <html lang="en">
 <head>
+{GA_TAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{e(title)}</title>
@@ -365,6 +374,7 @@ def privacy():
 <h2>Summary</h2>
 <ul><li>You can play every game without an account. We do not ask for your name, email address or any other account details.</li>
 <li>Game progress and settings are saved only in your browser's local storage on your device.</li>
+<li>We use Google Analytics to measure visits to the site (see <a href="#analytics">Analytics</a>).</li>
 <li>Third-party vendors, including Google, may use cookies to show ads based on your visits to this and other websites. You can opt out of personalised advertising (see below).</li></ul>
 
 <h2>Information we collect</h2>
@@ -375,7 +385,9 @@ def privacy():
 <h3>Information you send us</h3>
 <p>If you email us, we receive your email address and whatever you write. We use it only to reply to you and do not share it or add you to any mailing list.</p>
 <h3>Hosting and server logs</h3>
-<p>The site is hosted on GitHub Pages (GitHub, Inc.). Like any web host, GitHub may process technical information such as your IP address and browser type to deliver the pages and keep the service secure. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>. We do not currently use any analytics service.</p>
+<p>The site is hosted on GitHub Pages (GitHub, Inc.). Like any web host, GitHub may process technical information such as your IP address and browser type to deliver the pages and keep the service secure. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</p>
+<h3 id="analytics">Analytics</h3>
+<p>The site uses Google Analytics to measure visits, such as how many people visit, which pages and games they open and roughly where they come from. Google Analytics uses cookies and similar technologies, and the information it collects is processed by Google. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a>. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
 
 <h2>Advertising and cookies</h2>
 <p>To keep the games free, we use or may use Google AdSense and other third-party advertising vendors to display ads on the site.</p>
