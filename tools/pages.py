@@ -24,7 +24,7 @@ e = html.escape
 
 # ---------------------------------------------------------------- game info
 # cache-bust query for replaced thumbnails (bump when an img/<slug>.webp changes)
-IMG_V = {'kedim-therapist': '?v=2'}
+IMG_V = {'kedim-therapist': '?v=3', 'baby-kedim': '?v=1'}
 
 GAME_INFO = [
  dict(slug="moto-mayhem", name="Moto Mayhem", genre="Racing", color="#f97316",
@@ -247,6 +247,23 @@ dict(slug="kedim-therapist", name="Kedim Therapist", genre="Casual", color="#f97
             "Endless walk-in clinic and a daily patient with streaks",
             "Typewriter speech bubbles with animal babble voices, and lo-fi music and sound effects made with WebAudio",
             "Plays in portrait or landscape, pauses when you switch tabs, and saves progress on your device"]),
+dict(slug="baby-kedim", name="Baby Kedim", genre="Casual", color="#ec4899",
+  tagline="A cozy virtual pet game: raise baby Kedim the black cat and watch him grow up.",
+  about=["Baby Kedim is a virtual pet game for phones and desktop browsers. Kedim is a cute baby black cat who needs food, fun, a bath and sleep. Rings on the room buttons show how he feels, and caring for him keeps him happy.",
+         "A happy Kedim grows from Kitten to Kid, Teen and Adult. The mini-game he plays most decides whether he grows up as Therapist Kedim, Snack-Swing Kedim or Adventurer Kedim. Kedim never gets hurt: if you forget him he just gets sulky or messy and stops growing until you care for him again."],
+  how=["Kitchen: drag a food to Kedim's mouth.",
+       "Bathroom: rub the soap all over him, then tap Rinse.",
+       "Bedroom: tap Lights off for a nap. He wakes up when he is rested.",
+       "Playroom: pet him for purrs, throw the ball, talk to him and play mini-games for coins.",
+       "Spend coins on hats, collars, glasses and decor for his home.",
+       "Keep all his needs up so he keeps growing toward his grown-up form."],
+  controls=[("Feed","Drag food to Kedim's mouth","Mouse drag"),("Bath","Rub the soap over Kedim, then tap Rinse","Mouse drag"),("Pet / play","Tap or stroke Kedim, tap the ball","Mouse"),("Pause","II button","Esc")],
+  features=["Four rooms: Kitchen, Bathroom, Bedroom and Playroom",
+            "6 mini-games: Snack Swing, Fish Catch, Feel-Good Clinic, Yarn Pop, Kedim Dash and Treasure Dive",
+            "Grows from Kitten to Kid, Teen and Adult, with 3 grown-up forms",
+            "Dress-up items like hats, bows, scarves and glasses, plus home decor and themes",
+            "Gentle care: Kedim never gets hurt, he only gets sulky when you forget him",
+            "Sound and music settings, with progress saved on your device"]),
 dict(slug="block-glide", name="Block Glide", genre="Puzzle", color="#8b5cf6",
   tagline="Slide soft clay blocks through matching color gates and clear the board.",
   about=["Block Glide is a cozy color block sliding puzzle for phones and desktop browsers. The board is packed with chunky clay blocks in tetromino-like shapes, and the walls around it have colored gates. Drag a block to a gate of its own color and it slides out of the board.",
