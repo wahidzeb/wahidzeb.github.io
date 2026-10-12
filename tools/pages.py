@@ -23,6 +23,9 @@ LASTMOD = "2026-10-11"
 e = html.escape
 
 # ---------------------------------------------------------------- game info
+# cache-bust query for replaced thumbnails (bump when an img/<slug>.webp changes)
+IMG_V = {'kedim-therapist': '?v=2'}
+
 GAME_INFO = [
  dict(slug="moto-mayhem", name="Moto Mayhem", genre="Racing", color="#f97316",
   tagline="A motorbike combat racer: ride fast, hit hard, finish first.",
@@ -567,7 +570,7 @@ def game_page(g):
     body = f"""<span class="genre" style="--gc:{g['color']}">{e(g['genre'])}</span>
 <h1>{e(g['name'])}</h1>
 <p class="lead">{e(g['tagline'])} Free to play in your browser, no download or sign-up.</p>
-<a href="/{g['slug']}/"><img class="hero" src="/img/{g['slug']}.webp" alt="{e(g['name'])} gameplay screenshot" width="600" height="375"></a>
+<a href="/{g['slug']}/"><img class="hero" src="/img/{g['slug']}.webp{IMG_V.get(g['slug'],'')}" alt="{e(g['name'])} gameplay screenshot" width="600" height="375"></a>
 <a class="play" href="/{g['slug']}/">{PLAY_ICON}PLAY {e(g['name'].upper())}</a>
 <h2>About the game</h2>
 {''.join(f'<p>{e(p)}</p>' for p in g['about'])}
@@ -583,7 +586,7 @@ def game_page(g):
 <a class="play" href="/{g['slug']}/">{PLAY_ICON}PLAY NOW</a>"""
     page(f"/games/{g['slug']}/", f"{g['name']}: How to Play, Controls & Features | Games by Zaib",
          f"{g['name']} by Zaib: {g['tagline']} How to play, controls and features. Free in your browser, no download.", body,
-         og_image=f"/img/{g['slug']}.webp")
+         og_image=f"/img/{g['slug']}.webp{IMG_V.get(g['slug'],'')}")
 
 def games_index():
     cards = "".join(f'<a href="/games/{g["slug"]}/"><b>{e(g["name"])}</b><span class="small">{e(g["tagline"])}</span></a>' for g in GAME_INFO)
