@@ -185,6 +185,12 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
   <section class="info" aria-labelledby="info-h">
     <h2 id="info-h">About the games</h2>
     <p class="intro">Every game here is original, free and runs right in your browser on phones, tablets and computers. No downloads, no sign-up. Your progress is saved on your device.</p>
+  <article class="ginfo" id="sunny-acres-info">
+    <h3>Sunny Acres</h3>
+    <p>Sunny Acres is a cozy farm game for phones and desktop browsers. Grow wheat, corn, carrots, tomatoes, strawberries and pumpkins on your own fields, look after cute chickens, cows and sheep, and turn your harvest into bread, cakes, cheese, salads, berry juice, pumpkin pies and sweaters in the Bakery, Dairy, Kitchen and Loom.</p>
+    <p><strong>How to play:</strong> Tap an empty field and pick a seed, then swipe across more fields to plant them all. Swipe over bouncing crops to harvest. Tap pens to feed the animals and collect eggs, milk and wool, tap buildings to make goodies, and fill truck orders for coins and XP. Level up to unlock new crops, animals and buildings, and buy more fields in the Shop. Your farm keeps growing while you are away.</p>
+    <p class="lnk"><a href="/sunny-acres/">▶ Play Sunny Acres</a><a href="/games/sunny-acres/">How to play, controls &amp; features →</a></p>
+  </article>
   <article class="ginfo" id="pirate-isles-info">
     <h3>Pirate Isles</h3>
     <p>Pirate Isles is a cartoon pirate sailing adventure for phones and desktop browsers. Captain your own ship across a sunny sea of twelve islands and four harbour towns, carrying cargo between ports, collecting floating chests, digging up buried X-marks-the-spot treasure and chasing off cheeky pirate crews, who wave a white flag when they lose.</p>
@@ -329,7 +335,7 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
 </main>
 
 <noscript><p style="text-align:center;color:#b7b0d8;padding:20px">
-  <a href="/number-dash/">Number Dash</a> · <a href="/pirate-isles/">Pirate Isles</a> · <a href="/zaib-city/">Zaib City</a> · <a href="/moto-mayhem/">Moto Mayhem</a> · <a href="/gobble-hole/">Gobble Hole</a> · <a href="/juicy-merge/">Juicy Merge</a> · <a href="/horde-breaker/">Horde Breaker</a> · <a href="/bus-bonanza/">Bus Bonanza</a> · <a href="/goal-frenzy/">Goal Frenzy</a> · <a href="/fin-frenzy/">Fin Frenzy</a> · <a href="/fortress-frontline/">Fortress Frontline</a> · <a href="/neon-dash/">Neon Dash</a> · <a href="/block-glide/">Block Glide</a> · <a href="/kedim-snack-swing/">Kedim's Snack Swing</a> · <a href="/chai-tycoon/">Chai Tycoon</a> · <a href="/meowstronauts/">Meowstronauts</a> · <a href="/kedimz-adventure/">Kedimz Adventure</a> · <a href="/sky-glide/">Sky Glide</a> · <a href="/shuttle-smash/">Shuttle Smash</a> · <a href="/kedim-therapist/">Kedim Therapist</a> · <a href="/noodle-clash/">Noodle Clash</a> · <a href="/horizon-pilot/">Horizon Pilot</a> · <a href="/haulway-heroes/">Haulway Heroes</a></p></noscript>
+  <a href="/number-dash/">Number Dash</a> · <a href="/pirate-isles/">Pirate Isles</a> · <a href="/sunny-acres/">Sunny Acres</a> · <a href="/zaib-city/">Zaib City</a> · <a href="/moto-mayhem/">Moto Mayhem</a> · <a href="/gobble-hole/">Gobble Hole</a> · <a href="/juicy-merge/">Juicy Merge</a> · <a href="/horde-breaker/">Horde Breaker</a> · <a href="/bus-bonanza/">Bus Bonanza</a> · <a href="/goal-frenzy/">Goal Frenzy</a> · <a href="/fin-frenzy/">Fin Frenzy</a> · <a href="/fortress-frontline/">Fortress Frontline</a> · <a href="/neon-dash/">Neon Dash</a> · <a href="/block-glide/">Block Glide</a> · <a href="/kedim-snack-swing/">Kedim's Snack Swing</a> · <a href="/chai-tycoon/">Chai Tycoon</a> · <a href="/meowstronauts/">Meowstronauts</a> · <a href="/kedimz-adventure/">Kedimz Adventure</a> · <a href="/sky-glide/">Sky Glide</a> · <a href="/shuttle-smash/">Shuttle Smash</a> · <a href="/kedim-therapist/">Kedim Therapist</a> · <a href="/noodle-clash/">Noodle Clash</a> · <a href="/horizon-pilot/">Horizon Pilot</a> · <a href="/haulway-heroes/">Haulway Heroes</a></p></noscript>
 
 <script>
 /* ============================================================
@@ -340,6 +346,7 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
    entries form the "Most popular" row. cat = filter chip, isNew = NEW badge.
    ============================================================ */
 const GAMES = [
+  { name: "Sunny Acres", desc: "Cozy farm: plant and harvest, feed chickens, cows and sheep, bake treats and fill truck orders. Saves progress.", genre: "Simulation", url: "/sunny-acres/", img: "img/sunny-acres.webp", color: "#7ccf4f", cat: "Casual", isNew: true },
   { name: "Pirate Isles", desc: "Pirate ship adventure: sail sunny isles, trade cargo, dig up treasure, beat pirate bosses, upgrade to a galleon.", genre: "Adventure", url: "/pirate-isles/", img: "img/pirate-isles.webp", color: "#1b8fd6", cat: "Action", isNew: true },
   { name: "Number Dash", desc: "Math runner: pick + \u2212 \u00d7 \u00f7 gates, answer quick sums, grow your number and beat the monster. 60 levels.", genre: "Puzzle", url: "/number-dash/", img: "img/number-dash.webp", color: "#4cb8ff", cat: "Puzzle", isNew: true },
   { name: "Zaib City", desc: "Family-friendly 3D open-world city: borrow cars, run jobs, race, stunt and play a 22-mission story.", genre: "Simulation", url: "/zaib-city/", img: "img/zaib-city.webp", color: "#ffb21f", cat: "Racing", isNew: true },
