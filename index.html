@@ -185,6 +185,12 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
   <section class="info" aria-labelledby="info-h">
     <h2 id="info-h">About the games</h2>
     <p class="intro">Every game here is original, free and runs right in your browser on phones, tablets and computers. No downloads, no sign-up. Your progress is saved on your device.</p>
+  <article class="ginfo" id="number-dash-info">
+    <h3>Number Dash</h3>
+    <p>Number Dash is a math runner game for kids and grown-ups on phones and desktop browsers. Your Number Buddy dashes down a colourful track through six worlds, from Sunny Meadow to Starry Space, and every gate changes your number: plus and times make it grow, minus and divide make it shrink. Quiz doors ask quick sums, and at the finish line a Number Monster is waiting.</p>
+    <p><strong>How to play:</strong> Drag left or right to steer through the gate that gives you the bigger number, run through the correct answer on quiz doors, dodge grumpy minus clouds and grab coins. Be bigger than the Number Monster to win, and finish close to the best possible number for 3 stars. Choose Easy, Medium or Hard math in Settings.</p>
+    <p class="lnk"><a href="/number-dash/">▶ Play Number Dash</a><a href="/games/number-dash/">How to play, controls &amp; features →</a></p>
+  </article>
   <article class="ginfo" id="zaib-city-info">
     <h3>Zaib City</h3>
     <p>Zaib City is a family-friendly 3D open-world city game for phones and desktop browsers. Explore a bright low-poly city with a downtown of towers, a leafy suburb, a beach and harbour, an industrial zone, a park, a highway loop and a stunt hill with ramps, all with a day/night cycle and changing weather. Borrow any car from friendly locals, drive 15 vehicles from a pizza scooter to the Zaib Hyper X, and help the city with taxi fares, deliveries, ambulance runs, fires, speed patrols, races, stunt jumps and a 22-mission story.</p>
@@ -317,7 +323,7 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
 </main>
 
 <noscript><p style="text-align:center;color:#b7b0d8;padding:20px">
-  <a href="/zaib-city/">Zaib City</a> · <a href="/moto-mayhem/">Moto Mayhem</a> · <a href="/gobble-hole/">Gobble Hole</a> · <a href="/juicy-merge/">Juicy Merge</a> · <a href="/horde-breaker/">Horde Breaker</a> · <a href="/bus-bonanza/">Bus Bonanza</a> · <a href="/goal-frenzy/">Goal Frenzy</a> · <a href="/fin-frenzy/">Fin Frenzy</a> · <a href="/fortress-frontline/">Fortress Frontline</a> · <a href="/neon-dash/">Neon Dash</a> · <a href="/block-glide/">Block Glide</a> · <a href="/kedim-snack-swing/">Kedim's Snack Swing</a> · <a href="/chai-tycoon/">Chai Tycoon</a> · <a href="/meowstronauts/">Meowstronauts</a> · <a href="/kedimz-adventure/">Kedimz Adventure</a> · <a href="/sky-glide/">Sky Glide</a> · <a href="/shuttle-smash/">Shuttle Smash</a> · <a href="/kedim-therapist/">Kedim Therapist</a> · <a href="/noodle-clash/">Noodle Clash</a> · <a href="/horizon-pilot/">Horizon Pilot</a> · <a href="/haulway-heroes/">Haulway Heroes</a></p></noscript>
+  <a href="/number-dash/">Number Dash</a> · <a href="/zaib-city/">Zaib City</a> · <a href="/moto-mayhem/">Moto Mayhem</a> · <a href="/gobble-hole/">Gobble Hole</a> · <a href="/juicy-merge/">Juicy Merge</a> · <a href="/horde-breaker/">Horde Breaker</a> · <a href="/bus-bonanza/">Bus Bonanza</a> · <a href="/goal-frenzy/">Goal Frenzy</a> · <a href="/fin-frenzy/">Fin Frenzy</a> · <a href="/fortress-frontline/">Fortress Frontline</a> · <a href="/neon-dash/">Neon Dash</a> · <a href="/block-glide/">Block Glide</a> · <a href="/kedim-snack-swing/">Kedim's Snack Swing</a> · <a href="/chai-tycoon/">Chai Tycoon</a> · <a href="/meowstronauts/">Meowstronauts</a> · <a href="/kedimz-adventure/">Kedimz Adventure</a> · <a href="/sky-glide/">Sky Glide</a> · <a href="/shuttle-smash/">Shuttle Smash</a> · <a href="/kedim-therapist/">Kedim Therapist</a> · <a href="/noodle-clash/">Noodle Clash</a> · <a href="/horizon-pilot/">Horizon Pilot</a> · <a href="/haulway-heroes/">Haulway Heroes</a></p></noscript>
 
 <script>
 /* ============================================================
@@ -328,6 +334,7 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
    entries form the "Most popular" row. cat = filter chip, isNew = NEW badge.
    ============================================================ */
 const GAMES = [
+  { name: "Number Dash", desc: "Math runner: pick + \u2212 \u00d7 \u00f7 gates, answer quick sums, grow your number and beat the monster. 60 levels.", genre: "Puzzle", url: "/number-dash/", img: "img/number-dash.webp", color: "#4cb8ff", cat: "Puzzle", isNew: true },
   { name: "Zaib City", desc: "Family-friendly 3D open-world city: borrow cars, run jobs, race, stunt and play a 22-mission story.", genre: "Simulation", url: "/zaib-city/", img: "img/zaib-city.webp", color: "#ffb21f", cat: "Racing", isNew: true },
   { name: "Moto Mayhem",   desc: "Motorbike combat racer — punch, kick and boost to first place.", genre: "Racing",   url: "/moto-mayhem/",   img: "img/moto-mayhem.webp",   color: "#f97316", cat: "Racing" },
   { name: "Gobble Hole", desc: "3D city eater: swallow cones, cars, buses and skyscrapers. Outgrow 7 rival holes.", genre: "Arcade", url: "/gobble-hole/", img: "img/gobble-hole.webp", color: "#7b3cff", cat: "Action", isNew: true },
