@@ -715,7 +715,13 @@ def sitemap():
     open(os.path.join(ROOT, "sitemap.xml"), "w").write("\n".join(xml) + "\n")
     open(os.path.join(ROOT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 
+def sort_by_hub_order():
+    """Keep the guides list / about page in the same ranked order as the hub's GAMES array."""
+    order = [p.strip("/") for p in game_paths()]
+    GAME_INFO.sort(key=lambda g: order.index(g["slug"]) if g["slug"] in order else len(order))
+
 if __name__ == "__main__":
+    sort_by_hub_order()
     for g in GAME_INFO: game_page(g)
     games_index(); about(); contact(); privacy(); terms(); sitemap()
     print("info pages, sitemap.xml and robots.txt built")
