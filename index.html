@@ -409,7 +409,7 @@ const card = (g, i) => {
   const soon = !g.url;
   const thumb = soon
     ? `<div class="thumb">${SHUTTLE}<span class="genre" style="--gc:${g.color}">${esc(g.genre)}</span></div>`
-    : `<a class="thumb" href="${esc(g.url)}" tabindex="-1" aria-hidden="true"><img src="${esc(g.img)}" alt="" width="600" height="375" loading="${i < 2 ? "eager" : "lazy"}" decoding="async"><span class="genre" style="--gc:${g.color}">${esc(g.genre)}</span>${g.isNew ? '<span class="new">New</span>' : ""}</a>`;
+    : `<a class="thumb" href="${esc(g.url)}" tabindex="-1" aria-hidden="true"><img src="${esc(g.img)}" alt="" width="600" height="375" loading="${i < 2 ? "eager" : "lazy"}"${i < 2 ? ' fetchpriority="high"' : ""} decoding="async"><span class="genre" style="--gc:${g.color}">${esc(g.genre)}</span>${g.isNew ? '<span class="new">New</span>' : ""}</a>`;
   const btn = soon
     ? `<span class="play" aria-disabled="true">COMING SOON</span>`
     : `<a class="play" href="${esc(g.url)}" aria-label="Play ${esc(g.name)}">${PLAY_ICON}PLAY</a>`;

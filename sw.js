@@ -6,7 +6,7 @@
      stale-while-revalidate, so updated thumbnails show up on the next visit.
    - Cross-origin requests (Google Analytics, AdSense, etc.) are never touched.
    Bump VERSION to drop old caches. */
-const VERSION = "zg-2026-10-13-2";
+const VERSION = "zg-2026-10-13-3";
 const STATIC = VERSION + "-static";   // precache + cache-first assets
 const PAGES = VERSION + "-pages";     // HTML pages (hub, guides, games)
 const RUNTIME = VERSION + "-runtime"; // other same-origin files
@@ -17,16 +17,19 @@ const PRECACHE = [
 ];
 const MAX_PAGES = 60, MAX_RUNTIME = 150;
 
+// fetch with a hard timeout so a stalled network can never hang install or a navigation
+const timed = (p, ms) => Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), ms))]);
+
 self.addEventListener("install", (event) => {
+  // Small precache only (no thumbnails), each fetch capped at 8s; install never blocks on a stalled request.
   event.waitUntil((async () => {
     const c = await caches.open(STATIC);
     await Promise.all(PRECACHE.map(async (u) => {
-      try { const r = await fetch(u, { cache: "reload" }); if (r.ok) await c.put(u, r); } catch (e) {}
+      try { const r = await timed(fetch(u, { cache: "reload" }), 8000); if (r.ok) await c.put(u, r); } catch (e) {}
     }));
-    // seed the pages cache with the hub so "/" and "/?source=pwa" open offline
     const hub = await c.match("/"); if (hub) await (await caches.open(PAGES)).put("/", hub.clone());
-    await self.skipWaiting();
   })());
+  self.skipWaiting(); // not awaited
 });
 
 self.addEventListener("activate", (event) => {
@@ -45,23 +48,36 @@ async function trim(name, max) {
   for (let i = 0; i < keys.length - max; i++) await c.delete(keys[i]);
 }
 
-async function networkFirstPage(event) {
+const NAV_TIMEOUT = 2500; // ms: after this, show the cached copy / shell while the network keeps going in the background
+
+async function cachedPage(url) {
+  const key = pageKey(url), path = new URL(url).pathname;
+  return (await caches.match(key, { ignoreSearch: true })) ||
+         (!key.endsWith("/") && (await caches.match(key + "/", { ignoreSearch: true }))) ||
+         (path === "/" || path === "/index.html" ? await caches.match("/", { ignoreSearch: true }) : undefined);
+}
+
+function networkFirstPage(event) {
   const req = event.request;
-  try {
+  // network side: preload (if any) else fetch; successful pages refresh the cache in the background
+  const net = (async () => {
     let res; try { res = await event.preloadResponse; } catch (e) {}
     if (!res) res = await fetch(req);
     if (res && res.ok && res.type === "basic" && !res.redirected) {
       const copy = res.clone();
-      event.waitUntil(caches.open(PAGES).then((c) => c.put(pageKey(req.url), copy)).then(() => trim(PAGES, MAX_PAGES)));
+      event.waitUntil(caches.open(PAGES).then((c) => c.put(pageKey(req.url), copy)).then(() => trim(PAGES, MAX_PAGES)).catch(() => {}));
     }
     return res;
-  } catch (err) {
-    const key = pageKey(req.url);
-    const hit = (await caches.match(key, { ignoreSearch: true })) ||
-                (!key.endsWith("/") && (await caches.match(key + "/", { ignoreSearch: true })));
+  })();
+  net.catch(() => {});
+  return (async () => {
+    try { const r = await timed(net, NAV_TIMEOUT); if (r) return r; } catch (e) {}
+    const hit = await cachedPage(req.url).catch(() => undefined);
     if (hit) return hit;
+    // nothing cached: give the network a bit longer, then the offline shell (never hang)
+    try { const r = await timed(net, 8000); if (r) return r; } catch (e) {}
     return offlinePage();
-  }
+  })();
 }
 
 async function offlinePage() {
@@ -89,7 +105,7 @@ ${list}<button onclick="location.reload()">Try again</button></main></body></htm
 async function cacheFirst(req) {
   const hit = await caches.match(req, { ignoreSearch: true });
   if (hit) return hit;
-  const res = await fetch(req);
+  const res = await timed(fetch(req), 15000);
   if (res.ok && res.type === "basic") { const copy = res.clone(); caches.open(STATIC).then((c) => c.put(req, copy)); }
   return res;
 }
@@ -104,7 +120,7 @@ async function staleWhileRevalidate(event) {
     return res;
   });
   if (hit) { event.waitUntil(net.catch(() => {})); return hit; }
-  return net;
+  return timed(net, 15000).catch(() => Response.error());
 }
 
 self.addEventListener("fetch", (event) => {
