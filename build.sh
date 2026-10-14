@@ -9,3 +9,5 @@ open('index.html','w').write(open('index.template.html').read().replace('__FONT_
 PY
 echo "index.html built"
 python3 tools/pages.py
+# Copy protection: domain lock + obfuscation of the inline game-hub script (skips if ZG_NOPROTECT=1)
+[ "${ZG_NOPROTECT:-}" = 1 ] || python3 /workspace/zaib-common/protect.py index.html
