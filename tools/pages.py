@@ -618,6 +618,9 @@ def lis(items): return "<ul>" + "".join(f"<li>{e(i)}</li>" for i in items) + "</
 
 # ---------------------------------------------------------------- game pages
 def game_page(g):
+    # text fields may be given as a single string or a list of paragraphs/items (a bare string must not be iterated per letter)
+    for k in ('about', 'how', 'features'):
+        if isinstance(g.get(k), str): g[k] = [g[k]]
     rows = "".join(f"<tr><td>{e(a)}</td><td>{e(t)}</td><td>{e(k)}</td></tr>" for a, t, k in g["controls"])
     body = f"""<span class="genre" style="--gc:{g['color']}">{e(g['genre'])}</span>
 <h1>{e(g['name'])}</h1>
