@@ -546,6 +546,18 @@ dict(slug='dream-room', name='Dream Room', genre='Design', color='#ff7a59',
   how=["Read the client's brief: their style, palette and budget.", 'Tap a glowing + in the room to choose a piece, or pick a category such as Sofa or Walls.', "Keep within the budget and match the client's taste for a better score.", 'Tap Done when every spot is filled to see the before and after reveal.'],
   controls=[('Place or change a piece', 'Tap a + or an item', 'Click'), ('Finish the room', 'Done button', 'Click')],
   features=['32 levels with multi-room homes', 'Hundreds of furniture and decor pieces', 'Client styles, palettes and budgets to match', 'Big before and after reveals', 'Soft cartoon art, music and sound effects', 'Progress saved on your device']),
+dict(slug='boss-town', name='Boss Town Tycoon', genre='Idle', color='#ffb52e',
+  tagline='An idle business tycoon game: grow a lemonade stand into an empire of hotels, studios, airlines and space rockets.',
+  about=['Boss Town Tycoon is an idle business tycoon game for phones and desktop browsers. Start with a tiny lemonade stand, earn money and open bigger businesses: a tea stall, bakery, pizza place, toy shop, supermarket, grand hotel, movie studio, tech company, airline and finally space rockets.', 'Hire managers to run your businesses, keep earning while you are away and attract investors. Your town grows on screen as your empire gets bigger.'],
+  how=['Tap a business to collect its earnings.', 'Buy more of each business to earn faster and reach milestone bonuses.', 'Hire managers so businesses run by themselves, even while you are offline.', 'Buy upgrades, complete goals and attract investors to grow even faster.'],
+  controls=[('Collect and buy', 'Tap', 'Click'), ('Managers, upgrades and investors', 'Bottom tabs', 'Click')],
+  features=['11 businesses from lemonade stand to space rockets', 'Managers and offline earnings', 'Upgrades, goals and investors', 'A town that grows as you play', 'Bright cartoon art, music and sound effects', 'Progress saved on your device']),
+dict(slug='hop-heights', name='Hop Heights', genre='Platformer', color='#4aa8ff',
+  tagline='A bright 3D obby parkour adventure: 60 stages across 6 themed worlds.',
+  about=['Hop Heights is a bright 3D obby parkour game for phones and desktop browsers. Jump and climb through 60 short obstacle stages across 6 themed worlds: Candy Meadow, Lava Labs, Cloud Conveyor, Frosty Peaks, Neon Night and Star Summit.', 'Every stage ends on a checkpoint, so you never lose much progress. Collect stars to unlock new skins and trails.'],
+  how=['Run with the joystick and tap the jump button to hop between platforms.', 'Avoid lava and other red hazards: touching them sends you back to the last checkpoint.', 'Ride moving platforms and conveyors, bounce on jump pads and keep your footing on ice.', 'Collect stars and spend them on skins and trails.'],
+  controls=[('Move', 'Joystick', 'WASD / arrow keys'), ('Jump', 'Jump button', 'Space'), ('Camera', 'Drag on the right side', 'Mouse drag'), ('Pause', 'Pause button', 'Esc')],
+  features=['60 stages across 6 themed worlds', 'Lava, conveyors, jump pads, ice and moving platforms', 'Checkpoints on every stage', 'Unlockable skins and trails', 'Bright 3D graphics with quality settings', 'Progress saved on your device']),
 ]
 # ---------------------------------------------------------------- layout
 CSS = """@font-face{font-family:"Zaib Display";src:url(/fonts/lilita-subset.woff) format("woff");font-display:swap}
