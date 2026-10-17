@@ -12,7 +12,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Games by Zaib — Free Arcade Games in Your Browser</title>
-<meta name="description" content="Play 31 free HTML5 games by Zaib in your browser: cozy pets, puzzles, racing and arcade. No download, works on phones, install it like an app.">
+<meta name="description" content="Play 38 free HTML5 games by Zaib in your browser: cozy pets, puzzles, racing and arcade. No download, works on phones, install it like an app.">
 <meta name="author" content="Zaib">
 <meta name="google-adsense-account" content="ca-pub-1924890349431110">
 <meta name="theme-color" content="#0b0820">
@@ -31,7 +31,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Games by Zaib">
 <meta property="og:title" content="Games by Zaib — Free Arcade Games">
-<meta property="og:description" content="Play 31 free HTML5 games by Zaib in your browser: cozy pets, puzzles, racing and arcade. No download, works on phones, install it like an app.">
+<meta property="og:description" content="Play 38 free HTML5 games by Zaib in your browser: cozy pets, puzzles, racing and arcade. No download, works on phones, install it like an app.">
 <meta property="og:url" content="https://zaibgames.com/">
 <meta property="og:image" content="https://zaibgames.com/img/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -39,8 +39,9 @@
 <meta property="og:image:alt" content="Games by Zaib — screenshots of Moto Mayhem, Sky Glide, Horde Breaker and Goal Frenzy">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Games by Zaib — Free Arcade Games">
-<meta name="twitter:description" content="Play 31 free HTML5 games by Zaib in your browser: cozy pets, puzzles, racing and arcade. No download, works on phones, install it like an app.">
+<meta name="twitter:description" content="Play 38 free HTML5 games by Zaib in your browser: cozy pets, puzzles, racing and arcade. No download, works on phones, install it like an app.">
 <meta name="twitter:image" content="https://zaibgames.com/img/og.jpg">
+<meta name="twitter:image:alt" content="Games by Zaib — free games you can play in your browser">
 <style>
 @font-face{font-family:"Zaib Display";src:url(data:font/woff;base64,__FONT__) format("woff");font-display:swap}
 :root{
@@ -153,6 +154,32 @@ footer b{color:#e9d5ff}
 .ginfo .lnk a{color:#c4b5fd;text-decoration:none}.ginfo .lnk a:hover{color:#67e8f9;text-decoration:underline}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-bottom:8px}
 footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decoration:underline}
+/* ---------- share ---------- */
+.shr{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;min-height:44px;padding:0 20px 0 16px;border-radius:999px;cursor:pointer;
+  font-family:var(--display);font-size:19px;letter-spacing:.05em;color:#fff;border:1px solid rgba(255,255,255,.22);
+  background:linear-gradient(180deg,rgba(192,132,252,.35),rgba(126,34,206,.35));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:0 4px 0 rgba(76,29,149,.85),0 8px 22px rgba(147,51,234,.35),inset 0 1px 0 rgba(255,255,255,.3);text-shadow:0 2px 0 rgba(59,7,100,.6);
+  transition:transform .12s ease,box-shadow .12s ease,filter .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.shr svg{width:19px;height:19px;fill:currentColor;flex:none;filter:drop-shadow(0 2px 0 rgba(59,7,100,.6))}
+.shr:hover{filter:brightness(1.15)}
+.shr:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(76,29,149,.85),0 3px 10px rgba(147,51,234,.3),inset 0 1px 0 rgba(255,255,255,.25)}
+.shr:focus-visible,.cshr:focus-visible{outline:3px solid var(--a2);outline-offset:3px}
+.body{position:relative}
+.cshr{position:absolute;z-index:3;top:-23px;right:14px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;cursor:pointer;padding:0;color:#fff;
+  border:1px solid rgba(255,255,255,.28);background:linear-gradient(180deg,rgba(60,30,110,.78),rgba(28,14,60,.88));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:0 6px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.2);transition:transform .15s ease,background .2s,border-color .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.cshr svg{width:19px;height:19px;fill:currentColor;margin-left:-1px}
+.cshr:hover{border-color:rgba(168,85,247,.85);background:linear-gradient(180deg,#a855f7,#7e22ce)}
+.cshr:active{transform:scale(.9)}
+.name{padding-right:50px}
+.zsToast{position:fixed;z-index:9999;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 26px);transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  padding:11px 20px;border-radius:999px;font-weight:800;font-size:15px;color:#fff;background:linear-gradient(180deg,#a855f7,#7e22ce);
+  box-shadow:0 8px 24px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.3);transition:opacity .2s,transform .25s cubic-bezier(.2,1.4,.4,1);white-space:nowrap}
+.zsToast.on{opacity:1;transform:translate(-50%,0)}
+.zsBox{position:fixed;z-index:9999;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);width:min(92vw,420px);display:flex;gap:8px;align-items:center;
+  padding:10px;border-radius:16px;background:rgba(20,12,44,.96);border:1px solid rgba(168,85,247,.55);box-shadow:0 12px 34px rgba(0,0,0,.55)}
+.zsBox input{flex:1;min-width:0;font:600 14px system-ui,sans-serif;color:#fff;background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:10px;padding:9px 10px;user-select:text;-webkit-user-select:text}
+.zsBox button{flex:none;width:38px;height:38px;border-radius:10px;border:0;cursor:pointer;color:#fff;font-size:20px;line-height:1;background:rgba(255,255,255,.12)}
 @media (min-width:700px){.wrap{padding-top:48px}header{padding-bottom:36px}.games{gap:24px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
 </style>
@@ -169,6 +196,7 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
     <span class="badge"><i></i>Free · No downloads</span>
     <h1>Games by Zaib</h1>
     <p class="tag">Arcade games made for your phone. Tap a game and play instantly.</p>
+    <button type="button" class="shr" id="shareSite" aria-label="Share Games by Zaib"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7L8 9.8C7.5 9.3 6.8 9 6 9c-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.2-2.9-2.8-2.9z"/></svg>SHARE</button>
   </header>
 
   <h2 class="sec" id="feat-h"><span aria-hidden="true">🔥</span> Most popular</h2>
@@ -470,6 +498,7 @@ const GAMES = [
   { name: "Haulway Heroes", desc: "3D truck career — haul glass, cattle, fuel and logs, back into docks, upgrade 6 trucks.", genre: "Simulation", url: "/haulway-heroes/", img: "img/haulway-heroes.webp", color: "#f59e0b", cat: "Racing", isNew: true },
 ];
 
+const SHARE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7L8 9.8C7.5 9.3 6.8 9 6 9c-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.2-2.9-2.8-2.9z"/></svg>';
 const PLAY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.53.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>';
 const SHUTTLE = '<svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#e0fdfa" stroke-width="4" stroke-linejoin="round"><path d="M50 62 22 14h56z" fill="rgba(255,255,255,.15)"/><path d="M50 62 36 14M50 62l14-48M50 62V14"/></g><circle cx="50" cy="74" r="14" fill="#34d399"/><path d="M36 70h28" stroke="#065f46" stroke-width="4"/></svg>';
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
@@ -483,7 +512,8 @@ const card = (g, i) => {
   const btn = soon
     ? `<span class="play" aria-disabled="true">COMING SOON</span>`
     : `<a class="play" href="${esc(g.url)}" aria-label="Play ${esc(g.name)}">${PLAY_ICON}PLAY</a>`;
-  return `<article class="card${soon ? " soon" : ""}" style="--i:${Math.min(i, 8)}">${thumb}<div class="body"><h2 class="name">${esc(g.name)}</h2><p class="desc">${esc(g.desc)}</p>${btn}</div></article>`;
+  const sh = soon ? "" : `<button type="button" class="cshr" data-share="${esc(g.url)}" data-name="${esc(g.name)}" aria-label="Share ${esc(g.name)}">${SHARE_ICON}</button>`;
+  return `<article class="card${soon ? " soon" : ""}" style="--i:${Math.min(i, 8)}">${thumb}<div class="body">${sh}<h2 class="name">${esc(g.name)}</h2><p class="desc">${esc(g.desc)}</p>${btn}</div></article>`;
 };
 document.getElementById("featured").innerHTML = GAMES.slice(0, FEATURED_N).map(card).join("");
 const chips = document.getElementById("chips"), allGrid = document.getElementById("games");
@@ -495,6 +525,35 @@ function showCat(c) {
 chips.innerHTML = CATS.map(c => `<button type="button" data-c="${c}">${c}</button>`).join("");
 chips.addEventListener("click", e => { const b = e.target.closest("button"); if (b) showCat(b.dataset.c); });
 showCat("All");
+/* share: Web Share API, else copy link + toast, else a selectable link box. Never shows errors. */
+const zShare = (() => {
+  let tEl, tT, box;
+  function toast(msg) {
+    try { if (!tEl) { tEl = document.createElement("div"); tEl.className = "zsToast"; tEl.setAttribute("role", "status"); tEl.setAttribute("aria-live", "polite"); document.body.appendChild(tEl); }
+      tEl.textContent = msg; tEl.classList.add("on"); clearTimeout(tT); tT = setTimeout(() => tEl.classList.remove("on"), 1800); } catch (e) {}
+  }
+  function showBox(url) {
+    try { if (!box) { box = document.createElement("div"); box.className = "zsBox"; box.innerHTML = '<input type="text" readonly aria-label="Link to share"><button type="button" aria-label="Close">\u00d7</button>';
+        box.querySelector("button").onclick = () => { box.remove(); box = null; }; }
+      document.body.appendChild(box); const inp = box.querySelector("input"); inp.value = url; inp.focus(); inp.select(); } catch (e) {}
+  }
+  function legacyCopy(url) {
+    try { const t = document.createElement("textarea"); t.value = url; t.setAttribute("readonly", ""); t.style.cssText = "position:fixed;top:0;left:0;opacity:0;pointer-events:none";
+      document.body.appendChild(t); t.select(); const ok = document.execCommand && document.execCommand("copy"); t.remove(); return !!ok; } catch (e) { return false; }
+  }
+  return async function (d, from) {
+    try { typeof gtag === "function" && gtag("event", "share", { method: navigator.share ? "native" : "copy", content_type: from || "site", item_id: d.url }); } catch (e) {}
+    try { if (navigator.share) { await navigator.share(d); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+    try { if (navigator.clipboard && navigator.clipboard.writeText) { await navigator.clipboard.writeText(d.url); toast("Link copied!"); return; } } catch (e) {}
+    if (legacyCopy(d.url)) { toast("Link copied!"); return; }
+    showBox(d.url);
+  };
+})();
+document.getElementById("shareSite").addEventListener("click", () => zShare({ title: "Games by Zaib", text: "Free, fun games you can play right in your browser. Come play with me!", url: "https://zaibgames.com/" }, "site"));
+document.addEventListener("click", e => { const b = e.target.closest && e.target.closest(".cshr"); if (!b) return; e.preventDefault();
+  const slug = String(b.dataset.share || "").replace(/^\/+|\/+$/g, ""); if (!/^[a-z0-9-]+$/.test(slug)) return;
+  const name = b.dataset.name || "this game";
+  zShare({ title: name + " | Games by Zaib", text: "Come play " + name + " with me! It's free on Games by Zaib.", url: "https://zaibgames.com/" + slug + "/" }, "game"); });
 document.getElementById("yr").textContent = new Date().getFullYear();
 
 /* twinkling starfield */
