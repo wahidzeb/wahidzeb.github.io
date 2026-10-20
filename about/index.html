@@ -11,9 +11,10 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About | Games by Zaib</title>
-<meta name="description" content="Games by Zaib is a collection of free browser arcade games made by independent studio Games by Zaib.">
+<title>About Games by Zaib: Free Family-Friendly Games Made by Zaib</title>
+<meta name="description" content="Who makes Games by Zaib, how each game is designed and tested, why the games are safe for kids, and how the site stays free with no ads during play.">
 <meta name="author" content="Zaib">
+<meta name="google-adsense-account" content="ca-pub-1924890349431110">
 <meta name="theme-color" content="#0b0820">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://zaibgames.com/about/">
@@ -27,13 +28,13 @@
 <script src="/pwa.js" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Games by Zaib">
-<meta property="og:title" content="About | Games by Zaib">
-<meta property="og:description" content="Games by Zaib is a collection of free browser arcade games made by independent studio Games by Zaib.">
+<meta property="og:title" content="About Games by Zaib: Free Family-Friendly Games Made by Zaib">
+<meta property="og:description" content="Who makes Games by Zaib, how each game is designed and tested, why the games are safe for kids, and how the site stays free with no ads during play.">
 <meta property="og:url" content="https://zaibgames.com/about/">
 <meta property="og:image" content="https://zaibgames.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About | Games by Zaib">
-<meta name="twitter:description" content="Games by Zaib is a collection of free browser arcade games made by independent studio Games by Zaib.">
+<meta name="twitter:title" content="About Games by Zaib: Free Family-Friendly Games Made by Zaib">
+<meta name="twitter:description" content="Who makes Games by Zaib, how each game is designed and tested, why the games are safe for kids, and how the site stays free with no ads during play.">
 <meta name="twitter:image" content="https://zaibgames.com/img/og.jpg">
 <style>@font-face{font-family:"Zaib Display";src:url(/fonts/lilita-subset.woff) format("woff");font-display:swap}
 :root{--bg:#0b0820;--line:rgba(255,255,255,.12);--txt:#f4f1ff;--mut:#b7b0d8;--a1:#a855f7;--a2:#22d3ee;--a3:#f472b6;
@@ -70,28 +71,70 @@ box-shadow:0 6px 0 #4c1d95,0 10px 24px rgba(147,51,234,.45),inset 0 2px 0 rgba(2
 .cards a:hover{border-color:rgba(168,85,247,.6)}.cards b{font-family:var(--display);font-weight:400;font-size:21px;display:block}
 footer{text-align:center;color:rgba(183,176,216,.75);font-size:13px;margin-top:26px}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-bottom:8px}footer a{color:#c4b5fd;text-decoration:none}
-footer a:hover{text-decoration:underline}footer b{color:#e9d5ff}</style>
+footer a:hover{text-decoration:underline}footer b{color:#e9d5ff}
+.top nav a[aria-current="page"]{background:linear-gradient(180deg,#c084fc,#9333ea);border-color:transparent;color:#fff}
+.crumbs{font-size:13px;color:var(--mut);margin-bottom:10px}.crumbs a{color:#c4b5fd;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.h1post{font-size:clamp(30px,6.5vw,46px);line-height:1.08}
+.playrow{margin:6px 0 10px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}
+.shots figure{margin:0}.shots img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#140f2e}
+.shots figcaption{font-size:13px;color:var(--mut);margin-top:6px;line-height:1.4}
+.gcards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));margin:12px 0}
+.gcard{border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.04);overflow:hidden;display:flex;flex-direction:column}
+.gcard img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#140f2e}
+.gcard>div{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.gcard b{font-family:var(--display);font-weight:400;font-size:21px;color:#fff}
+.btns{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.mini,.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:88px;padding:0 16px;border-radius:12px;text-decoration:none;font-weight:800;font-size:15px}
+.mini{color:#fff;background:linear-gradient(180deg,#c084fc,#9333ea);box-shadow:0 3px 0 #4c1d95}
+.ghost{color:#e9d5ff;border:1px solid rgba(168,85,247,.55);background:rgba(168,85,247,.12)}
+.mini:hover,.ghost:hover{color:#fff;filter:brightness(1.1)}
+.posts{display:grid;gap:16px;margin-top:14px}
+.post{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:14px;align-items:start;padding:12px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.post img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:12px;display:block}
+.post h2{font-size:22px;margin:4px 0}.post h2 a{color:#fff;text-decoration:none}.post p{margin:4px 0}
+.more{font-weight:700;text-decoration:none;display:inline-block;padding:10px 0}
+@media (max-width:520px){.post{grid-template-columns:1fr}}
+footer p{margin:4px 0;color:rgba(183,176,216,.85)}
+footer nav a{display:inline-block;padding:8px 2px}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "About Games by Zaib", "url": "https://zaibgames.com/about/", "mainEntity": {"@type": "Organization", "name": "Games by Zaib", "url": "https://zaibgames.com/", "logo": "https://zaibgames.com/img/icon-512.png", "founder": {"@type": "Person", "name": "Zaib"}}}</script>
 </head>
 <body>
 <div class="wrap">
-<header class="top"><a class="logo" href="/">Games by Zaib</a><nav aria-label="Main"><a href="/">Games</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a></nav></header>
+<header class="top"><a class="logo" href="/">Games by Zaib</a><nav aria-label="Main"><a href="/">Games</a><a href="/guides/">Guides</a><a href="/about/" aria-current="page">About</a></nav></header>
 <main class="panel">
 <h1>About Games by Zaib</h1>
-<p class="lead">Games by Zaib is a small independent collection of free arcade games that you can play instantly in your web browser, made with phones in mind.</p>
-<h2>About the studio</h2>
-<p>Games by Zaib is an independent studio making free, colourful browser games. The focus is on quick, fun games that are easy to pick up on a phone, with enough depth (levels, upgrades and unlocks) to keep you coming back.</p>
-<h2>How the games work</h2>
-<p>Every game plays right in your browser. There is nothing to download or install and no account to create. The games work on phones, tablets and computers, with touch, keyboard and mouse controls. Music and sound effects are generated in the browser, and your progress is stored locally on your device.</p>
-<p>The characters, art, music and code in these games are original work. Teams, clubs and rivals that appear in the sports games are fictional.</p>
-<h2>The games</h2>
-<ul><li><a href="/games/boss-town/">Boss Town Tycoon</a>: An idle business tycoon game: grow a lemonade stand into an empire of hotels, studios, airlines and space rockets.</li><li><a href="/games/kedim-therapist/">Kedim Therapist</a>: A cozy, funny therapy office run by a cat: help 12 silly animal patients feel better.</li><li><a href="/games/meowstronauts/">Meowstronauts</a>: Two space cats fly their rockets across the galaxy. Play solo or 2-player co-op.</li><li><a href="/games/hop-heights/">Hop Heights</a>: A bright 3D obby parkour adventure: 60 stages across 6 themed worlds.</li><li><a href="/games/bolt-brigade/">Bolt Brigade</a>: A family-friendly cover shooter: pop out to blast wind-up toy robots, duck to reload. 35 missions, 5 bosses.</li><li><a href="/games/betta-bestie/">Betta Bestie</a>: Feed, play and watch TV with your own pet betta fish.</li><li><a href="/games/30-floors-up/">30 Floors Up</a>: A kid-friendly day-by-day zombie survival strategy game: ration, barricade and outsmart the goofy Shamblers.</li><li><a href="/games/rail-rush/">Rail Rush</a>: A kid-friendly train puzzle game: flip the track switches and get every train to the right station.</li><li><a href="/games/tank-rumble/">Tank Rumble</a>: A kid-friendly toy tank battle game: just drive, your tank fires by itself.</li><li><a href="/games/corner-office/">Corner Office</a>: An idle office game: tap, hire funny coworkers and get promoted from Intern all the way to CEO.</li><li><a href="/games/dream-room/">Dream Room</a>: An interior design makeover game: design dream rooms for happy clients.</li><li><a href="/games/baby-kedim/">Baby Kedim</a>: A cozy virtual pet game: raise baby Kedim the black cat and watch him grow up.</li><li><a href="/games/skyfire-squadron/">Skyfire Squadron</a>: A cartoony airplane shooter: auto-fire at enemy planes and bomb ships, subs and island guns across 32 missions.</li><li><a href="/games/silly-sprout-garden/">Silly Sprout Garden</a>: Plant magic seeds and grow 34 silly creature-plants in a cozy garden game for kids.</li><li><a href="/games/beat-buddies/">Beat Buddies</a>: Drag 25 cute singing buddies onto the stage and make your own song.</li><li><a href="/games/critter-keep-rescue/">Critter Keep Rescue</a>: Sneak, rescue and collect 30 cute critters across 36 levels.</li><li><a href="/games/sunny-acres/">Sunny Acres</a>: A cozy farm game: plant and harvest crops, care for cute animals, bake treats and fill truck orders.</li><li><a href="/games/pirate-isles/">Pirate Isles</a>: A cartoon pirate sailing adventure: trade cargo between ports, dig up treasure, beat pirate bosses and upgrade your ship.</li><li><a href="/games/number-dash/">Number Dash</a>: A fun math runner: steer through + − × ÷ gates, answer quick sums and grow your number to beat the Number Monster.</li><li><a href="/games/zaib-city/">Zaib City</a>: A family-friendly 3D open-world city adventure: borrow cars, help the city with jobs, race, stunt and explore.</li><li><a href="/games/moto-mayhem/">Moto Mayhem</a>: A motorbike combat racer: ride fast, hit hard, finish first.</li><li><a href="/games/gobble-hole/">Gobble Hole</a>: A 3D city eater: drag a black hole around and swallow everything smaller than you, up to whole skyscrapers.</li><li><a href="/games/juicy-merge/">Juicy Merge</a>: A juicy fruit merge physics puzzle: drop, merge and chain fruits all the way up to the Watermelon.</li><li><a href="/games/horde-breaker/">Horde Breaker</a>: A top-down zombie survival shooter.</li><li><a href="/games/bus-bonanza/">Bus Bonanza</a>: Untangle a packed parking lot and get every passenger onto the vehicle that matches their colour.</li><li><a href="/games/goal-frenzy/">Goal Frenzy</a>: Fast, glossy arcade football (soccer).</li><li><a href="/games/fin-frenzy/">Fin Frenzy</a>: Be the shark: eat fish, grow bigger and battle ocean bosses.</li><li><a href="/games/fortress-frontline/">Fortress Frontline</a>: A fantasy tower defense game: build, upgrade and hold the line against goblins, flyers and bosses.</li><li><a href="/games/neon-dash/">Neon Dash</a>: One tap, 200 neon levels: jump the spikes and dash to the finish gate.</li><li><a href="/games/block-glide/">Block Glide</a>: Slide soft clay blocks through matching color gates and clear the board.</li><li><a href="/games/kedim-snack-swing/">Kedim&#x27;s Snack Swing</a>: A rope-cutting physics puzzle: cut the ropes and swing the fish treat into Kedim the cat&#x27;s mouth.</li><li><a href="/games/chai-tycoon/">Chai Tycoon</a>: Grow a tiny roadside chai stall into a chai empire of dhabas, cafés and a delivery fleet.</li><li><a href="/games/kedimz-adventure/">Kedimz Adventure</a>: A side-scrolling platformer starring Kedimz the cat.</li><li><a href="/games/sky-glide/">Sky Glide</a>: A hand-drawn paper plane flying game.</li><li><a href="/games/shuttle-smash/">Shuttle Smash</a>: 3D badminton with swipe-to-hit controls.</li><li><a href="/games/noodle-clash/">Noodle Clash</a>: A snake battle arena: eat glowing orbs, boost, and make clever AI snakes crash into you.</li><li><a href="/games/horizon-pilot/">Horizon Pilot</a>: A 3D flight game: fly 7 planes through 25 missions over an island world.</li><li><a href="/games/haulway-heroes/">Haulway Heroes</a>: A 3D trucking career: haul tricky cargo across highways, hairpins and storms, then back into the dock.</li></ul>
-<p>New games are added regularly. Check the <a href="/">home page</a> for the latest.</p>
+<p class="lead">Games by Zaib is a home for free, colourful games that you can play straight away on a phone, tablet or computer. There is nothing to install, no account to make and nothing to buy.</p>
+<h2>What you will find here</h2>
+<p>The site has 38 games right now, and they cover a lot of ground. Some are quick: a one-tap runner, a fruit-merging puzzle or a five-minute football match. Others are longer projects that you return to over days, like building a town from a single lemonade stand, raising a baby cat, running a farm or exploring a 3D city with a 22-mission story. Every game saves your progress on your device, so you can close it and carry on later.</p>
+<p>Alongside the games there are <a href="/guides/">guides</a> for each one. The guides explain the controls, the worlds and levels, and the tricks that help when you get stuck.</p>
+<h2>Who the games are for</h2>
+<p>Most of the games are made for everyone: kids, parents, grandparents and anyone who wants a short break. A few, such as Silly Sprout Garden, Beat Buddies, Betta Bestie and Number Dash, are built especially for younger players, with big buttons and little or no reading needed. The action games keep things cartoon-style: robots pop into bolts and stars, pirates wave a white flag and sail away, and the zombies in Horde Breaker and 30 Floors Up are goofy rather than scary.</p>
+<h2 id="made-by-zaib">Made by Zaib</h2>
+<p>Every game on this site is designed, built and hand-tested by Zaib. That includes the ideas, the levels, the characters, the art, the music and the writing. Zaib plays each game on phone, tablet and computer screens, in portrait and landscape, from small phones up to wide monitors, and keeps playing it after launch to fix problems and add improvements. The guides and posts on this site are written by Zaib too, from playing the games.</p>
+<p>Characters such as Kedim the ginger cat (star of Kedim Therapist, Kedim's Snack Swing and Kedimz Adventure) and Baby Kedim the black kitten are original. Teams, clubs, rivals and towns in the games are made up.</p>
+<h2>How a game is made and tested</h2>
+<p>Each game starts with a simple idea that should be fun within the first minute, such as "tap a car to drive it out of a packed car park" or "drag a hungry black hole around a city". From there it grows in small steps: first the core action, then levels or upgrades, then sound, music and polish.</p>
+<p>Before a game goes live, and again after every update, it is checked for things like:</p>
+<ul><li>buttons that are big enough for small fingers and never hidden behind other things on screen</li>
+<li>text that fits on small phones, large tablets and wide computer screens, in both portrait and landscape</li>
+<li>progress that saves properly and survives closing and reopening the game</li>
+<li>a fair difficulty curve, with every level possible to finish</li>
+<li>no crashes or frozen screens during long play sessions</li></ul>
+<p>Games are updated often. Recent examples include Boss Town Tycoon getting daily gifts, town missions and clearer number displays, Rail Rush growing to 40 levels with a Bonus Lines world, and many games getting a Share button placed so it never covers the action. </p>
+<h2>Safe for kids</h2>
+<ul><li>No chat, no friend lists and no way to talk to strangers.</li>
+<li>No accounts, so children never type in a name, email or password.</li>
+<li>No real-money purchases. Coins and upgrades are earned only by playing.</li>
+<li>No gore and no bad language. Conflict is cartoon-style and silly.</li>
+<li><strong>No ads during play.</strong> If ads appear on this site, they appear only on pages such as the home page, guides and news, never inside or over a game.</li></ul>
+<p>Grown-ups can read the <a href="/privacy/">Privacy Policy</a> to see exactly what is and is not collected.</p>
 <h2>Free to play</h2>
-<p>All games are free. To help cover the cost of making new games, this site may show advertising in the future, as described in the <a href="/privacy/">Privacy Policy</a>.</p>
+<p>All the games are free. To help pay for making new games and keeping the site running, the site may show ads from Google on its pages, as explained in the <a href="/privacy/">Privacy Policy</a>. The games themselves stay ad-free.</p>
 <h2>Get in touch</h2>
-<p>Found a bug, have an idea, or want to say hi? Visit the <a href="/contact/">contact page</a> or email <a href="mailto:wahid.zeb@gmail.com">wahid.zeb@gmail.com</a>.</p>
+<p>Found a bug, have an idea for a level, or want to tell Zaib which game is your favourite? Please visit the <a href="/contact/">contact page</a>.</p>
 </main>
-<footer><nav aria-label="Site"><a href="/">Games</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></nav>Made with ♥ by <b>Zaib</b> · © 2026 Games by Zaib</footer>
+<footer><nav aria-label="Site"><a href="/">Games</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></nav><p>Free games made by <b>Zaib</b> for players of all ages. No downloads, no sign-up, no ads during play.</p><p>© 2026 Games by Zaib</p></footer>
 </div>
 </body>
 </html>

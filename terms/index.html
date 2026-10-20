@@ -12,8 +12,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Terms of Use | Games by Zaib</title>
-<meta name="description" content="Terms of Use for Games by Zaib, free browser games by Zaib.">
+<meta name="description" content="The rules for using Games by Zaib: free personal play, ownership of the games, in-game coins, advertising and health notes.">
 <meta name="author" content="Zaib">
+<meta name="google-adsense-account" content="ca-pub-1924890349431110">
 <meta name="theme-color" content="#0b0820">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://zaibgames.com/terms/">
@@ -28,12 +29,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Games by Zaib">
 <meta property="og:title" content="Terms of Use | Games by Zaib">
-<meta property="og:description" content="Terms of Use for Games by Zaib, free browser games by Zaib.">
+<meta property="og:description" content="The rules for using Games by Zaib: free personal play, ownership of the games, in-game coins, advertising and health notes.">
 <meta property="og:url" content="https://zaibgames.com/terms/">
 <meta property="og:image" content="https://zaibgames.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Terms of Use | Games by Zaib">
-<meta name="twitter:description" content="Terms of Use for Games by Zaib, free browser games by Zaib.">
+<meta name="twitter:description" content="The rules for using Games by Zaib: free personal play, ownership of the games, in-game coins, advertising and health notes.">
 <meta name="twitter:image" content="https://zaibgames.com/img/og.jpg">
 <style>@font-face{font-family:"Zaib Display";src:url(/fonts/lilita-subset.woff) format("woff");font-display:swap}
 :root{--bg:#0b0820;--line:rgba(255,255,255,.12);--txt:#f4f1ff;--mut:#b7b0d8;--a1:#a855f7;--a2:#22d3ee;--a3:#f472b6;
@@ -70,41 +71,67 @@ box-shadow:0 6px 0 #4c1d95,0 10px 24px rgba(147,51,234,.45),inset 0 2px 0 rgba(2
 .cards a:hover{border-color:rgba(168,85,247,.6)}.cards b{font-family:var(--display);font-weight:400;font-size:21px;display:block}
 footer{text-align:center;color:rgba(183,176,216,.75);font-size:13px;margin-top:26px}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-bottom:8px}footer a{color:#c4b5fd;text-decoration:none}
-footer a:hover{text-decoration:underline}footer b{color:#e9d5ff}</style>
+footer a:hover{text-decoration:underline}footer b{color:#e9d5ff}
+.top nav a[aria-current="page"]{background:linear-gradient(180deg,#c084fc,#9333ea);border-color:transparent;color:#fff}
+.crumbs{font-size:13px;color:var(--mut);margin-bottom:10px}.crumbs a{color:#c4b5fd;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.h1post{font-size:clamp(30px,6.5vw,46px);line-height:1.08}
+.playrow{margin:6px 0 10px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}
+.shots figure{margin:0}.shots img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#140f2e}
+.shots figcaption{font-size:13px;color:var(--mut);margin-top:6px;line-height:1.4}
+.gcards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));margin:12px 0}
+.gcard{border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.04);overflow:hidden;display:flex;flex-direction:column}
+.gcard img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#140f2e}
+.gcard>div{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.gcard b{font-family:var(--display);font-weight:400;font-size:21px;color:#fff}
+.btns{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.mini,.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:88px;padding:0 16px;border-radius:12px;text-decoration:none;font-weight:800;font-size:15px}
+.mini{color:#fff;background:linear-gradient(180deg,#c084fc,#9333ea);box-shadow:0 3px 0 #4c1d95}
+.ghost{color:#e9d5ff;border:1px solid rgba(168,85,247,.55);background:rgba(168,85,247,.12)}
+.mini:hover,.ghost:hover{color:#fff;filter:brightness(1.1)}
+.posts{display:grid;gap:16px;margin-top:14px}
+.post{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:14px;align-items:start;padding:12px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.post img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:12px;display:block}
+.post h2{font-size:22px;margin:4px 0}.post h2 a{color:#fff;text-decoration:none}.post p{margin:4px 0}
+.more{font-weight:700;text-decoration:none;display:inline-block;padding:10px 0}
+@media (max-width:520px){.post{grid-template-columns:1fr}}
+footer p{margin:4px 0;color:rgba(183,176,216,.85)}
+footer nav a{display:inline-block;padding:8px 2px}</style>
+
 </head>
 <body>
 <div class="wrap">
-<header class="top"><a class="logo" href="/">Games by Zaib</a><nav aria-label="Main"><a href="/">Games</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a></nav></header>
+<header class="top"><a class="logo" href="/">Games by Zaib</a><nav aria-label="Main"><a href="/">Games</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></header>
 <main class="panel">
 <h1>Terms of Use</h1>
-<p class="small">Last updated: 11 October 2026</p>
+<p class="small">Last updated: 20 October 2026</p>
 <p>These terms apply to your use of Games by Zaib at zaibgames.com ("the site"). By using the site you agree to them. If you do not agree, please do not use the site.</p>
 <h2>Using the games</h2>
-<p>The games are free to play for personal, non-commercial entertainment. You agree not to:</p>
-<ul><li>copy, modify, redistribute, resell or re-host the games or their code, art or music without written permission</li>
+<p>The games are free to play for personal, non-commercial fun. You agree not to:</p>
+<ul><li>copy, change, share, sell or re-host the games or their art, music or text without written permission</li>
 <li>embed the games on other websites in a way that presents them as your own or removes credits</li>
-<li>attempt to disrupt, overload or attack the site, or interfere with any advertising shown on it, including by generating invalid ad clicks or impressions</li>
+<li>try to disrupt, overload or attack the site, or interfere with any advertising shown on it, including by creating fake ad clicks or views</li>
 <li>use the site in any way that breaks the law</li></ul>
-<h2>Intellectual property</h2>
-<p>The games, including their code, characters, artwork, music, sound effects and text, are the work of Games by Zaib and are protected by copyright. All rights are reserved except where stated. Any teams, clubs, players or rivals in the games are fictional. Some text fonts are used under their open licences.</p>
+<h2>Ownership</h2>
+<p>The games, including their characters, artwork, music, sound effects and text, are the work of Games by Zaib and are protected by copyright. All rights are reserved except where stated. Any teams, clubs, players, towns or rivals in the games are made up. Some fonts are used under their open licences.</p>
 <h2>In-game items</h2>
-<p>Coins, upgrades and other in-game items are earned through play only. They have no real-world monetary value, cannot be bought, sold or exchanged, and may be lost if your browser data is cleared.</p>
+<p>Coins, upgrades and other in-game items are earned through play only. They have no real-world value, cannot be bought, sold or exchanged, and may be lost if your browser data is cleared.</p>
 <h2>Advertising</h2>
-<p>The site may show ads from third parties such as Google. We are not responsible for the content of ads or for third-party websites they link to. See our <a href="/privacy/">Privacy Policy</a> for how advertising cookies are used.</p>
+<p>The site may show ads from third parties such as Google on its pages, but not inside games while you play. We are not responsible for the content of ads or for other websites they link to. See our <a href="/privacy/">Privacy Policy</a> for how advertising cookies are used.</p>
 <h2>No warranty</h2>
-<p>The site and games are provided "as is" and "as available", without warranties of any kind. We do not guarantee that they will always be available, error-free or compatible with your device, or that saved progress will be kept.</p>
+<p>The site and games are provided "as is" and "as available", without warranties of any kind. We do not promise that they will always be available, error-free or work on every device, or that saved progress will be kept.</p>
 <h2>Limitation of liability</h2>
-<p>To the fullest extent permitted by law, Games by Zaib is not liable for any indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the site or games.</p>
+<p>To the fullest extent allowed by law, Games by Zaib is not liable for any indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the site or games.</p>
 <h2>Health note</h2>
-<p>Take regular breaks while playing. Some games contain flashing effects and screen shake; most games let you reduce effects in their settings.</p>
+<p>Take regular breaks while playing. Some games contain flashing effects and screen shake; many games let you reduce effects in their settings.</p>
 <h2>Changes</h2>
-<p>We may update these terms or change, add or remove games at any time. Continued use of the site after a change means you accept the updated terms.</p>
+<p>We may update these terms or change, add or remove games at any time. Using the site after a change means you accept the updated terms.</p>
 <h2>Governing law</h2>
 <p>These terms are governed by the laws of Malaysia.</p>
 <h2>Contact</h2>
-<p>Email <a href="mailto:wahid.zeb@gmail.com">wahid.zeb@gmail.com</a>.</p>
+<p>Please visit the <a href="/contact/">contact page</a>.</p>
 </main>
-<footer><nav aria-label="Site"><a href="/">Games</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></nav>Made with ♥ by <b>Zaib</b> · © 2026 Games by Zaib</footer>
+<footer><nav aria-label="Site"><a href="/">Games</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></nav><p>Free games made by <b>Zaib</b> for players of all ages. No downloads, no sign-up, no ads during play.</p><p>© 2026 Games by Zaib</p></footer>
 </div>
 </body>
 </html>

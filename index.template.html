@@ -11,7 +11,7 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Games by Zaib — Free Arcade Games in Your Browser</title>
+<title>Games by Zaib: 38 Free Games for Phone and Computer, No Download</title>
 <meta name="description" content="Play 38 free games, no download needed: cozy pets, puzzles, racing and arcade. Play in your browser on phones, tablets and computers.">
 <meta name="author" content="Zaib">
 <meta name="google-adsense-account" content="ca-pub-1924890349431110">
@@ -42,6 +42,7 @@
 <meta name="twitter:description" content="Play 38 free games, no download needed: cozy pets, puzzles, racing and arcade. Play in your browser on phones, tablets and computers.">
 <meta name="twitter:image" content="https://zaibgames.com/img/og.jpg">
 <meta name="twitter:image:alt" content="Games by Zaib — free games you can play in your browser">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://zaibgames.com/#org","name":"Games by Zaib","url":"https://zaibgames.com/","logo":"https://zaibgames.com/img/icon-512.png","founder":{"@type":"Person","name":"Zaib"}},{"@type":"WebSite","@id":"https://zaibgames.com/#site","name":"Games by Zaib","url":"https://zaibgames.com/","publisher":{"@id":"https://zaibgames.com/#org"},"inLanguage":"en"}]}</script>
 <style>
 @font-face{font-family:"Zaib Display";src:url(data:font/woff;base64,__FONT__) format("woff");font-display:swap}
 :root{
@@ -132,6 +133,24 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,13vw,104px);l
 @keyframes bob{50%{transform:translateY(-8px) rotate(-6deg)}}
 .soon .play{background:rgba(255,255,255,.07);color:var(--mut);box-shadow:inset 0 0 0 2px rgba(255,255,255,.14);text-shadow:none;cursor:default;font-size:20px}
 
+.topnav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0 auto 4px}
+.topnav a{text-decoration:none;color:#d9ccff;font-size:14px;font-weight:700;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.05);min-height:44px;display:inline-flex;align-items:center}
+.topnav a:hover{border-color:rgba(168,85,247,.6);color:#fff}
+.topnav a[aria-current="page"]{background:linear-gradient(180deg,#c084fc,#9333ea);border-color:transparent;color:#fff}
+.intro{color:#ddd8f5;font-size:16px;line-height:1.6;max-width:62ch;margin:14px auto 0}
+.intro a{color:#c4b5fd}
+.prow{display:flex;gap:10px;margin-top:10px}.prow .play{flex:1;margin-top:0}
+.glink{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 18px;border-radius:16px;text-decoration:none;font-weight:800;font-size:16px;color:#e9d5ff;border:1px solid rgba(168,85,247,.55);background:rgba(168,85,247,.14)}
+.glink:hover{color:#fff;border-color:rgba(168,85,247,.9)}
+.glink:focus-visible{outline:3px solid var(--a2);outline-offset:3px}
+.cats{margin:34px auto 0;max-width:900px}
+.cats>h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,6vw,40px);text-align:center;margin-bottom:6px}
+.cat{border-radius:18px;padding:16px 18px;margin-top:14px;background:rgba(255,255,255,.045);border:1px solid var(--line)}
+.cat h3{font-family:var(--display);font-weight:400;font-size:24px}
+.cat p{color:#d6d0f0;font-size:15px;margin:6px 0;line-height:1.55}
+.cat ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:15px}
+.cat li a{color:#c4b5fd;font-weight:700;text-decoration:none;display:inline-block;padding:6px 0}.cat li a:hover{text-decoration:underline}
+.cat li span{color:var(--mut);font-size:13px}
 .ad-slot{margin:26px auto 0;max-width:728px;min-height:90px;border-radius:14px;border:1px dashed rgba(255,255,255,.14);
   background:rgba(255,255,255,.025);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.22);
   font-size:11px;letter-spacing:.2em;text-transform:uppercase}
@@ -151,7 +170,7 @@ footer b{color:#e9d5ff}
 .ginfo h3{font-family:var(--display);font-weight:400;font-size:24px;letter-spacing:.01em}
 .ginfo p{color:#d6d0f0;font-size:15px;margin:6px 0}
 .ginfo .lnk{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;font-weight:700}
-.ginfo .lnk a{color:#c4b5fd;text-decoration:none}.ginfo .lnk a:hover{color:#67e8f9;text-decoration:underline}
+.ginfo .lnk a{color:#c4b5fd;text-decoration:none;display:inline-block;padding:10px 0}.ginfo .lnk a:hover{color:#67e8f9;text-decoration:underline}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-bottom:8px}
 footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decoration:underline}
 /* ---------- share ---------- */
@@ -192,10 +211,12 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
 </div>
 
 <main class="wrap">
+  <nav class="topnav" aria-label="Main"><!--NAV--><!--/NAV--></nav>
   <header>
     <span class="badge"><i></i>Free · No downloads</span>
     <h1>Games by Zaib</h1>
     <p class="tag">Arcade games made for your phone. Tap a game and play instantly.</p>
+    <p class="intro">Games by Zaib is a collection of 38 free games made by Zaib for players of every age. Raise a baby cat, build a town from a lemonade stand, merge fruit, race motorbikes or explore a friendly 3D city. Everything plays on your phone, tablet or computer with nothing to install and no sign-up, your progress is saved on your device, and there are no ads during play. Every game has a <a href="/guides/">guide</a> with controls and tips.</p>
     <button type="button" class="shr" id="shareSite" aria-label="Share Games by Zaib"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7L8 9.8C7.5 9.3 6.8 9 6 9c-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.2-2.9-2.8-2.9z"/></svg>SHARE</button>
   </header>
 
@@ -205,6 +226,8 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
   <h2 class="sec" id="all-h">All games</h2>
   <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
   <section class="games" id="games" aria-labelledby="all-h"></section>
+
+  <section class="cats" aria-labelledby="cats-h"><!--CATS--><!--/CATS--></section>
 
   <!-- Ad banner slot: intentionally empty and HIDDEN via CSS (see "AD SLOT: DISABLED" rule). Drop an ad unit inside #ad-slot later,
        add class "ads-on" to <body>, and keep it at least ~150px away from Play buttons. -->
@@ -217,233 +240,233 @@ footer nav a{color:#c4b5fd;text-decoration:none}footer nav a:hover{text-decorati
     <h3>Betta Bestie</h3>
     <p>Betta Bestie is a cosy virtual pet game for kids on phones and desktop browsers. Name your own betta fish, pick her colour and look after her in a round glass bowl in a cosy room with a blue sofa and a TV she loves to watch.</p>
     <p><strong>How to play:</strong> Tap Feed and drop pellets for her to chase (but don't overfeed!), rub algae off the glass, change her water, then play Follow the Sparkles, Bubble Pop, Hoop Jump, Mirror Flare and Trick Training to earn coins for decor, plants, TV channels and sofa cushions.</p>
-    <p class="lnk"><a href="/betta-bestie/">▶ Play Betta Bestie</a><a href="/games/betta-bestie/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/betta-bestie/">▶ Play Betta Bestie</a><a href="/games/betta-bestie/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="skyfire-squadron-info">
     <h3>Skyfire Squadron</h3>
     <p>Skyfire Squadron is a cartoony top-down airplane shooter for phones and desktop browsers. Fly over sunny seas, palm isles, frosty fjords and a thunder night, shooting down enemy planes and bombing battleships, carriers, submarines and island guns.</p>
     <p><strong>How to play:</strong> Drag to fly your plane. Your guns fire automatically, so focus on dodging bullets and lining up bombs on ships and ground targets. Earn coins to upgrade, unlock 5 planes, recruit wingmen and beat a giant multi-part boss at the end of each area.</p>
-    <p class="lnk"><a href="/skyfire-squadron/">▶ Play Skyfire Squadron</a><a href="/games/skyfire-squadron/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/skyfire-squadron/">▶ Play Skyfire Squadron</a><a href="/games/skyfire-squadron/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="bolt-brigade-info">
     <h3>Bolt Brigade</h3>
     <p>Bolt Brigade is a family-friendly shoot-and-hide cover shooter for phones and desktop browsers. Wind-up toy robots have taken over, and you clear them out from behind crates and walls across 5 colourful stages.</p>
     <p><strong>How to play:</strong> Hold to pop out of cover and auto-fire at the robots, and let go to duck back down and reload. Watch for robots about to shoot, use your EMP when things get busy, and spend coins on blaster upgrades to beat all 5 bosses.</p>
-    <p class="lnk"><a href="/bolt-brigade/">▶ Play Bolt Brigade</a><a href="/games/bolt-brigade/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/bolt-brigade/">▶ Play Bolt Brigade</a><a href="/games/bolt-brigade/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="silly-sprout-garden-info">
     <h3>Silly Sprout Garden</h3>
     <p>Silly Sprout Garden is a cozy garden game for kids on phones and desktop browsers. Plant magic seeds that grow into silly creature-plants like the Cactus Penguin and Banana Shark, then harvest and sell them to grow your garden.</p>
     <p><strong>How to play:</strong> Tap an empty plot to plant a seed, water it, and harvest when it is ready. Sell harvests for coins, buy new seeds and watch the weather: special weather can bring golden, rainbow and glowing mutations for your collection book.</p>
-    <p class="lnk"><a href="/silly-sprout-garden/">▶ Play Silly Sprout Garden</a><a href="/games/silly-sprout-garden/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/silly-sprout-garden/">▶ Play Silly Sprout Garden</a><a href="/games/silly-sprout-garden/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="beat-buddies-info">
     <h3>Beat Buddies</h3>
     <p>Beat Buddies is a music-making game for kids on phones and desktop browsers. Drag cute singing, drumming and beatboxing buddies onto the stage, and each one adds its own loop to your song.</p>
     <p><strong>How to play:</strong> Drag a buddy from the bottom tray onto the stage to add its sound, and drag it off to remove it. Mix beats, bass, melodies, chords and voices, find secret combos, then record your mix and share it with a link.</p>
-    <p class="lnk"><a href="/beat-buddies/">▶ Play Beat Buddies</a><a href="/games/beat-buddies/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/beat-buddies/">▶ Play Beat Buddies</a><a href="/games/beat-buddies/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="critter-keep-rescue-info">
     <h3>Critter Keep Rescue</h3>
     <p>Critter Keep Rescue is a cozy stealth-rescue and collecting game for kids on phones and desktop browsers. Run a keep of cute critters that earn coins, then sneak past cheeky raccoon bandits to bring borrowed critters home.</p>
     <p><strong>How to play:</strong> In rescue levels, move your keeper while staying out of the bandits' sight to reach the critters and get them home. In your keep, hatch eggs, merge critters into rarer ones, and build fences, a bell and a guard puppy to stop raids.</p>
-    <p class="lnk"><a href="/skyfire-squadron/">Skyfire Squadron</a> · <a href="/bolt-brigade/">Bolt Brigade</a> · <a href="/critter-keep-rescue/">▶ Play Critter Keep Rescue</a><a href="/games/critter-keep-rescue/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/critter-keep-rescue/">▶ Play Critter Keep Rescue</a><a href="/games/critter-keep-rescue/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="meowstronauts-info">
     <h3>Meowstronauts</h3>
     <p>Meowstronauts is an arcade space flyer and shooter. Sunny the yellow cat and Shadow the black cat ride rockets across six planets to get home, fighting space mice, robots and a boss at every planet. Play solo or in 2-player co-op on one phone.</p>
     <p><strong>How to play:</strong> Drag anywhere to fly; shooting is automatic. Tap the big button for your cat's power, collect fish stars to charge a Mega Meow shockwave, and tap SWAP to switch cats.</p>
-    <p class="lnk"><a href="/meowstronauts/">▶ Play Meowstronauts</a><a href="/games/meowstronauts/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/meowstronauts/">▶ Play Meowstronauts</a><a href="/games/meowstronauts/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="kedim-therapist-info">
     <h3>Kedim Therapist</h3>
     <p>Kedim Therapist is a cozy comedy game about a ginger cat therapist with a Ph.D. in Napping. Silly animal patients come in with funny problems: a dog afraid of the mailman, a ghost afraid of the dark, a dragon with a temper. Help all 12 patients graduate across 36 story sessions.</p>
     <p><strong>How to play:</strong> Tap to read the dialogue, then pick a Kind, Funny or Wise reply to raise the patient's mood. Play 7 therapy mini-games, earn coins and 5-star reviews, decorate the office, dress up Kedim, and keep the endless walk-in clinic running.</p>
-    <p class="lnk"><a href="/kedim-therapist/">▶ Play Kedim Therapist</a><a href="/games/kedim-therapist/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/kedim-therapist/">▶ Play Kedim Therapist</a><a href="/games/kedim-therapist/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="baby-kedim-info">
     <h3>Baby Kedim</h3>
     <p>Baby Kedim is a cozy virtual pet game about a cute baby black cat. Feed him, give him bubbly baths, tuck him in for naps and pet him for purrs, and he grows from Kitten to Kid, Teen and Adult.</p>
     <p><strong>How to play:</strong> Visit the Kitchen, Bathroom, Bedroom and Playroom to keep his food, bath, sleep and fun rings full. Play 6 mini-games for coins, dress him up and decorate his home. The mini-game he plays most decides his grown-up form.</p>
-    <p class="lnk"><a href="/baby-kedim/">▶ Play Baby Kedim</a><a href="/games/baby-kedim/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/baby-kedim/">▶ Play Baby Kedim</a><a href="/games/baby-kedim/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="sunny-acres-info">
     <h3>Sunny Acres</h3>
     <p>Sunny Acres is a cozy farm game for phones and desktop browsers. Grow wheat, corn, carrots, tomatoes, strawberries and pumpkins on your own fields, look after cute chickens, cows and sheep, and turn your harvest into bread, cakes, cheese, salads, berry juice, pumpkin pies and sweaters in the Bakery, Dairy, Kitchen and Loom.</p>
     <p><strong>How to play:</strong> Tap an empty field and pick a seed, then swipe across more fields to plant them all. Swipe over bouncing crops to harvest. Tap pens to feed the animals and collect eggs, milk and wool, tap buildings to make goodies, and fill truck orders for coins and XP. Level up to unlock new crops, animals and buildings, and buy more fields in the Shop. Your farm keeps growing while you are away.</p>
-    <p class="lnk"><a href="/sunny-acres/">▶ Play Sunny Acres</a><a href="/games/sunny-acres/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/sunny-acres/">▶ Play Sunny Acres</a><a href="/games/sunny-acres/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="pirate-isles-info">
     <h3>Pirate Isles</h3>
     <p>Pirate Isles is a cartoon pirate sailing adventure for phones and desktop browsers. Captain your own ship across a sunny sea of twelve islands and four harbour towns, carrying cargo between ports, collecting floating chests, digging up buried X-marks-the-spot treasure and chasing off cheeky pirate crews, who wave a white flag when they lose.</p>
     <p><strong>How to play:</strong> Drag anywhere to steer and your ship sails toward your finger. Your cannons fire automatically at pirates in range. Follow the yellow arrow to each mission, sail slowly into a port and tap Dock to pick missions, repair and upgrade your hull, sails, cannons and cargo hold, then save up for a Brigantine and a Galleon.</p>
-    <p class="lnk"><a href="/pirate-isles/">▶ Play Pirate Isles</a><a href="/games/pirate-isles/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/pirate-isles/">▶ Play Pirate Isles</a><a href="/games/pirate-isles/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="number-dash-info">
     <h3>Number Dash</h3>
     <p>Number Dash is a math runner game for kids and grown-ups on phones and desktop browsers. Your Number Buddy dashes down a colourful track through six worlds, from Sunny Meadow to Starry Space, and every gate changes your number: plus and times make it grow, minus and divide make it shrink. Quiz doors ask quick sums, and at the finish line a Number Monster is waiting.</p>
     <p><strong>How to play:</strong> Drag left or right to steer through the gate that gives you the bigger number, run through the correct answer on quiz doors, dodge grumpy minus clouds and grab coins. Be bigger than the Number Monster to win, and finish close to the best possible number for 3 stars. Choose Easy, Medium or Hard math in Settings.</p>
-    <p class="lnk"><a href="/number-dash/">▶ Play Number Dash</a><a href="/games/number-dash/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/number-dash/">▶ Play Number Dash</a><a href="/games/number-dash/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="zaib-city-info">
     <h3>Zaib City</h3>
     <p>Zaib City is a family-friendly 3D open-world city game for phones and desktop browsers. Explore a bright low-poly city with a downtown of towers, a leafy suburb, a beach and harbour, an industrial zone, a park, a highway loop and a stunt hill with ramps, all with a day/night cycle and changing weather. Borrow any car from friendly locals, drive 15 vehicles from a pizza scooter to the Zaib Hyper X, and help the city with taxi fares, deliveries, ambulance runs, fires, speed patrols, races, stunt jumps and a 22-mission story.</p>
     <p><strong>How to play:</strong> Walk with the left stick, tap ENTER next to any car (drivers happily stop, step out and wave), then steer with the arrows, hold GAS, DRIFT with the handbrake and boost with NITRO. Follow the pink GPS line to the ★ story missions and coloured job markers, earn cash and XP, buy cars and homes, upgrade at the garage and become the Hero of Zaib City. Nobody ever gets hurt: people just dodge and laugh!</p>
-    <p class="lnk"><a href="/zaib-city/">▶ Play Zaib City</a><a href="/games/zaib-city/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/zaib-city/">▶ Play Zaib City</a><a href="/games/zaib-city/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="moto-mayhem-info">
     <h3>Moto Mayhem</h3>
     <p>Moto Mayhem is a road-rash style motorbike racing game for phones and desktop browsers. Every race puts you on a winding highway against seven rival bikers, and the quickest way past them is often a well-timed punch or kick.</p>
     <p><strong>How to play:</strong> Throttle is automatic. Steer to stay on the road and dodge traffic and roadside objects. Ride alongside a rival and attack toward their side. Kicks reach further and hit harder but are slower than punches.</p>
-    <p class="lnk"><a href="/moto-mayhem/">▶ Play Moto Mayhem</a><a href="/games/moto-mayhem/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/moto-mayhem/">▶ Play Moto Mayhem</a><a href="/games/moto-mayhem/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="gobble-hole-info">
     <h3>Gobble Hole</h3>
     <p>Gobble Hole is a 3D city-eating arcade game for phones and desktop browsers. You control a black hole in a colourful low-poly world and swallow anything smaller than the hole: traffic cones, people, benches, cars, trees, buses and, eventually, whole skyscrapers. Play on four maps (a city, a beach, a farm and a space station) in Classic, Solo and Battle modes.</p>
     <p><strong>How to play:</strong> Drag anywhere (or use WASD / arrow keys) to move your hole. Objects smaller than the hole tip over and fall in, and every bite makes you bigger. In Classic, beat 7 rival holes in 2 minutes, where bigger holes eat smaller ones. In Solo, eat 100% of the map for three stars. In Battle, stay inside the shrinking zone and be the last hole standing.</p>
-    <p class="lnk"><a href="/gobble-hole/">▶ Play Gobble Hole</a><a href="/games/gobble-hole/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/gobble-hole/">▶ Play Gobble Hole</a><a href="/games/gobble-hole/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="juicy-merge-info">
     <h3>Juicy Merge</h3>
     <p>Juicy Merge is a fruit merge physics puzzle for phones and desktop browsers. Drop fruits into a glass jar, and two of the same fruit merge into the next size up, from a tiny Blueberry all the way to the Watermelon. It has satisfying rolling and stacking physics, juicy merge effects, combo chains, Classic, Timed and Daily Challenge modes, and themed jars and fruit skins to unlock.</p>
     <p><strong>How to play:</strong> Drag to aim and let go to drop the fruit. Match two of the same fruit to merge them, chain quick merges for combo multipliers, and check the Next box to plan ahead. Keep the pile below the red line: if a fruit stays above it for 3 seconds, the jar overflows. Shake, Pop and Upgrade power-ups help when the jar gets jammed.</p>
-    <p class="lnk"><a href="/juicy-merge/">▶ Play Juicy Merge</a><a href="/games/juicy-merge/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/juicy-merge/">▶ Play Juicy Merge</a><a href="/games/juicy-merge/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="horde-breaker-info">
     <h3>Horde Breaker</h3>
     <p>Horde Breaker is a twin-stick style zombie shooter built for touch screens. Auto-fire is on by default: you focus on moving and dodging while your gun locks onto the most dangerous zombie.</p>
     <p><strong>How to play:</strong> Move with the left joystick (or WASD). Your weapon aims and fires automatically. Keep moving. Brutes telegraph a charge, spitters fire acid, bloaters explode and crawlers lunge.</p>
-    <p class="lnk"><a href="/horde-breaker/">▶ Play Horde Breaker</a><a href="/games/horde-breaker/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/horde-breaker/">▶ Play Horde Breaker</a><a href="/games/horde-breaker/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="bus-bonanza-info">
     <h3>Bus Bonanza</h3>
     <p>Bus Bonanza is a colourful traffic-jam puzzle. Tap cars, vans and buses to drive them out of a packed lot along their arrows, park them, and board the passengers waiting in a long queue that match their colour. It has hundreds of levels, VIP, Arrange and Jumble power-ups, and beach, city, snow and night themes.</p>
     <p><strong>How to play:</strong> Tap a bus that has a clear road ahead (buses only drive forward). Fill buses with matching passengers so they depart and free their bay. If every bay is full and nobody can board, you lose. Boosters such as Extra Bay, Undo, Shuffle, Magnet and Helicopter help when you are stuck.</p>
-    <p class="lnk"><a href="/bus-bonanza/">▶ Play Bus Bonanza</a><a href="/games/bus-bonanza/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/bus-bonanza/">▶ Play Bus Bonanza</a><a href="/games/bus-bonanza/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="goal-frenzy-info">
     <h3>Goal Frenzy</h3>
     <p>Goal Frenzy is an arcade football game with a 3D-perspective stadium, curling shots and over-the-top power shots. Matches are short and fast, and they play well with a thumb on a phone or on a keyboard.</p>
     <p><strong>How to play:</strong> Move with the floating joystick on the left side of the screen. Tap SHOOT to shoot; hold it for more power and swipe across the button to curl the ball.</p>
-    <p class="lnk"><a href="/goal-frenzy/">▶ Play Goal Frenzy</a><a href="/games/goal-frenzy/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/goal-frenzy/">▶ Play Goal Frenzy</a><a href="/games/goal-frenzy/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="fin-frenzy-info">
     <h3>Fin Frenzy</h3>
     <p>Fin Frenzy is an underwater arcade game where you play a hungry shark. Start small, eat fish to grow, and dive through five ocean zones from a sunny coral reef to the glowing darkness of the abyss, with a boss at the end of each zone.</p>
     <p><strong>How to play:</strong> Drag anywhere to steer. Swim into smaller fish to eat them and keep your hunger bar full; avoid bigger predators until you have grown. Tap BOOST for speed and BITE for a strong bite, and chain meals into a Frenzy.</p>
-    <p class="lnk"><a href="/fin-frenzy/">▶ Play Fin Frenzy</a><a href="/games/fin-frenzy/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/fin-frenzy/">▶ Play Fin Frenzy</a><a href="/games/fin-frenzy/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="fortress-frontline-info">
     <h3>Fortress Frontline</h3>
     <p>Fortress Frontline is a fantasy tower defense game for phones and desktop browsers, in the style of Kingdom Rush. Defend your castle across 30 handcrafted levels in 4 worlds (Greenvale, Sandspire Dunes, Frostpeak Pass and Ashen Wastes), each ending in a boss fight. There is also an endless mode, a permanent star upgrade tree and an encyclopedia of every tower and enemy.</p>
     <p><strong>How to play:</strong> Tap a stone spot to build an Archer, Artillery, Mage or Frost tower, then tap the tower to upgrade it through 3 tiers and into 1 of 2 specialised branches. Call waves early for bonus coins, drop Meteor Strikes and send Reinforcements to block the path, and stop goblins, flyers, healers, splitters and bosses before they reach your gate. Finish with 18 or more lives for three stars.</p>
-    <p class="lnk"><a href="/fortress-frontline/">▶ Play Fortress Frontline</a><a href="/games/fortress-frontline/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/fortress-frontline/">▶ Play Fortress Frontline</a><a href="/games/fortress-frontline/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="neon-dash-info">
     <h3>Neon Dash</h3>
     <p>Neon Dash is a one-tap rhythm runner set in a glowing synthwave city. Your cube dashes forward on its own across 200 hand-checked levels that get faster and denser as you climb, each with its own track and color theme.</p>
     <p><strong>How to play:</strong> Tap (or press Space) to jump over pink spikes and purple blocks; hold to keep jumping as soon as you land. Grab coins in the air, reach the finish gate to unlock the next level, and spend coins on 44 neon skins.</p>
-    <p class="lnk"><a href="/neon-dash/">▶ Play Neon Dash</a><a href="/games/neon-dash/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/neon-dash/">▶ Play Neon Dash</a><a href="/games/neon-dash/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="block-glide-info">
     <h3>Block Glide</h3>
     <p>Block Glide is a cozy color block sliding puzzle. Drag chunky clay blocks around a crowded board and slide each one out through a gate of its own color. There are 160 levels in 8 chapters and a Daily Challenge. Along the way you meet ice, locks and keys, layered blocks, rotating blocks, shifting gates and bombs.</p>
     <p><strong>How to play:</strong> Drag a block to slide it. Blocks can't pass through each other, so clear a path first. A block leaves when it touches a gate of the same color and fits the gate's width. Clear the board before the timer or move counter runs out. Hammer, Freeze, Vacuum, Undo and Extra boosters help when you are stuck.</p>
-    <p class="lnk"><a href="/block-glide/">▶ Play Block Glide</a><a href="/games/block-glide/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/block-glide/">▶ Play Block Glide</a><a href="/games/block-glide/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="kedim-snack-swing-info">
     <h3>Kedim's Snack Swing</h3>
     <p>Kedim's Snack Swing is a rope-cutting physics puzzle for phones and desktop browsers. Kedim the cat is hungry, and his fish treat hangs from swinging ropes. There are 120 levels in 6 themed snack boxes (Kitchen, Garden, Toy, Space, Magic and Spooky), plus a daily level, hats and treat skins for Kedim, and 20 awards.</p>
     <p><strong>How to play:</strong> Swipe across a rope to cut it and let the treat swing and fall into Kedim's mouth. Collect the 3 stars on the way to unlock new boxes. Tap bubbles to pop them, tap air cushions to blow the treat, flip the gravity switch, bounce off pads, use portals, and cut ropes before the spiders crawl down. Stuck? A hint shows the full solution.</p>
-    <p class="lnk"><a href="/kedim-snack-swing/">▶ Play Kedim's Snack Swing</a><a href="/games/kedim-snack-swing/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/kedim-snack-swing/">▶ Play Kedim's Snack Swing</a><a href="/games/kedim-snack-swing/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="chai-tycoon-info">
     <h3>Chai Tycoon</h3>
     <p>Chai Tycoon is an idle tycoon game with a South Asian street-food feel. You start with one roadside chai stall and grow it into an empire: paratha and samosa counters, a lassi bar, a highway dhaba, cafés in a dozen cities, a delivery fleet and a chai export company. Customers walk up for steaming kulhads while the chaiwala does the long pour.</p>
     <p><strong>How to play:</strong> Tap the street to serve chai and start your shops. Buy more shops, hire managers so they run on their own (even offline), buy upgrades, and catch events like the Cricket Match Rush and Eid Special. Franchise to reset for Stars that boost profits for good.</p>
-    <p class="lnk"><a href="/chai-tycoon/">▶ Play Chai Tycoon</a><a href="/games/chai-tycoon/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/chai-tycoon/">▶ Play Chai Tycoon</a><a href="/games/chai-tycoon/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="kedimz-adventure-info">
     <h3>Kedimz Adventure</h3>
     <p>Kedimz Adventure is a mobile-first side-scrolling platformer. Kedimz the cat sets out to bring back the Golden Bells across five worlds of four levels each, and every world ends with a boss fight.</p>
     <p><strong>How to play:</strong> Move left and right. Keep holding a direction and Kedimz speeds up into a run. Press JUMP to jump; hold it for a higher jump. Stomp on enemies or swipe them with your paw.</p>
-    <p class="lnk"><a href="/kedimz-adventure/">▶ Play Kedimz Adventure</a><a href="/games/kedimz-adventure/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/kedimz-adventure/">▶ Play Kedimz Adventure</a><a href="/games/kedimz-adventure/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="sky-glide-info">
     <h3>Sky Glide</h3>
     <p>Sky Glide is a one-touch flying game with a sketchbook look. You pilot a paper plane: hold to lift, release to glide, and thread your way past pencils, birds, cranes, storm clouds and even black holes.</p>
     <p><strong>How to play:</strong> Hold anywhere on the screen to lift the plane; release to glide down. Avoid obstacles. Passing close to one without touching it gives a near-miss bonus, and near misses in a row build a combo multiplier up to x8.</p>
-    <p class="lnk"><a href="/sky-glide/">▶ Play Sky Glide</a><a href="/games/sky-glide/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/sky-glide/">▶ Play Sky Glide</a><a href="/games/sky-glide/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="shuttle-smash-info">
     <h3>Shuttle Smash</h3>
     <p>Shuttle Smash is a badminton game for phones with a portrait 3D-perspective court and realistic shuttlecock physics, including drag and tumbling feathers. Your player moves to the shuttle automatically, so you only need to think about where and how hard to hit.</p>
     <p><strong>How to play:</strong> Swipe to hit: the swipe direction sets your aim and its length and speed set the power. A short swipe plays a drop or net shot, a long swipe plays a clear or lob, and a long swipe on a high shuttle is a jump smash. Tap for an automatic shot.</p>
-    <p class="lnk"><a href="/shuttle-smash/">▶ Play Shuttle Smash</a><a href="/games/shuttle-smash/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/shuttle-smash/">▶ Play Shuttle Smash</a><a href="/games/shuttle-smash/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="noodle-clash-info">
     <h3>Noodle Clash</h3>
     <p>Noodle Clash is a snake battle arena game for phones and desktop browsers. It plays fully offline against clever AI snakes with real personalities: hunters that cut you off, cowards that flee, encirclers that coil around prey and grazers that chase every orb. Play the endless Classic arena, a 3-minute Rush, a Battle Royale with a shrinking zone, or a 2-player split-screen Duo on one phone.</p>
     <p><strong>How to play:</strong> Steer with the floating joystick, by following your finger, with the mouse or with the arrow keys. Eat glowing orbs to grow, and hold boost to speed up, which burns length. Any snake whose head touches another body explodes into orbs, so cut in front of rivals and avoid their bodies. Earn coins for skins and patterns, and complete daily missions and achievements.</p>
-    <p class="lnk"><a href="/noodle-clash/">▶ Play Noodle Clash</a><a href="/games/noodle-clash/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/noodle-clash/">▶ Play Noodle Clash</a><a href="/games/noodle-clash/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="horizon-pilot-info">
     <h3>Horizon Pilot</h3>
     <p>Horizon Pilot is a 3D flight game for phones and desktop browsers. Fly 7 aircraft, from a light trainer and a vintage biplane to a floatplane, an airliner and a fighter jet, over an island with mountains, cities and 7 airports. The career has 25 missions, plus Free Flight and a Daily Challenge.</p>
     <p><strong>How to play:</strong> Push the throttle up and the plane takes off. Drag the stick to bank and climb; let go and assisted controls level the wings. Fly through rings, drop supplies, scoop water to fight fires, rescue sailors, do loops and rolls, then follow the glide path to land. Earn coins to upgrade and repaint your planes.</p>
-    <p class="lnk"><a href="/horizon-pilot/">▶ Play Horizon Pilot</a><a href="/games/horizon-pilot/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/horizon-pilot/">▶ Play Horizon Pilot</a><a href="/games/horizon-pilot/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="haulway-heroes-info">
     <h3>Haulway Heroes</h3>
     <p>Haulway Heroes is a 3D truck-driving career game for phones and desktop browsers. Haul general goods, fragile glass, livestock, fuel, logs, cars and oversized loads with an escort car. Routes cross highways, cities with traffic lights, mountain hairpins, deserts, snowy passes and rainy nights, and there are 6 trucks to unlock, including a hand-painted art truck.</p>
     <p><strong>How to play:</strong> Steer with the on-screen wheel, by tilting your phone, or with arrow buttons, and use the GAS and BRAKE pedals. Follow the GPS. Slow down for tolls, weigh stations and speed cameras, refuel at gas stations, then switch to R and back the trailer into the loading bay. You are rated and paid on time, damage and driving.</p>
-    <p class="lnk"><a href="/haulway-heroes/">▶ Play Haulway Heroes</a><a href="/games/haulway-heroes/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/haulway-heroes/">▶ Play Haulway Heroes</a><a href="/games/haulway-heroes/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="30-floors-up-info">
     <h3>30 Floors Up</h3>
     <p>30 Floors Up is a survival strategy game for phones and desktop browsers. You are stuck in an apartment on the 30th floor while goofy green Shamblers shuffle around outside. Each day brings a new story card and a few actions, and every choice costs something. Ration your water and food, fortify the door, keep the noise down, trade with your neighbours and plan your escape to the roof. The zombies are silly rather than scary, so it suits younger players too.</p>
     <p><strong>How to play:</strong> Each morning, read the day's card and pick one of its choices. Icons show which supplies each choice changes. Spend your actions for the day: Fortify, Scavenge, Catch rain, Rest, Trade or Craft. Keep an eye on your water, food, health and noise. Noise draws the Shamblers to your door. Tap End day when you are done, and survive day by day until you can escape to the roof.</p>
-    <p class="lnk"><a href="/30-floors-up/">▶ Play 30 Floors Up</a><a href="/games/30-floors-up/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/30-floors-up/">▶ Play 30 Floors Up</a><a href="/games/30-floors-up/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="rail-rush-info">
     <h3>Rail Rush</h3>
     <p>Rail Rush is a train track switching puzzle for phones and desktop browsers. Colourful trains roll along branching tracks, and you flip the switches so each one reaches the station of the same colour. There are 40 levels across meadows, canyons, snowy peaks and the Bonus Lines world, with 8 collectible engines, track themes and upgrades to unlock as you go.</p>
     <p><strong>How to play:</strong> Watch the trains coming along the track and check their colours. Tap a switch to change which way the track goes. Send each train into the station that matches its colour. A wrong station costs you. Clear every train in the level to win stars, then unlock new engines and upgrades.</p>
-    <p class="lnk"><a href="/rail-rush/">▶ Play Rail Rush</a><a href="/games/rail-rush/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/rail-rush/">▶ Play Rail Rush</a><a href="/games/rail-rush/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="tank-rumble-info">
     <h3>Tank Rumble</h3>
     <p>Tank Rumble is a cartoon tank action game for phones and desktop browsers. Drive a cute toy tank around a play-mat arena while it fires automatically, popping waves of goofy robots into bolts and stars. Fight through stages that end in big boss bots, pick power perks between waves and upgrade or unlock new tanks in the garage.</p>
     <p><strong>How to play:</strong> Drag anywhere on the screen to drive. Your tank aims and fires by itself. Dodge enemy shots and pick up the bolts and stars that robots drop. Choose a power perk when one is offered to make your tank stronger. Beat the boss bot at the end of each stage, then spend your bolts in the garage.</p>
-    <p class="lnk"><a href="/tank-rumble/">▶ Play Tank Rumble</a><a href="/games/tank-rumble/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/tank-rumble/">▶ Play Tank Rumble</a><a href="/games/tank-rumble/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="corner-office-info">
     <h3>Corner Office</h3>
     <p>Corner Office is an idle rank-up game for phones and desktop browsers. Start as an intern at a small desk, tap to work, play quick office tasks and earn coins. Hire funny coworkers to earn for you, reach your performance goals and get promoted up 10 ranks to CEO. Your desk and office get fancier with every promotion.</p>
     <p><strong>How to play:</strong> Tap your desk to work and earn coins. Play quick office tasks such as Coffee Rush, File Frenzy and Inbox Zero for bigger rewards. Hire coworkers and buy upgrades so you earn coins even when you are not tapping. Fill the performance bar to get promoted to the next floor and rank.</p>
-    <p class="lnk"><a href="/corner-office/">▶ Play Corner Office</a><a href="/games/corner-office/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/corner-office/">▶ Play Corner Office</a><a href="/games/corner-office/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="dream-room-info">
     <h3>Dream Room</h3>
     <p>Dream Room is an interior design game for phones and desktop browsers. Fun clients ask you to make over their rooms, and you pick the furniture, colours, rugs, lights and walls. Match each client's style, colour palette and budget, then watch the big before and after reveal. There are 32 levels, multi-room homes and hundreds of decor pieces.</p>
     <p><strong>How to play:</strong> Read the client's brief: their style, palette and budget. Tap a glowing + in the room to choose a piece, or pick a category such as Sofa or Walls. Keep within the budget and match the client's taste for a better score. Tap Done when every spot is filled to see the before and after reveal.</p>
-    <p class="lnk"><a href="/dream-room/">▶ Play Dream Room</a><a href="/games/dream-room/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/dream-room/">▶ Play Dream Room</a><a href="/games/dream-room/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="boss-town-info">
     <h3>Boss Town Tycoon</h3>
     <p>Boss Town Tycoon is an idle business tycoon game for phones and desktop browsers. Start with a tiny lemonade stand, earn money and open bigger businesses: a tea stall, bakery, pizza place, toy shop, supermarket, grand hotel, movie studio, tech company, airline, space rockets and finally a Galaxy Network. Your town grows on screen as your empire gets bigger.</p>
     <p><strong>How to play:</strong> Tap a business to collect its earnings, then buy more of it to earn faster. Hire managers so businesses run by themselves, even while you are away. Buy upgrades for big speed and profit boosts, finish town missions to earn stars and go from Stall Kid to Galaxy Boss, open a free gift every day and tap lucky surprises. Investors make you earn more forever and let you pick perks on your Investor Board.</p>
-    <p class="lnk"><a href="/boss-town/">▶ Play Boss Town Tycoon</a><a href="/games/boss-town/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/boss-town/">▶ Play Boss Town Tycoon</a><a href="/games/boss-town/">Read the full guide →</a></p>
   </article>
   <article class="ginfo" id="hop-heights-info">
     <h3>Hop Heights</h3>
     <p>Hop Heights is a bright 3D obby parkour game for phones and desktop browsers. Jump and climb through 60 short obstacle stages across 6 themed worlds: Candy Meadow, Lava Labs, Cloud Conveyor, Frosty Peaks, Neon Night and Star Summit. Every stage ends on a checkpoint, so you never lose much progress.</p>
     <p><strong>How to play:</strong> Use the joystick (or WASD / arrow keys) to run and the jump button (or Space) to hop. Avoid lava, ride moving platforms and conveyors, bounce on jump pads and keep your footing on ice. Collect stars to unlock new skins and trails.</p>
-    <p class="lnk"><a href="/hop-heights/">▶ Play Hop Heights</a><a href="/games/hop-heights/">How to play, controls &amp; features →</a></p>
+    <p class="lnk"><a href="/hop-heights/">▶ Play Hop Heights</a><a href="/games/hop-heights/">Read the full guide →</a></p>
   </article>
   </section>
 
-  <footer><nav aria-label="Site"><a href="/games/">Game guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></nav>Made with ♥ by <b>Zaib</b> · <span id="yr"></span></footer>
+  <!--FOOTER--><!--/FOOTER-->
 </main>
 
 <noscript><p style="text-align:center;color:#b7b0d8;padding:20px">
@@ -503,6 +526,8 @@ const PLAY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v1
 const SHUTTLE = '<svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#e0fdfa" stroke-width="4" stroke-linejoin="round"><path d="M50 62 22 14h56z" fill="rgba(255,255,255,.15)"/><path d="M50 62 36 14M50 62l14-48M50 62V14"/></g><circle cx="50" cy="74" r="14" fill="#34d399"/><path d="M36 70h28" stroke="#065f46" stroke-width="4"/></svg>';
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 
+const GUIDES = /*GUIDES*/[]/*/GUIDES*/;
+const guideUrl = u => { const s = String(u).replace(/^\/+|\/+$/g, ""); return (GUIDES.includes(s) ? "/guides/" : "/games/") + s + "/"; };
 const FEATURED_N = 6, CATS = ["All", "Kids", "Action", "Racing", "Puzzle", "Sports", "Casual"];
 const card = (g, i) => {
   const soon = !g.url;
@@ -511,7 +536,7 @@ const card = (g, i) => {
     : `<a class="thumb" href="${esc(g.url)}" tabindex="-1" aria-hidden="true"><img src="${esc(g.img)}" alt="" width="600" height="375" loading="${i < 2 ? "eager" : "lazy"}"${i < 2 ? ' fetchpriority="high"' : ""} decoding="async"><span class="genre" style="--gc:${g.color}">${esc(g.genre)}</span>${g.isNew ? '<span class="new">New</span>' : ""}</a>`;
   const btn = soon
     ? `<span class="play" aria-disabled="true">COMING SOON</span>`
-    : `<a class="play" href="${esc(g.url)}" aria-label="Play ${esc(g.name)}">${PLAY_ICON}PLAY</a>`;
+    : `<div class="prow"><a class="play" href="${esc(g.url)}" aria-label="Play ${esc(g.name)}">${PLAY_ICON}PLAY</a><a class="glink" href="${guideUrl(g.url)}" aria-label="${esc(g.name)} guide">Guide</a></div>`;
   const sh = soon ? "" : `<button type="button" class="cshr" data-share="${esc(g.url)}" data-name="${esc(g.name)}" aria-label="Share ${esc(g.name)}">${SHARE_ICON}</button>`;
   return `<article class="card${soon ? " soon" : ""}" style="--i:${Math.min(i, 8)}">${thumb}<div class="body">${sh}<h2 class="name">${esc(g.name)}</h2><p class="desc">${esc(g.desc)}</p>${btn}</div></article>`;
 };
@@ -554,7 +579,7 @@ document.addEventListener("click", e => { const b = e.target.closest && e.target
   const slug = String(b.dataset.share || "").replace(/^\/+|\/+$/g, ""); if (!/^[a-z0-9-]+$/.test(slug)) return;
   const name = b.dataset.name || "this game";
   zShare({ title: name + " | Games by Zaib", text: "Come play " + name + " with me! It's free on Games by Zaib.", url: "https://zaibgames.com/" + slug + "/" }, "game"); });
-document.getElementById("yr").textContent = new Date().getFullYear();
+{ const yr = document.getElementById("yr"); if (yr) yr.textContent = new Date().getFullYear(); }
 
 /* twinkling starfield */
 (() => {

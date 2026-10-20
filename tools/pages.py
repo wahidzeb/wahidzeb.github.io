@@ -4,11 +4,14 @@ sitemap.xml and robots.txt for https://zaibgames.com/.
 Run via ./build.sh (or directly: python3 tools/pages.py). Edit GAME_INFO below to add
 an info page for a new game. Game URLs for the sitemap are also read from the GAMES
 array in index.template.html, so any card there is included automatically."""
-import html, os, re, datetime
+import html, json, os, re, datetime, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import zgsite
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://zaibgames.com"
-EMAIL = "wahid.zeb@gmail.com"
+EMAIL = None  # no site email yet (do not use a personal address); set e.g. "hello@zaibgames.com" when Zaib creates one
+ADSENSE_META = '<meta name="google-adsense-account" content="ca-pub-1924890349431110">'  # same as hub home; never remove
 OWNER = "Zaib"
 GA_TAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WE2FDHVM9"></script>
@@ -18,8 +21,9 @@ GA_TAG = """<!-- Google tag (gtag.js) -->
   gtag('js', new Date());
   gtag('config', 'G-0WE2FDHVM9');
 </script>"""
-UPDATED = "11 October 2026"
+UPDATED = "20 October 2026"
 LASTMOD = "2026-10-11"
+TODAY = datetime.date.today().isoformat()
 e = html.escape
 
 # ---------------------------------------------------------------- game info
@@ -595,19 +599,51 @@ box-shadow:0 6px 0 #4c1d95,0 10px 24px rgba(147,51,234,.45),inset 0 2px 0 rgba(2
 .cards a:hover{border-color:rgba(168,85,247,.6)}.cards b{font-family:var(--display);font-weight:400;font-size:21px;display:block}
 footer{text-align:center;color:rgba(183,176,216,.75);font-size:13px;margin-top:26px}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-bottom:8px}footer a{color:#c4b5fd;text-decoration:none}
-footer a:hover{text-decoration:underline}footer b{color:#e9d5ff}"""
+footer a:hover{text-decoration:underline}footer b{color:#e9d5ff}
+.top nav a[aria-current="page"]{background:linear-gradient(180deg,#c084fc,#9333ea);border-color:transparent;color:#fff}
+.crumbs{font-size:13px;color:var(--mut);margin-bottom:10px}.crumbs a{color:#c4b5fd;text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.h1post{font-size:clamp(30px,6.5vw,46px);line-height:1.08}
+.playrow{margin:6px 0 10px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}
+.shots figure{margin:0}.shots img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#140f2e}
+.shots figcaption{font-size:13px;color:var(--mut);margin-top:6px;line-height:1.4}
+.gcards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));margin:12px 0}
+.gcard{border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.04);overflow:hidden;display:flex;flex-direction:column}
+.gcard img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#140f2e}
+.gcard>div{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.gcard b{font-family:var(--display);font-weight:400;font-size:21px;color:#fff}
+.btns{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.mini,.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:88px;padding:0 16px;border-radius:12px;text-decoration:none;font-weight:800;font-size:15px}
+.mini{color:#fff;background:linear-gradient(180deg,#c084fc,#9333ea);box-shadow:0 3px 0 #4c1d95}
+.ghost{color:#e9d5ff;border:1px solid rgba(168,85,247,.55);background:rgba(168,85,247,.12)}
+.mini:hover,.ghost:hover{color:#fff;filter:brightness(1.1)}
+.posts{display:grid;gap:16px;margin-top:14px}
+.post{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:14px;align-items:start;padding:12px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.post img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:12px;display:block}
+.post h2{font-size:22px;margin:4px 0}.post h2 a{color:#fff;text-decoration:none}.post p{margin:4px 0}
+.more{font-weight:700;text-decoration:none;display:inline-block;padding:10px 0}
+@media (max-width:520px){.post{grid-template-columns:1fr}}
+footer p{margin:4px 0;color:rgba(183,176,216,.85)}
+footer nav a{display:inline-block;padding:8px 2px}"""
 
 PLAY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.53.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>'
-FOOTER_LINKS = [("/", "Games"), ("/about/", "About"), ("/contact/", "Contact"), ("/privacy/", "Privacy Policy"), ("/terms/", "Terms of Use")]
+NAV_LINKS = [("/", "Games"), ("/guides/", "Guides"), ("/news/", "Tips & News"), ("/about/", "About")]
+FOOTER_LINKS = NAV_LINKS + [("/contact/", "Contact"), ("/privacy/", "Privacy Policy"), ("/terms/", "Terms of Use")]
 
-def nav():
-    return "".join(f'<a href="{u}">{t}</a>' for u, t in FOOTER_LINKS if u != "/terms/")
+def live_links(links):
+    """Hide Tips & News until at least one post is published (never link to an empty page)."""
+    return [(u, t) for u, t in links if u != "/news/" or SITEGEN.posts]
+
+def nav(active=None):
+    return "".join(f'<a href="{u}"{" aria-current=\"page\"" if u == active else ""}>{e(t)}</a>' for u, t in live_links(NAV_LINKS))
 
 def footer():
-    links = "".join(f'<a href="{u}">{t}</a>' for u, t in FOOTER_LINKS)
-    return f'<footer><nav aria-label="Site">{links}</nav>Made with ♥ by <b>{OWNER}</b> · © {datetime.date.today().year} Games by Zaib</footer>'
+    links = "".join(f'<a href="{u}">{e(t)}</a>' for u, t in live_links(FOOTER_LINKS))
+    return (f'<footer><nav aria-label="Site">{links}</nav>'
+            f'<p>Free games made by <b>{OWNER}</b> for players of all ages. No downloads, no sign-up, no ads during play.</p>'
+            f'<p>© {datetime.date.today().year} Games by Zaib</p></footer>')
 
-def page(path, title, desc, body, og_image="/img/og.jpg"):
+def page(path, title, desc, body, og_image="/img/og.jpg", ld=None, og_type="website", active=None, extra_head=""):
     url = SITE + path
     doc = f"""<!doctype html>
 <html lang="en">
@@ -618,6 +654,7 @@ def page(path, title, desc, body, og_image="/img/og.jpg"):
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="author" content="{OWNER}">
+{ADSENSE_META}
 <meta name="theme-color" content="#0b0820">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="{url}">
@@ -629,7 +666,7 @@ def page(path, title, desc, body, og_image="/img/og.jpg"):
 <meta name="apple-mobile-web-app-title" content="Zaib Games">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <script src="/pwa.js" defer></script>
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Games by Zaib">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
@@ -640,10 +677,11 @@ def page(path, title, desc, body, og_image="/img/og.jpg"):
 <meta name="twitter:description" content="{e(desc)}">
 <meta name="twitter:image" content="{SITE}{og_image}">
 <style>{CSS}</style>
+{"".join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False).replace("</", "<\\/") + "</script>" for x in (ld or []))}{extra_head}
 </head>
 <body>
 <div class="wrap">
-<header class="top"><a class="logo" href="/">Games by Zaib</a><nav aria-label="Main">{nav()}</nav></header>
+<header class="top"><a class="logo" href="/">Games by Zaib</a><nav aria-label="Main">{nav(active or path)}</nav></header>
 <main class="panel">
 {body}
 </main>
@@ -659,7 +697,20 @@ def page(path, title, desc, body, og_image="/img/og.jpg"):
 def lis(items): return "<ul>" + "".join(f"<li>{e(i)}</li>" for i in items) + "</ul>"
 
 # ---------------------------------------------------------------- game pages
+def redirect_stub(old, new, title):
+    doc = f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>{e(title)}</title>
+<link rel="canonical" href="{SITE}{new}"><meta http-equiv="refresh" content="0; url={new}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{ADSENSE_META}
+</head><body style="background:#0b0820;color:#f4f1ff;font:16px system-ui,sans-serif;padding:24px">
+<p>This page has moved to <a style="color:#c4b5fd" href="{new}">{e(title)}</a>.</p></body></html>
+"""
+    out = os.path.join(ROOT, old.strip("/"), "index.html"); os.makedirs(os.path.dirname(out), exist_ok=True); open(out, "w").write(doc)
+
 def game_page(g):
+    if g['slug'] in SITEGEN.guides:  # the full guide replaces the old short page
+        return redirect_stub(f"/games/{g['slug']}/", f"/guides/{g['slug']}/", SITEGEN.guides[g['slug']]['title'])
     # text fields may be given as a single string or a list of paragraphs/items (a bare string must not be iterated per letter)
     for k in ('about', 'how', 'features'):
         if isinstance(g.get(k), str): g[k] = [g[k]]
@@ -678,7 +729,7 @@ def game_page(g):
 <h2>Features</h2>
 {lis(g['features'])}
 <h2>Good to know</h2>
-<p>{e(g['name'])} runs on phones, tablets and computers in any modern browser. It is a single web page with no plug-ins. Your progress (levels, coins, unlocks and settings) is saved only in your browser's local storage on this device. Clearing your browser data resets it. See our <a href="/privacy/">Privacy Policy</a>.</p>
+<p>{e(g['name'])} plays on phones, tablets and computers with nothing to install, and your progress is saved on this device. See our <a href="/privacy/">Privacy Policy</a>.</p>
 <p>{e(g['name'])} was designed and made by {OWNER}. <a href="/">Browse all games</a> or <a href="/contact/">send feedback</a>.</p>
 <a class="play" href="/{g['slug']}/">{PLAY_ICON}PLAY NOW</a>"""
     page(f"/games/{g['slug']}/", f"{g['name']}: How to Play, Controls & Features | Games by Zaib",
@@ -686,45 +737,78 @@ def game_page(g):
          og_image=f"/img/{g['slug']}.webp{IMG_V.get(g['slug'],'')}")
 
 def games_index():
-    cards = "".join(f'<a href="/games/{g["slug"]}/"><b>{e(g["name"])}</b><span class="small">{e(g["tagline"])}</span></a>' for g in GAME_INFO)
-    body = f"""<h1>Game guides</h1><p class="lead">How to play, controls and features for every game on Games by Zaib.</p>
-<div class="cards">{cards}</div>"""
-    page("/games/", "Game Guides: How to Play | Games by Zaib", "How to play, controls and features for every free browser game by Zaib.", body)
+    redirect_stub("/games/", "/guides/", "Game guides")
 
 # ---------------------------------------------------------------- static pages
+def contact_line():
+    if EMAIL:
+        return f'email <a href="mailto:{EMAIL}">{EMAIL}</a> or visit the <a href="/contact/">contact page</a>'
+    return 'visit the <a href="/contact/">contact page</a>'
+
 def about():
-    items = "".join(f'<li><a href="/games/{g["slug"]}/">{e(g["name"])}</a>: {e(g["tagline"])}</li>' for g in GAME_INFO)
+    n = len([g for g in GAME_INFO])
+    cats = {}
+    for g in GAME_INFO: cats.setdefault(g["genre"], []).append(g)
     body = f"""<h1>About Games by Zaib</h1>
-<p class="lead">Games by Zaib is a small independent collection of free arcade games that you can play instantly in your web browser, made with phones in mind.</p>
-<h2>About the studio</h2>
-<p>Games by Zaib is an independent studio making free, colourful browser games. The focus is on quick, fun games that are easy to pick up on a phone, with enough depth (levels, upgrades and unlocks) to keep you coming back.</p>
-<h2>How the games work</h2>
-<p>Every game plays right in your browser. There is nothing to download or install and no account to create. The games work on phones, tablets and computers, with touch, keyboard and mouse controls. Music and sound effects are generated in the browser, and your progress is stored locally on your device.</p>
-<p>The characters, art, music and code in these games are original work. Teams, clubs and rivals that appear in the sports games are fictional.</p>
-<h2>The games</h2>
-<ul>{items}</ul>
-<p>New games are added regularly. Check the <a href="/">home page</a> for the latest.</p>
+<p class="lead">Games by Zaib is a home for free, colourful games that you can play straight away on a phone, tablet or computer. There is nothing to install, no account to make and nothing to buy.</p>
+<h2>What you will find here</h2>
+<p>The site has {n} games right now, and they cover a lot of ground. Some are quick: a one-tap runner, a fruit-merging puzzle or a five-minute football match. Others are longer projects that you return to over days, like building a town from a single lemonade stand, raising a baby cat, running a farm or exploring a 3D city with a 22-mission story. Every game saves your progress on your device, so you can close it and carry on later.</p>
+<p>Alongside the games there are <a href="/guides/">guides</a> for each one{' and a <a href="/news/">Tips &amp; News</a> section with beginner walkthroughs, round-ups and notes on what has changed' if SITEGEN.posts else ''}. The guides explain the controls, the worlds and levels, and the tricks that help when you get stuck.</p>
+<h2>Who the games are for</h2>
+<p>Most of the games are made for everyone: kids, parents, grandparents and anyone who wants a short break. A few, such as Silly Sprout Garden, Beat Buddies, Betta Bestie and Number Dash, are built especially for younger players, with big buttons and little or no reading needed. The action games keep things cartoon-style: robots pop into bolts and stars, pirates wave a white flag and sail away, and the zombies in Horde Breaker and 30 Floors Up are goofy rather than scary.</p>
+<h2 id="made-by-zaib">Made by Zaib</h2>
+<p>Every game on this site is designed, built and hand-tested by Zaib. That includes the ideas, the levels, the characters, the art, the music and the writing. Zaib plays each game on phone, tablet and computer screens, in portrait and landscape, from small phones up to wide monitors, and keeps playing it after launch to fix problems and add improvements. The guides and posts on this site are written by Zaib too, from playing the games.</p>
+<p>Characters such as Kedim the ginger cat (star of Kedim Therapist, Kedim's Snack Swing and Kedimz Adventure) and Baby Kedim the black kitten are original. Teams, clubs, rivals and towns in the games are made up.</p>
+<h2>How a game is made and tested</h2>
+<p>Each game starts with a simple idea that should be fun within the first minute, such as "tap a car to drive it out of a packed car park" or "drag a hungry black hole around a city". From there it grows in small steps: first the core action, then levels or upgrades, then sound, music and polish.</p>
+<p>Before a game goes live, and again after every update, it is checked for things like:</p>
+<ul><li>buttons that are big enough for small fingers and never hidden behind other things on screen</li>
+<li>text that fits on small phones, large tablets and wide computer screens, in both portrait and landscape</li>
+<li>progress that saves properly and survives closing and reopening the game</li>
+<li>a fair difficulty curve, with every level possible to finish</li>
+<li>no crashes or frozen screens during long play sessions</li></ul>
+<p>Games are updated often. Recent examples include Boss Town Tycoon getting daily gifts, town missions and clearer number displays, Rail Rush growing to 40 levels with a Bonus Lines world, and many games getting a Share button placed so it never covers the action. {'You can read about changes like these in <a href="/news/">Tips &amp; News</a>.' if SITEGEN.posts else ''}</p>
+<h2>Safe for kids</h2>
+<ul><li>No chat, no friend lists and no way to talk to strangers.</li>
+<li>No accounts, so children never type in a name, email or password.</li>
+<li>No real-money purchases. Coins and upgrades are earned only by playing.</li>
+<li>No gore and no bad language. Conflict is cartoon-style and silly.</li>
+<li><strong>No ads during play.</strong> If ads appear on this site, they appear only on pages such as the home page, guides and news, never inside or over a game.</li></ul>
+<p>Grown-ups can read the <a href="/privacy/">Privacy Policy</a> to see exactly what is and is not collected.</p>
 <h2>Free to play</h2>
-<p>All games are free. To help cover the cost of making new games, this site may show advertising in the future, as described in the <a href="/privacy/">Privacy Policy</a>.</p>
+<p>All the games are free. To help pay for making new games and keeping the site running, the site may show ads from Google on its pages, as explained in the <a href="/privacy/">Privacy Policy</a>. The games themselves stay ad-free.</p>
 <h2>Get in touch</h2>
-<p>Found a bug, have an idea, or want to say hi? Visit the <a href="/contact/">contact page</a> or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>"""
-    page("/about/", "About | Games by Zaib", f"Games by Zaib is a collection of free browser arcade games made by independent studio Games by Zaib.", body)
+<p>Found a bug, have an idea for a level, or want to tell Zaib which game is your favourite? Please {contact_line()}.</p>"""
+    ld = [{"@context": "https://schema.org", "@type": "AboutPage", "name": "About Games by Zaib", "url": SITE + "/about/",
+           "mainEntity": {"@type": "Organization", "name": "Games by Zaib", "url": SITE + "/", "logo": SITE + "/img/icon-512.png",
+                          "founder": {"@type": "Person", "name": OWNER}}}]
+    page("/about/", "About Games by Zaib: Free Family-Friendly Games Made by Zaib",
+         "Who makes Games by Zaib, how each game is designed and tested, why the games are safe for kids, and how the site stays free with no ads during play.", body, ld=ld)
 
 def contact():
-    body = f"""<h1>Contact</h1>
-<p class="lead">I'd love to hear from you, whether it's feedback, a bug report, a game idea or a business enquiry.</p>
-<h2>Email</h2>
+    if EMAIL:
+        how = f"""<h2>Email</h2>
 <p><a class="play" href="mailto:{EMAIL}?subject=Games%20by%20Zaib">✉ {EMAIL}</a></p>
-<p>I usually reply within a few days.</p>
+<p>Replies usually take a few days.</p>"""
+    else:
+        how = """<h2>How to reach us</h2>
+<p>A dedicated email address for players and parents is being set up and will be added to this page as soon as it is ready. We do not publish anyone's personal contact details.</p>
+<p>Until then, most questions about controls, saving and tricky levels are answered in each game's <a href="/guides/">guide</a>. When the address is live, the notes below explain what helps most in a message.</p>"""
+    body = f"""<h1>Contact</h1>
+<p class="lead">Feedback, bug reports, level ideas and questions from parents are all welcome. Every message is read by Zaib, who makes the games.</p>
+{how}
 <h2>Reporting a bug</h2>
-<p>To help me fix a problem quickly, please include:</p>
-<ul><li>the name of the game and what you were doing when the problem happened</li>
-<li>your device and browser (for example "Android phone, Chrome" or "iPhone, Safari")</li>
+<p>To help fix a problem quickly, please include:</p>
+<ul><li>the name of the game and what you were doing when it happened (for example "Juicy Merge, Daily Challenge, after a Shake")</li>
+<li>your device and whether you were holding it upright or sideways</li>
 <li>a screenshot, if you can</li></ul>
-<h2>Privacy requests</h2>
-<p>For any question about your privacy or the data described in our <a href="/privacy/">Privacy Policy</a>, email the same address with "Privacy" in the subject line.</p>
-<p class="small">Games by Zaib is an independent game studio.</p>"""
-    page("/contact/", "Contact | Games by Zaib", f"Contact Games by Zaib: feedback, bug reports and enquiries.", body)
+<h2>Ideas and feedback</h2>
+<p>The games are updated often, and player feedback helps decide what to fix first. If a level feels unfair, a button is hard to reach or a game is missing something you would love, say so.</p>
+<h2>Parents and privacy</h2>
+<p>The games do not ask for names, emails or accounts. For any question about privacy or the information described in our <a href="/privacy/">Privacy Policy</a>, please mark your message "Privacy".</p>
+"""
+    page("/contact/", "Contact Games by Zaib: Feedback, Bug Reports and Ideas",
+         "How to send feedback, report a bug or ask a privacy question about Games by Zaib, plus what to include so problems get fixed quickly.", body)
 
 def privacy():
     body = f"""<h1>Privacy Policy</h1>
@@ -733,81 +817,83 @@ def privacy():
 
 <h2>Summary</h2>
 <ul><li>You can play every game without an account. We do not ask for your name, email address or any other account details.</li>
-<li>Game progress and settings are saved only in your browser's local storage on your device.</li>
-<li>We use Google Analytics to measure visits to the site (see <a href="#analytics">Analytics</a>).</li>
-<li>Third-party vendors, including Google, may use cookies to show ads based on your visits to this and other websites. You can opt out of personalised advertising (see below).</li></ul>
+<li>Game progress and settings are saved only on your device.</li>
+<li>We use Google Analytics to count visits to the site (see <a href="#analytics">Analytics</a>).</li>
+<li>Third-party vendors, including Google, may use cookies to show ads based on your visits to this and other websites. You can opt out of personalised advertising (see <a href="#ads">Advertising and cookies</a>).</li>
+<li>Visitors in the EEA, the UK and Switzerland are asked for consent before personalised ads are used (see <a href="#consent">Consent</a>).</li></ul>
 
 <h2>Information we collect</h2>
 <h3>No account data</h3>
 <p>The site has no registration, login, user profiles, chat or comment features. We do not collect your name, email address, phone number, payment details or other account data while you browse or play.</p>
-<h3>Game saves in local storage</h3>
-<p>Our games use your browser's <strong>localStorage</strong> to remember things like unlocked levels, coins, high scores, purchased in-game items (bought with in-game coins only) and settings such as sound and controls. This data stays on your device. It is not sent to us and we cannot see it. You can delete it at any time with the game's "Reset progress" option or by clearing your browser's site data for zaibgames.com.</p>
+<h3>Game saves on your device</h3>
+<p>Our games use your browser's storage on your device to remember things like unlocked levels, coins, high scores, items bought with in-game coins and settings such as sound and controls. This data stays on your device. It is not sent to us and we cannot see it. You can delete it at any time with a game's reset option or by clearing your browser's site data for zaibgames.com.</p>
 <h3>Information you send us</h3>
-<p>If you email us, we receive your email address and whatever you write. We use it only to reply to you and do not share it or add you to any mailing list.</p>
-<h3>Hosting and server logs</h3>
-<p>The site is served by a third-party web hosting provider. Like any web host, it may process technical information such as your IP address and browser type to deliver the pages and keep the service secure.</p>
+<p>If you contact us, we receive your contact details and whatever you write. We use it only to reply to you and do not share it or add you to any mailing list.</p>
+<h3>Hosting</h3>
+<p>The site is served by a third-party hosting provider. Like any web host, it may process technical information such as your IP address and browser type to deliver the pages and keep the service secure.</p>
 <h3 id="analytics">Analytics</h3>
-<p>The site uses Google Analytics to measure visits, such as how many people visit, which pages and games they open and roughly where they come from. Google Analytics uses cookies and similar technologies, and the information it collects is processed by Google. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a>. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+<p>The site uses Google Analytics to measure visits, such as how many people visit, which pages and games they open and roughly where they come from. Google Analytics uses cookies and similar technologies, and the information it collects is processed by Google. See <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a>. You can opt out of Google Analytics with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
 
-<h2>Advertising and cookies</h2>
-<p>To keep the games free, we use or may use Google AdSense and other third-party advertising vendors to display ads on the site.</p>
+<h2 id="ads">Advertising and cookies</h2>
+<p>To keep the games free, we use or may use Google and other third-party advertising vendors to show ads on the site's pages. Ads are never shown inside or over a game while you play.</p>
 <ul>
 <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.</li>
 <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visits to this site and/or other sites on the Internet.</li>
 <li>You may opt out of personalised advertising by visiting <a href="https://adssettings.google.com" rel="noopener">Google Ads Settings</a> (adssettings.google.com).</li>
 <li>You can also opt out of some third-party vendors' use of cookies for personalised advertising by visiting <a href="https://www.aboutads.info" rel="noopener">www.aboutads.info</a> (and <a href="https://www.youronlinechoices.eu" rel="noopener">www.youronlinechoices.eu</a> in Europe).</li>
 </ul>
-<p>Cookies are small text files stored by your browser. Ad vendors may also use similar technologies such as web beacons, device identifiers and local storage to measure ads and prevent fraud. To learn more about how Google uses information from sites that use its services, see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a> and <a href="https://policies.google.com/technologies/ads" rel="noopener">How Google uses cookies in advertising</a>.</p>
-<p>If you do not opt out, you may still see ads, but they will be less relevant to you. You can also block or delete cookies in your browser settings. The games will still work, although blocking local storage will stop your progress from being saved.</p>
+<p>Cookies are small text files stored by your browser. Ad vendors may also use similar technologies such as web beacons, device identifiers and local storage to measure ads and prevent fraud. To learn more, see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a> and <a href="https://policies.google.com/technologies/ads" rel="noopener">How Google uses cookies in advertising</a>.</p>
+<p>If you opt out, you may still see ads, but they will be less relevant to you. You can also block or delete cookies in your browser settings. The games will still work, although blocking site storage stops your progress from being saved.</p>
 
-<h2>Consent for visitors in the EEA, UK and Switzerland</h2>
-<p>Where required by law (for example under the GDPR and UK GDPR), when ads are shown we will ask for your consent through a consent message from a Google-certified consent management platform before personalised ads or non-essential cookies are used. You can change or withdraw your choice at any time through that message. Where personalised ads are not allowed, only non-personalised or limited ads are shown.</p>
+<h2 id="consent">Consent for visitors in the EEA, UK and Switzerland</h2>
+<p>Where required by law (for example under the GDPR and UK GDPR), when ads are shown we ask for your consent through a consent message from a Google-certified consent management platform before personalised ads or non-essential cookies are used. The message lets you accept, decline or choose your options, and you can change or withdraw your choice at any time through the same message. Where personalised ads are not allowed, only non-personalised or limited ads are shown.</p>
 
 <h2>Children's privacy</h2>
-<p>Our games are family-friendly and suitable for a general audience, but the site is not directed specifically at children under 13 (or the minimum age in your country). We do not knowingly collect personal information from children. Children should ask a parent or guardian before using the internet and emailing anyone, including us. If you are a parent or guardian and believe your child has sent us personal information, contact us and we will delete it.</p>
+<p>Our games are family-friendly and many are made with children in mind. We do not knowingly collect personal information from children: there are no accounts, no chat and nothing to type in. Where our pages may be visited by children, we ask our advertising partners to treat those visits appropriately, which can mean showing only non-personalised ads. Children should ask a parent or guardian before contacting anyone online, including us. If you are a parent or guardian and believe your child has sent us personal information, contact us and we will delete it.</p>
 
 <h2>Your rights</h2>
-<p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you. Since we only hold data you email to us, contact us at the address below to make a request.</p>
+<p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you. Since we only hold information you send us, contact us to make a request.</p>
 
 <h2>Third-party links</h2>
 <p>The site may link to other websites. We are not responsible for their content or privacy practices, so please review their privacy policies.</p>
 
 <h2>Changes to this policy</h2>
-<p>We may update this policy, for example when we start showing ads or add new features. The "Last updated" date at the top shows when it last changed.</p>
+<p>We may update this policy, for example when ads start appearing or new features are added. The "Last updated" date at the top shows when it last changed.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy? Email <a href="mailto:{EMAIL}">{EMAIL}</a> or visit the <a href="/contact/">contact page</a>.<br>Games by Zaib</p>"""
-    page("/privacy/", "Privacy Policy | Games by Zaib", "Privacy Policy for Games by Zaib: local game saves, advertising cookies (including Google), opt-out links and contact details.", body)
+<p>Questions about this policy? Please {contact_line()}.<br>Games by Zaib</p>"""
+    page("/privacy/", "Privacy Policy | Games by Zaib",
+         "How Games by Zaib handles your information: game saves stay on your device, Google Analytics, advertising cookies from Google, consent choices and children's privacy.", body)
 
 def terms():
     body = f"""<h1>Terms of Use</h1>
 <p class="small">Last updated: {UPDATED}</p>
 <p>These terms apply to your use of Games by Zaib at zaibgames.com ("the site"). By using the site you agree to them. If you do not agree, please do not use the site.</p>
 <h2>Using the games</h2>
-<p>The games are free to play for personal, non-commercial entertainment. You agree not to:</p>
-<ul><li>copy, modify, redistribute, resell or re-host the games or their code, art or music without written permission</li>
+<p>The games are free to play for personal, non-commercial fun. You agree not to:</p>
+<ul><li>copy, change, share, sell or re-host the games or their art, music or text without written permission</li>
 <li>embed the games on other websites in a way that presents them as your own or removes credits</li>
-<li>attempt to disrupt, overload or attack the site, or interfere with any advertising shown on it, including by generating invalid ad clicks or impressions</li>
+<li>try to disrupt, overload or attack the site, or interfere with any advertising shown on it, including by creating fake ad clicks or views</li>
 <li>use the site in any way that breaks the law</li></ul>
-<h2>Intellectual property</h2>
-<p>The games, including their code, characters, artwork, music, sound effects and text, are the work of Games by Zaib and are protected by copyright. All rights are reserved except where stated. Any teams, clubs, players or rivals in the games are fictional. Some text fonts are used under their open licences.</p>
+<h2>Ownership</h2>
+<p>The games, including their characters, artwork, music, sound effects and text, are the work of Games by Zaib and are protected by copyright. All rights are reserved except where stated. Any teams, clubs, players, towns or rivals in the games are made up. Some fonts are used under their open licences.</p>
 <h2>In-game items</h2>
-<p>Coins, upgrades and other in-game items are earned through play only. They have no real-world monetary value, cannot be bought, sold or exchanged, and may be lost if your browser data is cleared.</p>
+<p>Coins, upgrades and other in-game items are earned through play only. They have no real-world value, cannot be bought, sold or exchanged, and may be lost if your browser data is cleared.</p>
 <h2>Advertising</h2>
-<p>The site may show ads from third parties such as Google. We are not responsible for the content of ads or for third-party websites they link to. See our <a href="/privacy/">Privacy Policy</a> for how advertising cookies are used.</p>
+<p>The site may show ads from third parties such as Google on its pages, but not inside games while you play. We are not responsible for the content of ads or for other websites they link to. See our <a href="/privacy/">Privacy Policy</a> for how advertising cookies are used.</p>
 <h2>No warranty</h2>
-<p>The site and games are provided "as is" and "as available", without warranties of any kind. We do not guarantee that they will always be available, error-free or compatible with your device, or that saved progress will be kept.</p>
+<p>The site and games are provided "as is" and "as available", without warranties of any kind. We do not promise that they will always be available, error-free or work on every device, or that saved progress will be kept.</p>
 <h2>Limitation of liability</h2>
-<p>To the fullest extent permitted by law, Games by Zaib is not liable for any indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the site or games.</p>
+<p>To the fullest extent allowed by law, Games by Zaib is not liable for any indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the site or games.</p>
 <h2>Health note</h2>
-<p>Take regular breaks while playing. Some games contain flashing effects and screen shake; most games let you reduce effects in their settings.</p>
+<p>Take regular breaks while playing. Some games contain flashing effects and screen shake; many games let you reduce effects in their settings.</p>
 <h2>Changes</h2>
-<p>We may update these terms or change, add or remove games at any time. Continued use of the site after a change means you accept the updated terms.</p>
+<p>We may update these terms or change, add or remove games at any time. Using the site after a change means you accept the updated terms.</p>
 <h2>Governing law</h2>
 <p>These terms are governed by the laws of Malaysia.</p>
 <h2>Contact</h2>
-<p>Email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>"""
-    page("/terms/", "Terms of Use | Games by Zaib", "Terms of Use for Games by Zaib, free browser games by Zaib.", body)
+<p>Please {contact_line()}.</p>"""
+    page("/terms/", "Terms of Use | Games by Zaib", "The rules for using Games by Zaib: free personal play, ownership of the games, in-game coins, advertising and health notes.", body)
 
 # ---------------------------------------------------------------- sitemap/robots
 def game_paths():
@@ -823,12 +909,17 @@ def game_paths():
         if f"/{g['slug']}/" not in paths: paths.append(f"/{g['slug']}/")
     return paths
 
+def live_lastmod(slug):
+    """Last update date of a game: newest 'SHIPPED/shipped' date for it in the coordination logs, else LASTMOD."""
+    return GAME_LASTMOD.get(slug, LASTMOD)
+
 def sitemap():
-    pages = [("/", "1.0"), ("/games/", "0.6"), ("/about/", "0.5"), ("/contact/", "0.4"), ("/privacy/", "0.3"), ("/terms/", "0.3")]
-    pages += [(f"/games/{g['slug']}/", "0.7") for g in GAME_INFO]
-    pages += [(p, "0.9") for p in game_paths()]
+    pages = [("/", TODAY, "1.0"), ("/about/", TODAY, "0.5"), ("/contact/", TODAY, "0.4"), ("/privacy/", TODAY, "0.3"), ("/terms/", TODAY, "0.3")]
+    pages += SITEGEN.urls()
+    pages += [(f"/games/{g['slug']}/", LASTMOD, "0.5") for g in GAME_INFO if g['slug'] not in SITEGEN.guides]
+    pages += [(p, live_lastmod(p.strip("/")), "0.9") for p in game_paths()]
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    xml += [f"  <url><loc>{SITE}{p}</loc><lastmod>{LASTMOD}</lastmod><priority>{pr}</priority></url>" for p, pr in pages]
+    xml += [f"  <url><loc>{SITE}{p}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>" for p, d, pr in pages]
     xml.append("</urlset>")
     open(os.path.join(ROOT, "sitemap.xml"), "w").write("\n".join(xml) + "\n")
     open(os.path.join(ROOT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
@@ -838,8 +929,50 @@ def sort_by_hub_order():
     order = [p.strip("/") for p in game_paths()]
     GAME_INFO.sort(key=lambda g: order.index(g["slug"]) if g["slug"] in order else len(order))
 
+def hub_home():
+    """Fill the static nav, footer and crawlable game list into the built index.html."""
+    f = os.path.join(ROOT, "index.html")
+    if not os.path.exists(f): return
+    h = open(f).read()
+    h = re.sub(r"<!--NAV-->.*?<!--/NAV-->", lambda m: "<!--NAV-->" + nav("/") + "<!--/NAV-->", h, flags=re.S)
+    h = re.sub(r"<!--FOOTER-->.*?<!--/FOOTER-->", lambda m: "<!--FOOTER-->" + footer() + "<!--/FOOTER-->", h, flags=re.S)
+    h = re.sub(r"<!--CATS-->.*?<!--/CATS-->", lambda m: "<!--CATS-->" + categories_html() + "<!--/CATS-->", h, flags=re.S)
+    h = h.replace("/*GUIDES*/[]/*/GUIDES*/", json.dumps(sorted(SITEGEN.guides)))
+    for slug in SITEGEN.guides: h = h.replace(f'href="/games/{slug}/"', f'href="/guides/{slug}/"')
+    open(f, "w").write(h)
+
+CAT_BLURBS = [
+ ("Kids", "Games for younger players", "Big buttons, bright colours and very little reading. Grow silly creature-plants, care for a pet fish, mix songs with singing buddies, or sneak past cheeky raccoons to rescue cute critters. Nothing here is scary, and nobody ever gets hurt."),
+ ("Casual", "Cozy, idle and relaxing games", "Games you can enjoy at your own pace. Build a business empire that keeps earning while you are away, decorate rooms for picky clients, run a farm, chat with silly patients in a cat's therapy office or raise a baby kitten. Your progress is saved on your device, so short sessions are fine."),
+ ("Puzzle", "Puzzle and brain games", "Think first, then tap. Untangle car parks, slide clay blocks through matching gates, swing a fish treat into a hungry cat's mouth, switch train tracks and merge fruit all the way to a watermelon. Every level can be solved, and most have three stars to chase."),
+ ("Action", "Action and adventure", "Quick reflexes and cartoon chaos: space cats, toy robots, a hungry shark, a black hole that swallows a city, a 3D obstacle course and a pirate sea to explore. Fights stay silly and gore-free, and many games aim and fire for you so you can focus on moving."),
+ ("Racing", "Driving, flying and open worlds", "Get behind the wheel or the controls. Ride in a motorbike race, fly seven planes through island missions, haul tricky cargo in a big truck or explore a friendly 3D city where drivers happily lend you their car."),
+ ("Sports", "Sports games", "Short, fast matches with simple swipe controls: arcade football with power shots and a full league, and 3D badminton with jump smashes. Both let two players share one phone."),
+]
+
+def categories_html():
+    src = open(os.path.join(ROOT, "index.template.html")).read()
+    m = re.search(r"const GAMES = \[(.*?)\n\];", src, re.S)
+    rows = re.findall(r'name:\s*"([^"]+)".*?url:\s*"/([^"/]+)/".*?cat:\s*"([^"]+)"', m.group(1))
+    out = ['<h2 id="cats-h">Find your kind of game</h2>']
+    for cat, title, blurb in CAT_BLURBS:
+        games = [(n, s_) for n, s_, c in rows if c == cat]
+        if not games: continue
+        items = "".join(f'<li><a href="/{s_}/">{e(n)}</a> <span>(<a href="{SITEGEN.guide_url(s_)}">guide</a>)</span></li>' for n, s_ in games)
+        out.append(f'<div class="cat"><h3>{e(title)}</h3><p>{e(blurb)}</p><ul>{items}</ul></div>')
+    return "".join(out)
+
+GAME_LASTMOD = {}
+try:
+    GAME_LASTMOD = json.load(open(os.path.join(ROOT, "tools", "game-lastmod.json")))
+except Exception:
+    pass
+
+sort_by_hub_order()
+SITEGEN = zgsite.Site(ROOT, page, SITE, OWNER, GAME_INFO, IMG_V, TODAY)
+
 if __name__ == "__main__":
-    sort_by_hub_order()
     for g in GAME_INFO: game_page(g)
-    games_index(); about(); contact(); privacy(); terms(); sitemap()
-    print("info pages, sitemap.xml and robots.txt built")
+    games_index(); about(); contact(); privacy(); terms()
+    SITEGEN.build(); sitemap(); hub_home()
+    print("info pages, guides, news, sitemap.xml and robots.txt built")
