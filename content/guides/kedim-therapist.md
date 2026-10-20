@@ -2,7 +2,7 @@ title: Kedim Therapist Guide: Best Replies, Mini-Games and 5-Star Sessions
 seo_title: Kedim Therapist Guide: How to Get 5 Stars, Every Patient and Mini-Game | Games by Zaib
 description: Learn how sessions work in Kedim Therapist: which replies help most, how the mood meter adds up, tips for all 7 mini-games, the 12 patients, the shop and the walk-in clinic.
 lead: In Kedim Therapist you are Dr. Kedim, a ginger cat with a red scarf who listens to silly animal patients. Each session is a short, funny chat plus one mini-game. This guide shows how the mood meter really works, so you can turn 3-star visits into 5-star ones.
-related: baby-kedim, kedimz-adventure, snack-swing
+related: baby-kedim, kedimz-adventure, kedim-snack-swing
 updated: 2026-10-20
 shots: kedim-therapist-office.webp|Dr. Kedim the ginger cat sitting in his office chair with the next patient Biscuit shown at the bottom|The office between sessions. The Next button shows who is due ; kedim-therapist-replies.webp|Biscuit the dog on the couch with three reply cards marked Funny, Wise and Kind|Three replies: one great, one okay, one silly ; kedim-therapist-mini-game.webp|The intro card for the Breathe With Me mini-game with a Start button|Every session has one mini-game ; kedim-therapist-session-complete.webp|Session complete card with three stars, final mood 70 percent, one of two great answers and 56 coins|Our first session: 3 stars. Good, but not perfect
 ---
