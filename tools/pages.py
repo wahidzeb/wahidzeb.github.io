@@ -10,7 +10,7 @@ import zgsite
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://zaibgames.com"
-EMAIL = None  # no site email yet (do not use a personal address); set e.g. "hello@zaibgames.com" when Zaib creates one
+EMAIL = "wahid.zeb@gmail.com"  # Zaib's decision 2026-10-20: show this address on the Contact page (mailto "Contact us" button)
 ADSENSE_META = '<meta name="google-adsense-account" content="ca-pub-1924890349431110">'  # same as hub home; never remove
 OWNER = "Zaib"
 GA_TAG = """<!-- Google tag (gtag.js) -->
@@ -742,7 +742,7 @@ def games_index():
 # ---------------------------------------------------------------- static pages
 def contact_line():
     if EMAIL:
-        return f'email <a href="mailto:{EMAIL}">{EMAIL}</a> or visit the <a href="/contact/">contact page</a>'
+        return f'use the <a href="/contact/">Contact us</a> button on our contact page, or email <a href="mailto:{EMAIL}">{EMAIL}</a>'
     return 'visit the <a href="/contact/">contact page</a>'
 
 def about():
@@ -778,7 +778,7 @@ def about():
 <h2>Free to play</h2>
 <p>All the games are free. To help pay for making new games and keeping the site running, the site may show ads from Google on its pages, as explained in the <a href="/privacy/">Privacy Policy</a>. The games themselves stay ad-free.</p>
 <h2>Getting help</h2>
-<p>Stuck on a level or wondering how saving works? Every game has a full <a href="/guides/">guide</a>, and the <a href="/contact/">contact page</a> explains where to find answers.</p>"""
+<p>Stuck on a level or wondering how saving works? Every game has a full <a href="/guides/">guide</a>, and you can reach Zaib with the Contact us button on the <a href="/contact/">contact page</a>.</p>"""
     ld = [{"@context": "https://schema.org", "@type": "AboutPage", "name": "About Games by Zaib", "url": SITE + "/about/",
            "mainEntity": {"@type": "Organization", "name": "Games by Zaib", "url": SITE + "/", "logo": SITE + "/img/icon-512.png",
                           "founder": {"@type": "Person", "name": OWNER}}}]
@@ -787,9 +787,12 @@ def about():
 
 def contact():
     if EMAIL:
-        how = f"""<h2>Email</h2>
-<p><a class="play" href="mailto:{EMAIL}?subject=Games%20by%20Zaib">✉ {EMAIL}</a></p>
-<p>Replies usually take a few days.</p>"""
+        how = f"""<h2>Contact us</h2>
+<p><a class="play" href="mailto:{EMAIL}?subject=Games%20by%20Zaib">✉ Contact us</a></p>
+<p>The button opens a new email in your email app. You can also write to <a href="mailto:{EMAIL}">{EMAIL}</a> directly. Replies can take a few days.</p>
+<h2>Before you write: quick answers</h2>
+<p>Most questions are about controls, saving or a tricky level. Each game has a full <a href="/guides/">guide</a> written from our own play, with a controls table, beginner tips and an FAQ.</p>
+<p>Every game saves your progress on the device and browser you play on. There are no accounts, so progress does not move between devices, and clearing your browser data for zaibgames.com resets it. If a game seems stuck, reloading the page is safe: your progress is kept.</p>"""
     else:
         how = None
     if how:
@@ -802,7 +805,7 @@ def contact():
 <li>your device and whether you were holding it upright or sideways</li>
 <li>a screenshot, if you can</li></ul>
 <h2>Parents and privacy</h2>
-<p>The games do not ask for names, emails or accounts. For any question about privacy or the information described in our <a href="/privacy/">Privacy Policy</a>, please mark your message "Privacy".</p>
+<p>The games do not ask for names, emails or accounts. For any question about privacy or the information described in our <a href="/privacy/">Privacy Policy</a>, use the Contact us button and mark your message "Privacy".</p>
 """
     else:
         body = """<h1>Contact</h1>
@@ -817,7 +820,7 @@ def contact():
 <p>The games do not ask for names, emails or accounts, and there is nothing to buy with real money. Our <a href="/privacy/">Privacy Policy</a> explains what information the site uses, and our <a href="/about/">About page</a> explains who makes the games and how they are tested.</p>
 """
     page("/contact/", "Contact and Help: Games by Zaib",
-         "How to get help with Games by Zaib: where to find answers about controls, saves and tricky levels, how games are tested and fixed, and privacy information for parents.", body)
+         ("Contact Games by Zaib: send feedback, bug reports, level ideas or privacy questions by email, and find quick answers about controls, saves and tricky levels." if EMAIL else "How to get help with Games by Zaib: where to find answers about controls, saves and tricky levels, how games are tested and fixed, and privacy information for parents."), body)
 
 def privacy():
     body = f"""<h1>Privacy Policy</h1>
@@ -861,7 +864,7 @@ def privacy():
 <p>Our games are family-friendly and many are made with children in mind. We do not knowingly collect personal information from children: there are no accounts, no chat and nothing to type in. Where our pages may be visited by children, we ask our advertising partners to treat those visits appropriately, which can mean showing only non-personalised ads. Children should ask a parent or guardian before contacting anyone online, including us. If you are a parent or guardian and believe your child has sent us personal information, contact us and we will delete it.</p>
 
 <h2>Your rights</h2>
-<p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you. Since we only hold information you send us, contact us to make a request.</p>
+<p>Depending on where you live, you may have rights to access, correct or delete personal data we hold about you. Since we only hold information you send us, please {contact_line()} to make a request.</p>
 
 <h2>Third-party links</h2>
 <p>The site may link to other websites. We are not responsible for their content or privacy practices, so please review their privacy policies.</p>
