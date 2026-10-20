@@ -55,6 +55,11 @@ def md(text, ctx):
             out.append(f"<h3>{inline(first[4:], ctx)}</h3>")
             if len(lines) > 1: out.append("<p>" + inline(" ".join(lines[1:]), ctx) + "</p>")
             continue
+        if all(l.startswith("|") for l in lines):
+            rows = [[c.strip() for c in l.strip().strip("|").split("|")] for l in lines if not re.match(r"^\|[\s:|-]+\|?$", l)]
+            head = "".join(f"<th>{inline(c, ctx)}</th>" for c in rows[0])
+            body = "".join("<tr>" + "".join(f"<td>{inline(c, ctx)}</td>" for c in r) + "</tr>" for r in rows[1:])
+            out.append(f'<div class="tbl"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'); continue
         if all(l.startswith("- ") for l in lines):
             out.append("<ul>" + "".join(f"<li>{inline(l[2:], ctx)}</li>" for l in lines) + "</ul>"); continue
         if all(re.match(r"\d+\. ", l) for l in lines):
