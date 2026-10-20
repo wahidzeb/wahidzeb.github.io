@@ -45,7 +45,7 @@ Skyfire Squadron is our newest flying guide and the most action-packed. Your chu
 
 There are 32 missions across four stages: Sunny Seas, Palm Isles, Frosty Fjords and Thunder Night. Every stage has a mini-boss on mission 4 and a big boss on mission 8, ending with the Storm Baron. Each mission gives up to three stars: one for finishing, one for shooting down 70% of enemies and one for keeping half your health. Stars and coins unlock four more planes, from the Hornet to the Phoenix.
 
-We will be honest: we were **shot down twice** on the very first mission before we earned a **Perfect Mission** with 58 of 59 enemies down and 83% health left. **Starter tip:** watch the red bullets, not the enemy planes. Your guns hit whatever is in front of you, so small sideways moves to stay out of the bullet streams matter more than chasing targets. Buy the Armor upgrade early for an extra point of health.
+We will be honest: we have been **shot down on every hand-played try** at the very first mission so far, once with 38 of 59 enemies down. **Starter tip:** watch the red bullets, not the enemy planes. Your guns hit whatever is in front of you, so small sideways moves to stay out of the bullet streams matter more than chasing targets. Buy the Armor upgrade early for an extra point of health.
 
 **Who it suits:** players who enjoy quick arcade action. Everything is cartoon style, with puffs of smoke and no people shown being hurt.
 

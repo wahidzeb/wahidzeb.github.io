@@ -1,7 +1,7 @@
 title: We Lost First: What Five of Our Games Taught Us on the First Try
 seo_title: Beginner Tips From Our First Defeats: Bolt Brigade, Tank Rumble, Fortress Frontline and More | Games by Zaib
-description: When we write a guide, we play the game from scratch, and we often lose the first round. Here is what going wrong taught us in Bolt Brigade, Tank Rumble, Fortress Frontline, Pirate Isles and Skyfire Squadron, and the fix that worked each time.
-lead: Every guide on this site starts with a real first try, and quite a few of those first tries went badly. That turned out to be useful. Each defeat pointed straight at the one habit that makes the game click. Here are five of them, with the fix we found.
+description: When we write a guide, we play the game from scratch, and we often lose the first round. Here is what going wrong taught us in Bolt Brigade, Tank Rumble, Fortress Frontline, Pirate Isles and Skyfire Squadron, and what we changed (or still need to).
+lead: Every guide on this site starts with a real first try, and quite a few of those first tries went badly. That turned out to be useful. Each defeat pointed straight at the one habit that makes the game click. Here are five of them, with the fix we found, or in one case the fix we are still working on.
 date: 2026-10-20
 kind: Tips
 image: fortress-frontline
@@ -48,7 +48,7 @@ It also means our guides can say honestly what goes wrong, and how to fix it. Lo
 
 **The lesson.** Since your guns hit whatever is in front of you, chasing enemy planes is not the main job. Staying out of the streams of red bullets is. Small sideways moves work better than big swoops, and the MEGA button clears every bullet on the screen when things get crowded.
 
-**What changed.** On a later run we earned a **Perfect Mission**: 58 of 59 enemies down and 83% health left, worth 227 coins. That one result also earned all three stars, because Skyfire Squadron gives a star for finishing, one for shooting down 70% of enemies and one for keeping half your health.
+**Still in progress.** This is the one game on the list we have not beaten yet: a third hand-played try ended the same way, with 42 of 59 enemies down. Our plan for the next try is to treat the bullets, not the planes, as the thing to watch. That matters for stars too: Skyfire Squadron gives one star for finishing a mission, one for shooting down 70% of enemies and one for keeping half your health, so dodging well is worth two of the three. And because you keep the coins you collect even when you are shot down, our failed runs still count toward the first upgrade. The third try alone earned 85 coins.
 
 ## The pattern behind all five
 

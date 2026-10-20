@@ -627,7 +627,7 @@ footer p{margin:4px 0;color:rgba(183,176,216,.85)}
 footer nav a{display:inline-block;padding:8px 2px}"""
 
 PLAY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.53.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>'
-NAV_LINKS = [("/", "Games"), ("/guides/", "Guides"), ("/news/", "Tips & News"), ("/about/", "About")]
+NAV_LINKS = [("/", "Games"), ("/games/", "Categories"), ("/guides/", "Guides"), ("/news/", "Tips & News"), ("/about/", "About")]
 FOOTER_LINKS = NAV_LINKS + [("/contact/", "Contact"), ("/privacy/", "Privacy Policy"), ("/terms/", "Terms of Use")]
 
 def live_links(links):
@@ -730,14 +730,14 @@ def game_page(g):
 {lis(g['features'])}
 <h2>Good to know</h2>
 <p>{e(g['name'])} plays on phones, tablets and computers with nothing to install, and your progress is saved on this device. See our <a href="/privacy/">Privacy Policy</a>.</p>
-<p>{e(g['name'])} was designed and made by {OWNER}. <a href="/">Browse all games</a> or <a href="/contact/">send feedback</a>.</p>
+<p>{e(g['name'])} was designed and made by {OWNER}. <a href="/">Browse all games</a> or read the <a href="/guides/">guides</a>.</p>
 <a class="play" href="/{g['slug']}/">{PLAY_ICON}PLAY NOW</a>"""
     page(f"/games/{g['slug']}/", f"{g['name']}: How to Play, Controls & Features | Games by Zaib",
          f"{g['name']} by Zaib: {g['tagline']} How to play, controls and features. Free in your browser, no download.", body,
          og_image=f"/img/{g['slug']}.webp{IMG_V.get(g['slug'],'')}")
 
 def games_index():
-    redirect_stub("/games/", "/guides/", "Game guides")
+    pass  # /games/ is now the category index (tools/categories.py)
 
 # ---------------------------------------------------------------- static pages
 def contact_line():
@@ -777,8 +777,8 @@ def about():
 <p>Grown-ups can read the <a href="/privacy/">Privacy Policy</a> to see exactly what is and is not collected.</p>
 <h2>Free to play</h2>
 <p>All the games are free. To help pay for making new games and keeping the site running, the site may show ads from Google on its pages, as explained in the <a href="/privacy/">Privacy Policy</a>. The games themselves stay ad-free.</p>
-<h2>Get in touch</h2>
-<p>Found a bug, have an idea for a level, or want to tell Zaib which game is your favourite? Please {contact_line()}.</p>"""
+<h2>Getting help</h2>
+<p>Stuck on a level or wondering how saving works? Every game has a full <a href="/guides/">guide</a>, and the <a href="/contact/">contact page</a> explains where to find answers.</p>"""
     ld = [{"@context": "https://schema.org", "@type": "AboutPage", "name": "About Games by Zaib", "url": SITE + "/about/",
            "mainEntity": {"@type": "Organization", "name": "Games by Zaib", "url": SITE + "/", "logo": SITE + "/img/icon-512.png",
                           "founder": {"@type": "Person", "name": OWNER}}}]
@@ -791,10 +791,9 @@ def contact():
 <p><a class="play" href="mailto:{EMAIL}?subject=Games%20by%20Zaib">✉ {EMAIL}</a></p>
 <p>Replies usually take a few days.</p>"""
     else:
-        how = """<h2>How to reach us</h2>
-<p>A dedicated email address for players and parents is being set up and will be added to this page as soon as it is ready. We do not publish anyone's personal contact details.</p>
-<p>Until then, most questions about controls, saving and tricky levels are answered in each game's <a href="/guides/">guide</a>. When the address is live, the notes below explain what helps most in a message.</p>"""
-    body = f"""<h1>Contact</h1>
+        how = None
+    if how:
+        body = f"""<h1>Contact</h1>
 <p class="lead">Feedback, bug reports, level ideas and questions from parents are all welcome. Every message is read by Zaib, who makes the games.</p>
 {how}
 <h2>Reporting a bug</h2>
@@ -802,13 +801,23 @@ def contact():
 <ul><li>the name of the game and what you were doing when it happened (for example "Juicy Merge, Daily Challenge, after a Shake")</li>
 <li>your device and whether you were holding it upright or sideways</li>
 <li>a screenshot, if you can</li></ul>
-<h2>Ideas and feedback</h2>
-<p>The games are updated often, and player feedback helps decide what to fix first. If a level feels unfair, a button is hard to reach or a game is missing something you would love, say so.</p>
 <h2>Parents and privacy</h2>
 <p>The games do not ask for names, emails or accounts. For any question about privacy or the information described in our <a href="/privacy/">Privacy Policy</a>, please mark your message "Privacy".</p>
 """
-    page("/contact/", "Contact Games by Zaib: Feedback, Bug Reports and Ideas",
-         "How to send feedback, report a bug or ask a privacy question about Games by Zaib, plus what to include so problems get fixed quickly.", body)
+    else:
+        body = """<h1>Contact</h1>
+<p class="lead">Games by Zaib is a small independent studio. We do not run a contact form or publish a contact email at the moment, and we never publish anyone's personal contact details. This page explains where to find answers in the meantime.</p>
+<h2>Questions about a game</h2>
+<p>Almost every question we see is about controls, saving or a tricky level. Each game has a full <a href="/guides/">guide</a> written from our own play, with a controls table, beginner tips, a walkthrough of the first levels and an FAQ. The <a href="/news/">Tips &amp; News</a> section adds round-ups, comparisons and beginner lessons across several games.</p>
+<h2>Saves and progress</h2>
+<p>Every game saves your progress on the device and browser you play on. There are no accounts, so progress does not move between devices, and clearing your browser data for zaibgames.com resets it. If a game seems stuck, reloading the page is safe: your progress is kept.</p>
+<h2>How problems get fixed</h2>
+<p>Every game is play-tested on phones held upright and sideways, on tablets and on computers, both before release and in regular checks afterwards. Bugs found that way are fixed and released as updates, and the guides list notable changes under "What changed after testing".</p>
+<h2>Parents and privacy</h2>
+<p>The games do not ask for names, emails or accounts, and there is nothing to buy with real money. Our <a href="/privacy/">Privacy Policy</a> explains what information the site uses, and our <a href="/about/">About page</a> explains who makes the games and how they are tested.</p>
+"""
+    page("/contact/", "Contact and Help: Games by Zaib",
+         "How to get help with Games by Zaib: where to find answers about controls, saves and tricky levels, how games are tested and fixed, and privacy information for parents.", body)
 
 def privacy():
     body = f"""<h1>Privacy Policy</h1>
@@ -916,6 +925,7 @@ def live_lastmod(slug):
 def sitemap():
     pages = [("/", TODAY, "1.0"), ("/about/", TODAY, "0.5"), ("/contact/", TODAY, "0.4"), ("/privacy/", TODAY, "0.3"), ("/terms/", TODAY, "0.3")]
     pages += SITEGEN.urls()
+    pages += [(u, TODAY, "0.7") for u in CAT_URLS]
     pages += [(f"/games/{g['slug']}/", LASTMOD, "0.5") for g in GAME_INFO if g['slug'] not in SITEGEN.guides]
     pages += [(p, live_lastmod(p.strip("/")), "0.9") for p in game_paths()]
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -950,6 +960,10 @@ CAT_BLURBS = [
  ("Sports", "Sports games", "Short, fast matches with simple swipe controls: arcade football with power shots and a full league, and 3D badminton with jump smashes. Both let two players share one phone."),
 ]
 
+CAT_URLS = []
+import categories
+CAT_PAGE = {'Kids': 'kids', 'Puzzle': 'puzzle', 'Action': 'action', 'Racing': 'racing', 'Sports': 'sports'}
+
 def categories_html():
     src = open(os.path.join(ROOT, "index.template.html")).read()
     m = re.search(r"const GAMES = \[(.*?)\n\];", src, re.S)
@@ -959,7 +973,9 @@ def categories_html():
         games = [(n, s_) for n, s_, c in rows if c == cat]
         if not games: continue
         items = "".join(f'<li><a href="/{s_}/">{e(n)}</a> <span>(<a href="{SITEGEN.guide_url(s_)}">guide</a>)</span></li>' for n, s_ in games)
-        out.append(f'<div class="cat"><h3>{e(title)}</h3><p>{e(blurb)}</p><ul>{items}</ul></div>')
+        h3 = f'<a href="/games/{CAT_PAGE[cat]}/">{e(title)}</a>' if cat in CAT_PAGE else e(title)
+        out.append(f'<div class="cat"><h3>{h3}</h3><p>{e(blurb)}</p><ul>{items}</ul></div>')
+    out.append('<p class="catall">Browse by category: ' + " · ".join(f'<a href="/games/{c[0]}/">{e(c[2])}</a>' for c in categories.CATEGORIES) + ' · <a href="/games/">all categories</a></p>')
     return "".join(out)
 
 GAME_LASTMOD = {}
@@ -974,5 +990,5 @@ SITEGEN = zgsite.Site(ROOT, page, SITE, OWNER, GAME_INFO, IMG_V, TODAY)
 if __name__ == "__main__":
     for g in GAME_INFO: game_page(g)
     games_index(); about(); contact(); privacy(); terms()
-    SITEGEN.build(); sitemap(); hub_home()
+    SITEGEN.build(); CAT_URLS[:] = categories.build(page, SITEGEN, SITE, {p["slug"] for p in SITEGEN.posts}); sitemap(); hub_home()
     print("info pages, guides, news, sitemap.xml and robots.txt built")

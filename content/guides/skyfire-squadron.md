@@ -1,10 +1,10 @@
 title: Skyfire Squadron Guide: Missions, Stars, Planes, Upgrades and Bosses
 seo_title: Skyfire Squadron Guide: Airplane Shooter Tips, Stars, Planes and Bosses | Games by Zaib
 description: A Skyfire Squadron guide from real play: how flying and bombing work, how the three stars are scored, every power-up, the five planes and what they cost, the six upgrades, and the bosses waiting in all four stages.
-lead: Skyfire Squadron is a bright cartoon airplane shooter. Your little plane fires by itself while you steer through waves of enemy fighters, drop bombs on ships and collect power-ups. We were shot down twice before we earned our first Perfect Mission. Here is what we learned.
+lead: Skyfire Squadron is a bright cartoon airplane shooter. Your little plane fires by itself while you steer through waves of enemy fighters, drop bombs on ships and collect power-ups. We have been shot down on every hand-played try at the first mission so far, and each defeat taught us something. Here is what we learned.
 related: horizon-pilot, tank-rumble, shuttle-smash
 updated: 2026-10-20
-shots: skyfire-squadron-title.webp|The Skyfire Squadron title screen with a blue plane and red enemy planes over the sea and Play, Hangar, Daily, How to play and Settings buttons|The title screen ; skyfire-squadron-battle.webp|A blue plane at the bottom of the screen firing upward while red enemy bullets fly and an explosion flashes near an island|Mission 1-1: dodge the red bullets while your guns fire ; skyfire-squadron-perfect.webp|The Perfect Mission results screen with three stars, 58 of 59 enemies down, 83 percent health left and 227 coins|Our Perfect Mission on 1-1 ; skyfire-squadron-hangar.webp|The Hangar screen showing the Sparrow plane with its stats and the Guns, Armor, Bombs, Mega Bomb, Wingmen and Magnet upgrades|The Hangar: planes and upgrades
+shots: skyfire-squadron-title.webp|The Skyfire Squadron title screen with a blue plane and red enemy planes over the sea and Play, Hangar, Daily, How to play and Settings buttons|The title screen ; skyfire-squadron-battle.webp|A blue plane at the bottom of the screen firing upward at red enemy planes while red enemy bullets fly toward it|Mission 1-1, played by hand: dodge the red bullets while your guns fire ; skyfire-squadron-shot-down.webp|The Shot Down results screen with no stars, 42 of 59 enemies down, 0 percent health left and 85 coins earned|Another hand-played try on 1-1: shot down, but the 85 coins are kept ; skyfire-squadron-hangar.webp|The Hangar screen showing the Sparrow plane with its stats and the Guns, Armor, Bombs, Mega Bomb, Wingmen and Magnet upgrades|The Hangar: planes and upgrades
 ---
 Skyfire Squadron looks like a Saturday-morning cartoon. Chubby planes zoom over turquoise water, little islands with palm trees drift past, and when something is hit it bursts into a puff of cartoon smoke. There are no people on screen and nothing gory, so it suits younger players who like fast arcade action.
 
@@ -27,11 +27,11 @@ The green bar at the top is your health. Each enemy bullet that reaches you take
 
 ## Our first missions
 
-Our first attempt at 1-1 lasted under a minute. We swept the plane left and right across the bottom of the screen without watching the bullets closely. We shot down 38 of 59 enemies but lost all our health. The second try ended the same way, with 36 of 49 enemies down.
+Our first attempt at 1-1 lasted under a minute. We swept the plane left and right across the bottom of the screen without watching the bullets closely. We shot down 38 of 59 enemies but lost all our health. The second try ended the same way, with 36 of 49 enemies down, and so did a third, with 42 of 59. We have not yet won 1-1 playing by hand.
 
 The lesson was simple: **watching the red bullets matters more than chasing planes.** Your guns hit anything in front of you, so small sideways moves that keep you out of the bullet streams pay off more than big swoops.
 
-On a later run we finished the mission with health to spare. The results screen said **Perfect Mission!** with 58 of 59 enemies down, 83% health left and **227 coins**.
+Every run still paid out: you keep the coins you collect even when you are shot down. Our third try earned 85 coins with no stars, so a failed mission still helps toward your first upgrade.
 
 Mission 1-1 lasts a little under a minute. Later missions run longer and enemies fire faster.
 
@@ -40,7 +40,7 @@ Mission 1-1 lasts a little under a minute. Later missions run longer and enemies
 Every results screen shows three goals. Each one is worth a star:
 
 1. **Finish the mission.** A win always gives at least one star.
-2. **Shoot down 70% of enemies.** The screen shows this as "enemies down", for example 58 / 59.
+2. **Shoot down 70% of enemies.** The screen shows this as "enemies down", for example 38 / 59 on our first try.
 3. **Keep half your health.** End the mission with at least 50% of your health bar.
 
 Get all three and the title reads **Perfect Mission!** Otherwise it says **Mission Complete!** If you are shot down you get no stars, but you keep the coins you picked up.
