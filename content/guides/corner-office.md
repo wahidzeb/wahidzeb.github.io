@@ -97,5 +97,5 @@ Several sessions. The early ranks come in minutes, the later ones take longer.
 ### Do coworkers keep working when I close the game?
 Yes, for up to 2 hours, at half speed.
 
-### Is my progress saved?
-Yes, on your device.
+### Do I keep my rank if I close the game?
+Yes. Your rank, coins, coworkers and upgrades are kept on this device. The game also remembers when you left, which is how the Welcome back card knows what your team earned while you were away.

@@ -56,7 +56,7 @@ Coins buy cube skins. There are **44** in total, starting with Cyan (free), then
 
 Neon Dash is simple to understand and has no reading needed once you have seen the How to Play card. Runs are short and retrying is instant, which is good for short play sessions. It can be fast and flashy, with screen shake and glowing effects, and the vibration and music can be switched off in Settings. The game pauses itself if you switch to another tab, and there is a countdown before it resumes.
 
-## What changed after testing
+## Changes since launch
 
 The look got two big upgrades: brighter neon effects for the cube, more detailed obstacles, three layers of moving city, glow and reflections on the floor, then themed sections with landmarks and a city skyline drawn especially for phones held upright. The menus were polished too.
 

@@ -24,6 +24,8 @@ Two stars or more moves the story on to that patient's next session. Each of the
 
 On a phone everything is tapping, plus dragging in a couple of the mini-games. On a computer, Space or Enter moves the chat along and 1, 2 or 3 picks a reply.
 
+{{shots}}
+
 ## The secret of the mood meter
 
 The bar at the top of the screen is the patient's mood. Here is how it adds up, worked out from playing and checking the numbers:

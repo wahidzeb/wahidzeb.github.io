@@ -73,7 +73,7 @@ Stars are not always on the main route, so glance around each stage as you climb
 - Conveyor plus ice stages in Star Summit punish small corrections. Make one clear movement, then let go.
 - If your device feels slow, the game switches itself to a smoother graphics mode, and you can choose it yourself in Settings.
 
-## What changed after testing
+## What we fixed after testing
 
 Hop Heights was played through all 60 stages before and after its updates. That testing led to a list of fixes: jump pads now reliably reach the next ledge, the checkpoint flag numbers face the right way, red hazards look properly red on every setting, the stairs camera no longer hides the next step, and the hardest double spinners (stages 43, 45, 47, 48, 53 and 58) were made easier. Ice in Frosty Peaks also got more contrast so the edges are easier to see.
 

@@ -27,6 +27,8 @@ The game plays upright on a phone, but on the first planet it suggests turning y
 
 You do not need to keep your finger on the rocket. Drag from any empty spot and the rocket follows your movement, so your thumb never hides the action.
 
+{{shots}}
+
 ## Our first flight (and what went wrong)
 
 On our first try we wandered around Moon Cheese grabbing fish and ignoring the edges of the screen. About forty seconds later a cheese asteroid, a UFO shot and a space mouse had each tagged us once, and the card said **CATS DOWN!** with 30 fish stars, 12 enemies defeated and 3 hits taken. You start with three hearts, so three hits ends the run.

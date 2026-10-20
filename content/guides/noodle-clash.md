@@ -24,6 +24,8 @@ You are a noodle in a round arena full of glowing food orbs, sitting in a bowl w
 
 The short tutorial teaches steering, eating, boosting and crashing in four steps. You can skip it.
 
+{{shots}}
+
 ## Boosting: fast but costly
 
 Boosting makes you much faster, but it **burns your length** and leaves a trail of orbs behind you. Use it in short bursts for a reason:
@@ -71,11 +73,11 @@ The computer noodles have personalities:
 
 Every match pays coins based on how you did (even our 17-second run earned 5). There are 3 daily missions and 19 awards that pay more. The Shop sells 18 skins, from free Chili Oil and Matcha to Rainbow Dragon and Royal Gold (2,500 coins), and 8 patterns such as Stripes, Polka Dots and the animated Neon Pulse. They only change how your noodle looks.
 
-## What changed after testing
+## Fixes after testing
 
 Updates turned the food into little noodle-bowl treats (dumplings, eggs, shrimp, bok choy and chillies) that bob and glow, gave the arena a ceramic bowl rim, ripples and steam, and made the noodle bodies richer. Numbers for coins, scores and missions now use separators and short forms so they always fit, and a More games link was added to the results screen.
 
-## FAQ
+## Common questions
 
 ### How do I stop crashing in Noodle Clash?
 Give your head room, avoid squeezing between two noodles, and stay off the red border. Only your head touching something causes a crash.
@@ -89,5 +91,5 @@ Yes. Duo is a split-screen, 3-minute duel on one phone. Turn the phone sideways.
 ### Does it need the internet?
 The rivals are computer-controlled noodles, so there is no waiting for other players to join.
 
-### Does it save?
+### Are my skins and awards kept?
 Yes. Your coins, skins, missions and awards are saved on your device.

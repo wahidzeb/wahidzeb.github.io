@@ -85,11 +85,11 @@ Eventually growth slows. That is when the **Franchise** tab matters. Franchising
 5. Save big upgrades like "All profits x2" for when you can afford them; they beat buying one more shop.
 6. Do not franchise too early. Wait until the Franchise tab offers a good handful of Stars.
 
-## What changed after testing
+## What testing changed
 
 A graphics pass gave the bazaar more detail. Layout fixes made sure the tabs and shop cards fit on short landscape phone screens, and save checks were added so a damaged save cannot break your empire.
 
-## FAQ
+## Your questions answered
 
 ### Does Chai Tycoon earn while I am away?
 Yes, but only shops with a manager, and only up to the offline limit (2 hours at first, more with Long Naps).
@@ -100,5 +100,5 @@ More Chai Stalls, then the Paratha Tawa at 60, then the Tea Master manager at 15
 ### What does franchising do?
 It restarts your empire in exchange for Stars, which permanently boost profits.
 
-### Is progress saved?
-Yes, on your device.
+### Will my chai empire be there when I come back?
+Yes. Your shops, managers, money and Stars are kept on this device. Shops with a manager also keep earning while you are away, up to the offline limit.

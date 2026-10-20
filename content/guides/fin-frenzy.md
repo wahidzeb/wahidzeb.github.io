@@ -99,11 +99,11 @@ If you find the game hard, **Big Belly and Armor Plates** make the biggest diffe
 4. Use Frenzy when lots of fish are around.
 5. Try follow-finger mode in Settings if the joystick feels tricky. There is also a left-handed layout.
 
-## What changed after testing
+## What we tuned after testing
 
 Saves were checked and made safer, and later versions polished the game's look and wording and made the More games link and results screens fit properly.
 
-## FAQ
+## Questions from players and parents
 
 ### Is Fin Frenzy scary for kids?
 It is cartoon-style and colourful. The deeper zones are darker, but there is nothing gory.
@@ -114,5 +114,5 @@ Your hunger bar ran out. Keep eating.
 ### How do I beat a boss?
 Grow first by eating smaller fish, then bite the boss when it is tired or stunned.
 
-### Is my progress saved?
-Yes, on your device.
+### Do I keep my sharks and gear?
+Yes. Coins, the sharks you have unlocked, gear upgrades, level stars and missions are kept on this device, so your shark is just as strong next time.

@@ -21,6 +21,8 @@ Our very first level took a single swipe: one rope straight above Kedim, three s
 
 A level is done when Kedim catches the treat. You lose it if the treat falls off the screen, hits spikes or gets stolen by a spider.
 
+{{shots}}
+
 ## The six Snack Boxes
 
 There are 120 levels in six boxes of 20, with 3 stars each, so 360 stars in total. Each new box needs a number of stars:
@@ -61,11 +63,11 @@ New gadgets arrive one at a time, so each box first teaches the idea gently, the
 
 Finishing levels pays coins (25 for our first 3-star level), and awards pay extra (our first one, First Bite, gave 20). The **Daily Snack** on the title screen is a special level each day worth 40 coins, with a streak bonus if you come back daily. Coins buy more hints, 9 treat skins and 11 hats for Kedim. There are 20 awards to collect.
 
-## What changed after testing
+## Fixes after playtests
 
 Recent updates drew more detailed fish, twisted ropes, shiny faceted stars and metal spikes and anchors, and turned the background into a cardboard box with a spotlight on Kedim. Settings now fit on wide phone screens, and a More games link was added to the results.
 
-## FAQ
+## Your questions answered
 
 ### How many stars do I need for the Spooky Box?
 215 stars. Garden needs 30, Toy 70, Space 115 and Magic 165.
@@ -79,5 +81,5 @@ Tap the treat while it is inside the bubble.
 ### What do I do about spiders?
 Cut the rope the spider is crawling down before it reaches the treat.
 
-### Does it save?
+### Do I keep my hats and skins?
 Yes. Your stars, coins, skins and hats are saved on your device.

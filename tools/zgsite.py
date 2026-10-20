@@ -69,10 +69,10 @@ def md(text, ctx):
 
 def faq_items(body):
     """Q&A pairs under a '## ... questions' / '## FAQ' heading (### question + answer)."""
-    m = re.search(r"^## (?:FAQ|.*[Qq]uestions.*)$(.*?)(?=^## |\Z)", body, re.M | re.S)
+    m = re.search(r"^## (?:FAQ|[^\n]*[Qq]uestions[^\n]*)$(.*?)(?=^## |\Z)", body, re.M | re.S)
     if not m: return []
     return [(q.strip(), re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", a.strip().replace("\n", " ").replace("**", "")))
-            for q, a in re.findall(r"^### (.+)\n(.+?)(?=^### |\Z)", m.group(1), re.M | re.S)]
+            for q, a in re.findall(r"^### ([^\n]+)\n(.+?)(?=^### |\Z)", m.group(1), re.M | re.S)]
 
 class Site:
     def __init__(self, root, page, site, owner, games, imgv, today):
@@ -124,7 +124,7 @@ class Site:
 <span class="genre" style="--gc:{g['color']}">{e(g['genre'])}</span>
 <h1>{e(gd['title'])}</h1>
 <p class="lead">{inline(gd.get('lead', g['tagline']), ctx)}</p>
-<p class="small">By {self.OWNER} · Updated {fmt_date(upd)} · Free to play, no download</p>
+<p class="small">By {self.OWNER} · Updated {fmt_date(upd)}</p>
 <a href="/{slug}/" tabindex="-1" aria-hidden="true"><img class="hero" src="{self.thumb(slug)}" alt="" width="600" height="375"></a>
 {self.play_btn(slug)}
 {body_html}

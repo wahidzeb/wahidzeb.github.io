@@ -32,6 +32,8 @@ Merge two Watermelons and they burst in a **Juice Jackpot** worth 200 points (mo
 
 You only ever get the five smallest fruits to drop, Blueberry to Lemon, and the small ones come up most often. Everything from Orange upward has to be built by merging. The **Next** box at the top right shows what is coming after your current fruit, so you can plan one move ahead.
 
+{{shots}}
+
 ## Combos
 
 Merges that happen within about half a second of each other build a combo chain. Every step adds +0.5 to your multiplier, up to x4. Chains happen naturally when one merge drops a new fruit onto its twin, which drops onto the next, and so on. In our first game a simple double merge showed **COMBO x2** after only about thirty drops.
@@ -86,7 +88,7 @@ The Shop has three tabs: **Jars** (Orchard Crate 400, Candy Cloud 700, Ocean Bow
 - Keep the top clear. A fruit only ends the game if it stays above the line for three seconds, so a bouncing fruit is not a disaster.
 - Use Upgrade to finish a chain rather than to start one.
 
-## What changed after testing
+## Updates after testing
 
 Recent updates gave the fruit more detail and cuter faces, added a juice splash every time two fruits merge, and dressed the kitchen with a window, shelf and cupboards. The background was simplified in landscape so the jar is easy to see. A More games link was added to the results screen, and the Share button was moved so it never covers the jar.
 
@@ -105,4 +107,4 @@ Only Blueberry, Cherry, Lime, Plum and Lemon. Everything bigger comes from mergi
 Yes. Everyone gets the same fruit order and goal for the day, which makes it fun to compare scores with friends.
 
 ### Does it save my coins and best score?
-Yes, automatically on your device.
+Yes. Your coins, best scores for Classic, Timed and Daily, jars, fruit skins and power-ups are kept on this device.

@@ -25,6 +25,8 @@ The controls changed after early testing (more on that below), and they are now 
 
 Aim assist gently snaps the circle onto the nearest bot, so you do not need to be pixel-perfect. If your magazine runs empty, your hero ducks and reloads by themselves, which is safe but slow. It is better to duck on your own terms.
 
+{{shots}}
+
 ## The one rule: duck on the red "!"
 
 Every robot shows a red **!** just before it fires. That is your cue. Hold COVER, wait for the shot to bonk off the blocks, then pop back out. Doing this is the difference between 1 star and 3 stars, because stars are all about how much health you finish with:
@@ -99,7 +101,7 @@ The Gear tab has four more upgrades: **Armor** (+2 max health), **Barricade** (+
 - Replays are worth it. You keep the coins from every run, so replaying an earlier mission for its third star also pays for upgrades.
 - On bosses, stay in cover during the attack and pop out as the cores glow. Being greedy during an attack is how 3 stars become 2.
 
-## What we changed after testing
+## Changes after playtests
 
 Bolt Brigade was tested over many versions before it reached its current form:
 
@@ -108,7 +110,7 @@ Bolt Brigade was tested over many versions before it reached its current form:
 - **Double taps fixed (version 7).** Some phones registered one tap as two on the menus.
 - **Smarter results messages (version 9).** Replaying a boss you had already beaten used to announce "New stage unlocked!" again, and the last mission kept saying "Replay for 3 stars" even when you had them all. Both now show the right message, and finishing all 35 missions on 3 stars shows a special "true Bolt Brigade legend" note.
 
-## FAQ
+## Questions players ask
 
 ### Is Bolt Brigade violent?
 It is cartoon action. You zap wind-up toy robots that pop and drop coins. There are no people, no blood and nothing scary, which is why it sits happily alongside our other action games for all ages.

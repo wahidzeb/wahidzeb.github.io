@@ -83,7 +83,7 @@ Every day there is a fresh Daily Challenge board, made right in the game. Today'
 
 Coins also buy looks. There are 6 block skins, including Candy Gloss (300), Toy Bricks (500), Jelly (500), Block Buddies with blinking faces (700) and Gemstone (900), plus 6 colour themes. They change only how the board looks.
 
-## What changed after testing
+## How testing changed the puzzles
 
 The game was tuned to fit phones held sideways, with boosters moving to the right side in landscape. The results card was adjusted so its buttons always fit, and a crash that could happen when the window was resized was fixed. Saves were also strengthened so progress is kept safely between visits.
 
@@ -101,5 +101,5 @@ On your first move.
 ### Does using a booster cost me stars?
 No. Only continuing after running out limits you to 1 star.
 
-### Is my progress saved?
-Yes, on your device.
+### Do I lose my level if I close the game?
+No. Your current level, stars, coins, boosters, skins and themes are kept on this device, along with your Daily Challenge streak.

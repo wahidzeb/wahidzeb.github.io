@@ -98,5 +98,5 @@ Yes. There are no timers and no failing, just redesigning until the client is ha
 ### Can I redo a room?
 Yes. Tap Redesign on the result card.
 
-### Is my progress saved?
-Yes, on your device.
+### Are my finished rooms and furniture kept?
+Yes. Your coins, finished rooms and the furniture you have bought are kept on this device, so you can keep decorating later.

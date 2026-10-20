@@ -104,7 +104,7 @@ Bigger planes also need a higher rank. Ranks go from **Cadet** through Student P
 
 The game handles a lot of the hard parts for younger players: assisted controls, an interactive tutorial, on-screen tips and AUTO. Older children can try Engine Out! and Crosswind Landing for a real challenge. The 3D graphics need a reasonably recent phone; quality adjusts automatically.
 
-## FAQ
+## Questions players ask
 
 ### Do I need a joystick?
 No. Touch, phone tilt and keyboard all work.
@@ -112,5 +112,5 @@ No. Touch, phone tilt and keyboard all work.
 ### What does AUTO do?
 The autopilot flies for you, but that mission can then only earn 2 stars.
 
-### Is my progress saved?
-Yes, on your device.
+### Will my planes and mission stars stay unlocked?
+Yes. Your coins, planes, upgrades, liveries, mission stars and Daily streak are kept on this device. Each mission remembers your best result.

@@ -27,6 +27,8 @@ Tap the tabs along the bottom to move around the house.
 
 In the kitchen, the first food is free and the others cost a few coins each (between 4 and 14 when we played). Crops from the garden can also be fed to him, which saves coins.
 
+{{shots}}
+
 ## How growing up really works
 
 Kedim grows in four stages: **Kitten, Kid, Teen and Adult**. The top bar shows his stage and how long until the next one ("Grows in 10m" on day one).
@@ -89,7 +91,7 @@ Tap the little kitty face at the top of the screen to adopt **up to three cats**
 - Do the bath before bedtime so two needs are full while he sleeps.
 - The game can offer a gentle reminder when Kedim gets hungry or misses you, at most once a day. It only appears if you say yes.
 
-## What changed after testing
+## Changes after our first weeks with Kedim
 
 Recent updates made the home feel alive: curtains sway, a pendant lamp swings, magnets wobble on the fridge, and a beam of window light catches floating dust. Kedim was drawn bigger on upright phones, and on very short, wide screens he no longer hides under the top bar. Scores and streaks in the mini-games now use compact numbers so they always fit.
 
@@ -107,5 +109,5 @@ Play Feel-Good Clinic and Yarn Pop more than the other mini-games while he grows
 ### Can I have more than one cat?
 Yes, up to three. Tap the kitty face at the top of the screen.
 
-### Does it save?
-Yes, automatically on your device.
+### Will Kedim remember me tomorrow?
+Yes. Kedim's name, age, needs, outfits, coins, garden and hobby room are kept on this device. The game also notes when you left, so he keeps growing while you are away and may be a little hungry or sleepy when you come back.

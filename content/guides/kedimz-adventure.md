@@ -98,11 +98,11 @@ Coins buy cat skins, hats and upgrades.
 
 **Our tip:** buy **Extra Heart** first. One more heart makes every level easier, especially boss fights. **Start Big** is the next best buy.
 
-## What changed after testing
+## Fixes since launch
 
 Saves are now checked when they load so a damaged save cannot break the game, the shop was made more compact on phones held sideways, and a share button was added.
 
-## FAQ
+## Questions we hear a lot
 
 ### Is Kedimz Adventure good for young children?
 Yes. There is no blood or scary content, and falling or getting hit is forgiving.
@@ -110,8 +110,8 @@ Yes. There is no blood or scary content, and falling or getting hit is forgiving
 ### How many levels are there?
 20: five worlds of four levels each, including five boss levels.
 
-### Is my progress saved?
-Yes, on your device.
+### Do I keep my gems and hats?
+Yes. Your coins, unlocked levels, collected gems, skins, hats and upgrades are kept on this device, so Kedimz can carry on from the last level you reached.
 
 ### Does it work sideways?
 Yes, and the game suggests landscape for the best view.

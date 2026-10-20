@@ -77,11 +77,11 @@ Traffic gets heavier and the hills get steeper as you go.
 
 Each faster bike also accelerates harder, handles better and has more armour. The Upgrades tab improves your **engine, tires and armor**. A good plan is to save for the **Viper 600** first, then put money into tires so the bike grips on later tracks.
 
-## What changed after testing
+## Fixes after our test races
 
 Updates gave the game a graphics pass and general polish, then made big cash amounts display in a compact way (K, M and so on) so they always fit on screen.
 
-## FAQ
+## Questions from players and parents
 
 ### Why am I so slow?
 Check you are on the road. Off-road riding caps your speed.

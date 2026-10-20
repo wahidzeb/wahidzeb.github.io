@@ -102,5 +102,5 @@ Rail Rush is calm and has no fail screen beyond "So close!" with a Try again but
 ### What happens if a train goes to the wrong station?
 You see "Oops!" and it counts against your stars, but the level carries on.
 
-### Is my progress saved?
-Yes, on your device.
+### Will my stars and engines stay unlocked?
+Yes. Your coins, stars on every level, engine upgrades, train skins and themes are kept on this device, so your railway is ready next time.

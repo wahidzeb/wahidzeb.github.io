@@ -71,11 +71,11 @@ There are slow-motion replays of big points, commentator callouts and crowd reac
 
 Coins buy stat upgrades, outfits and rackets. Rackets run from the free **Starter Wood** to **Carbon Blade** (400), **Volt Striker** (900), **Jade Whisper** (1,300), **Phoenix Flame** (1,900) and **Galaxy Nova** (2,800). Outfits range from **Court Classic** (free) to **Sunset Blaze** (2,000).
 
-## What changed after testing
+## Tweaks after test matches
 
 Saves are now checked when they load so a damaged save cannot break the game. The match record display was made more compact, and the share button was moved so it fits neatly on the title screen when the phone is sideways.
 
-## FAQ
+## Questions players ask
 
 ### Do I have to move my player?
 No. Your player runs to the shuttle automatically.
@@ -86,5 +86,5 @@ Yes. Choose 2 PLAYERS SAME PHONE in Quick Match and sit facing each other.
 ### How do I smash?
 Make a long swipe when the shuttle is high on your side.
 
-### Is my progress saved?
-Yes, on your device.
+### Do my outfits and rackets stay unlocked?
+Yes. Coins, player upgrades, outfits, rackets and power shots are kept on this device, along with your match settings.

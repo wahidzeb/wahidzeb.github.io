@@ -90,7 +90,7 @@ Bigger ships have much more health and also carry more cargo.
 
 **Our order:** one level of **Sails** (deliveries get easier), then **Hull**, then save for the **Brigantine** as soon as you reach Rank 3.
 
-## FAQ
+## Quick questions
 
 ### Is Pirate Isles violent?
 No. Battles are cartoon-style and beaten pirates wave a white flag and sail away.
@@ -98,5 +98,5 @@ No. Battles are cartoon-style and beaten pirates wave a white flag and sail away
 ### What happens if my ship is wrecked?
 You restart at the last port you docked at.
 
-### Is my progress saved?
-Yes, on your device.
+### Will my ship and gold be saved?
+Yes. Your gold, rank, ships, ship upgrades and story progress are kept on this device, so your captain is ready to set sail again whenever you are.

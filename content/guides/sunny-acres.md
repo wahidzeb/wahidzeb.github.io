@@ -76,7 +76,7 @@ Villagers like Farmer Joe and Chef Pip post orders on the board. Each order show
 
 Sunny Acres has no fail state, no fighting and no time pressure. Reading is light, with emoji pictures for every item, so younger children can play with a little help at first. It is a gentle way to practise simple planning: "If I plant corn now, I can feed the cows later."
 
-## What changed after testing
+## What we improved on the farm
 
 A careful round of checks made saves sturdier, made sure orders and buildings always hold valid items, kept the game running smoothly if something unexpected happens, and shortened big coin numbers so they fit. Pop-up messages were also fixed to stay centred on every screen.
 
@@ -92,4 +92,4 @@ Choose a seed, keep your finger down and swipe across empty fields.
 Fill truck orders, then make goodies in buildings once you unlock them.
 
 ### Is my farm saved?
-Yes, on your device.
+Yes. Your fields, animals, buildings, stored goods and truck orders are kept on this device, and crops you planted keep growing while you are away.

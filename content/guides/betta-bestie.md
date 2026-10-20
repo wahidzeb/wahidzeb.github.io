@@ -23,6 +23,8 @@ It was made with younger players in mind. There is no way to lose: if you forget
 
 The buttons along the bottom are everything you need: **Feed**, **Clean**, **Play**, **TV** and **Shop**. The trophy button at the top shows your achievements, and the gift button reopens the calendar.
 
+{{shots}}
+
 ## The three care meters
 
 Your betta has three meters: **full** (food), **clean** (water) and **happy**. They drift down slowly in real time, even while the game is closed, and her face changes to match. If any meter drops very low she looks a bit sad; when all three are high she is at her happiest.

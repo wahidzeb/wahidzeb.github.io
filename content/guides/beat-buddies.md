@@ -102,7 +102,7 @@ Daily Fun is the fastest way to earn notes, so check it each time you play.
 - The game works offline once it has loaded.
 - A share link stores the song inside the link itself. Nothing is uploaded, and no account is needed.
 
-## FAQ
+## Quick questions
 
 ### Is Beat Buddies free?
 Yes. Notes are earned by playing, not bought.
@@ -110,5 +110,5 @@ Yes. Notes are earned by playing, not bought.
 ### How many buddies can be on stage?
 Seven at once.
 
-### Is my progress saved?
-Yes, on your device.
+### Are my buddies and combos remembered?
+Yes. Your notes, the buddies you have bought and the secret combos you have found are kept on this device, so your collection keeps growing each time you play.

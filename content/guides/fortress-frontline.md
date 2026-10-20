@@ -75,7 +75,7 @@ There are **30 levels** across four worlds, each ending with a boss:
 
 Along the way you meet 17 kinds of enemy, including fast ones, armoured knights, flyers that Cannons cannot hit, healers, splitters that break into smaller monsters, burrowers that tunnel underground, and summoners.
 
-## What changed after testing
+## Balance changes after testing
 
 A layout check across phone sizes led to fixes for short landscape screens, and the Victory screen was made more compact when the phone is sideways. Saves were made safer so a damaged save cannot break the game, and the title screen got new artwork.
 

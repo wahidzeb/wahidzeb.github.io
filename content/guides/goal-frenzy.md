@@ -77,11 +77,11 @@ Matches can be 5-a-side or 7-a-side, and there are 16 made-up clubs plus your ow
 
 In **My Club** you name your team and choose kit and badge colours. Coins from matches buy powers and squad upgrades in the Shop: **Pace, Shooting, Passing, Defending, Goalkeeper and Stamina**. Our Zaib FC started at about 68 in every rating, so upgrades make a real difference against the stronger clubs.
 
-## What changed after testing
+## Updates after test matches
 
 Updates added a share button on the title screen and later moved it so it sits neatly on phones held sideways. Earlier versions also refined the game's look and controls.
 
-## FAQ
+## Common questions
 
 ### Can two people play on one phone?
 Yes. Choose 2 PLAYERS same device in Quick Match or Penalty Shootout. Each player uses half of the screen.

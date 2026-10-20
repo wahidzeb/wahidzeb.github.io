@@ -101,7 +101,7 @@ Coins buy **upgrades** and **new tanks**.
 
 Tank Rumble is a simple one-finger action game. The theme is toys and robots, nothing realistic. Rounds are short, and losing just shows a friendly "Tank Toppled!" card with a Play again button.
 
-## FAQ
+## Questions we hear a lot
 
 ### Do I have to aim?
 No. Aim is set to Auto, so your tank picks targets and fires by itself.
@@ -109,5 +109,5 @@ No. Aim is set to Auto, so your tank picks targets and fires by itself.
 ### How many chapters are there?
 Four, each with five stages and a boss.
 
-### Is my progress saved?
-Yes, on your device.
+### Do my tanks and upgrades stay unlocked?
+Yes. Coins, the tanks you have unlocked, their upgrades, stars and the levels you have reached are kept on this device.

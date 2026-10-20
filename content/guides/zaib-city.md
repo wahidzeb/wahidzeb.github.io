@@ -20,6 +20,8 @@ You start with $500, Level 1 and the Reputation title **Friendly Face**. Mayor S
 
 The game works upright, but the title screen suggests turning your phone sideways, and that gives a much wider view of the road. It is also a big 3D world, so the first load can take a little while on older phones.
 
+{{shots}}
+
 ## Controls on a phone
 
 | What | On foot | In a car |
@@ -120,5 +122,5 @@ Finish story missions and jobs, and keep your Reputation high, since it raises e
 ### Why can't I go to the beach yet?
 That district opens at Level 3 or after the Beach Day story mission.
 
-### Does it save?
+### Can I stop in the middle of the story?
 Yes, on your device. Homes also act as save points in the story.

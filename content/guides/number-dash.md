@@ -18,6 +18,8 @@ Our first attempt was to let the Buddy run and see what happened. It finished on
 
 The second time we got the quiz door right (4 + 2 = 6, "Correct!", +6) and felt great, but we then drifted through a −3 gate and another red gate near the end and finished on **4**. The lesson: **every gate counts, right up to the finish**, and red gates later in the level can undo a good start. Watch the whole row before you commit to a side.
 
+{{shots}}
+
 ## Controls
 
 | Action | Phone | Computer |
@@ -102,5 +104,5 @@ It depends on your number. Below 10, +10 is bigger. Above 10, ×2 is bigger.
 ### How do I get 3 stars?
 Finish with at least 90% of the best possible number for that level.
 
-### Does it save?
+### Are my Buddies and stars kept?
 Yes. Your levels, stars, coins and Buddies are saved on your device.

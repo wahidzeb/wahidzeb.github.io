@@ -26,6 +26,8 @@ Drag anywhere on the screen and your hole moves in that direction, like a joysti
 
 On a computer you can use W A S D, the arrow keys or drag with the mouse. When your hole goes behind a tall building, an outline keeps it visible.
 
+{{shots}}
+
 ## The three modes
 
 | Mode | Rivals | Time | Goal |
@@ -71,7 +73,7 @@ Solo has no rivals, so it is all about being thorough. Work through the map in s
 
 Every round pays coins (even our 8th place earned 25, and finishing the tutorial gave 50). There are also 3 daily missions and 16 achievements for bonus coins. Spend them on new maps, hole skins (from Bubblegum and Lime Pop at 150 up to Royal Gold at 1,200 and Galaxy at 1,500) and trails (Sparkles at 200 up to Confetti at 1,000). Skins and trails are just for looks, so if you want more to play, buy the maps first.
 
-## What changed after testing
+## What we changed after playing
 
 The latest updates added much more detail to the world: buildings with balconies, awnings and porches, long shadows, warm and cool lighting, textures on pavements, roads and grass, and a swirl inside the hole when it swallows something. The game description was reworded, a More games link was added to the results screen, and the Share button on the title screen was moved so it never hides your coin count.
 
@@ -89,5 +91,5 @@ Swallow 100% of the map within two minutes. Sweep in neat strips and follow the 
 ### Is Gobble Hole suitable for kids?
 Yes. Everything is bright and cartoony: people, animals and objects simply tip over the rim and drop out of sight, with nothing scary or gory.
 
-### Does it save my coins?
-Yes, automatically on your device.
+### Does it keep my coins and skins?
+Yes. Coins, hole skins, trails, unlocked maps, stars and best scores are kept on this device, so you can keep gobbling where you left off.

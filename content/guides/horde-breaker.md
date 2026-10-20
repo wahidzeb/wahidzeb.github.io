@@ -84,7 +84,7 @@ Coins buy and upgrade weapons, specials and survivor stats.
 
 The four specials are **Air Strike, Rage Mode, Black Hole and Tesla Storm**. The Shotgun is a great first buy for close crowds.
 
-## What changed after testing
+## Tweaks after testing
 
 The game got two graphics passes, then a kid-friendly update that removed all gore. Later updates added a share button and fixed where it sits on the title screen.
 
@@ -99,5 +99,5 @@ No. Auto-fire aims at the most dangerous zombie for you. You can switch to Assis
 ### How do I unlock new maps?
 Beat the boss at the end of each map.
 
-### Is progress saved?
-Yes, on your device.
+### Do I keep my weapons between sessions?
+Yes. Your coins, weapons and their upgrades, unlocked levels, stars and best Endless Survival wave are kept on this device, so the armory is ready next time.

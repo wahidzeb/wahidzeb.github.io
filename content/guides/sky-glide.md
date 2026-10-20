@@ -80,11 +80,11 @@ Each world has its own art and music. In Stormy Skies, tap a little more firmly 
 
 For beginners, the **Map Explorer** is a lovely first buy: it glides down slowly, which gives you more time between taps. The **Origami Crane**'s extra heart helps a lot in the storm.
 
-## What changed after testing
+## How playtesting shaped the game
 
 Saves were made safer and values are checked when they load. Pop-up messages were turned into a neat pill shape that sits well on phones held upright, and the share button was moved so it never covers the menu.
 
-## FAQ
+## Your questions answered
 
 ### Is Sky Glide hard?
 The first world is gentle. Later worlds add wind and low gravity, which take practice.
@@ -95,5 +95,5 @@ Use short taps. Long holds make the plane climb too fast.
 ### How many stars are there?
 60: three in each of the 20 levels.
 
-### Is my progress saved?
-Yes, on your device.
+### Will my planes and stars still be there tomorrow?
+Yes. Your coins, the paper planes you have bought, unlocked levels, stars and best Endless distance are kept on this device, so you can carry on from the same level. A different phone or browser starts again from Level 1.

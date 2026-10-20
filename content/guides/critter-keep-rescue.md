@@ -91,7 +91,7 @@ After you clear **Level 2**, bandits start sneaking into your keep to borrow cri
 
 **Quests** give coins for things like "Rescue 3 critters", "Hatch 1 egg", "Merge 1 critter", "Shoo away 2 bandits", "Get 3 stars in 1 level" or "Pet critters 10 times". There is also a daily reward that grows with your streak, including free eggs.
 
-## FAQ
+## Questions we hear a lot
 
 ### Is it scary?
 No. Being caught just sends you back to the start with a giggle.
@@ -99,5 +99,5 @@ No. Being caught just sends you back to the start with a giggle.
 ### How many levels are there?
 36 rescue levels across six biomes.
 
-### Is my progress saved?
-Yes, on your device.
+### Will my critters be waiting when I come back?
+Yes. Your rescued critters, eggs, coins, stars, quests and the Book are kept on this device, so the keep looks just as you left it.

@@ -101,5 +101,5 @@ No. Nothing withers or goes wrong. Without water, plants simply grow at normal s
 ### How many creatures are there?
 34, from Common to Mythic, plus Golden, Rainbow and Glowing versions.
 
-### Is my progress saved?
-Yes, on your device.
+### Will my garden still be growing next time?
+Yes. Your plants, seeds, coins, decorations and the creatures in your Book are kept on this device, and the Daily Gift remembers your streak so you can keep it going.

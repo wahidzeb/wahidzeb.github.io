@@ -91,7 +91,7 @@ Nothing harsh. If the barricade fails, *"You hid in the closet until they got bo
 
 **Chapter 2, The Roof**, is a whole new challenge, with a giant water tank, a tent, a rooftop garden, pigeons and a kite across the gap to a neighbour, all the way to **Day 60**.
 
-## FAQ
+## Common questions
 
 ### Is it scary?
 No. The Shamblers are goofy and there is no fighting or gore.

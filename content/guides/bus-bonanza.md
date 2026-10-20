@@ -66,7 +66,7 @@ Each win pays coins: 20 to start, a little more every five levels, and a **10-co
 
 There are hundreds of levels, and every one can be solved. Difficulty rises smoothly, with a few easier breather levels mixed in, and the scenery changes every five levels between **beach, city, snow and night**. The Levels screen shows your stars for every level you have played.
 
-## What changed after testing
+## What our test runs changed
 
 Two graphics updates added more detailed vehicles, different-looking passengers and extra scenery. Pop-ups and results were tidied so they fit on short landscape screens, and the results card was adjusted so the More games link fits neatly.
 
@@ -81,5 +81,5 @@ Yes. Every level is solvable, and power-ups are there to help when you get stuck
 ### Do power-ups cost stars?
 Yes. Using none gives 3 stars, one or two gives 2 stars.
 
-### Is progress saved?
-Yes, on your device.
+### Do I keep my level and boosters?
+Yes. Your level, stars, coins and leftover boosters are kept on this device, so you go straight back to the next car park.

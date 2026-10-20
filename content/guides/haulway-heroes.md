@@ -108,7 +108,7 @@ The **Rangeela Art Truck** is the showpiece: hand-painted panels, a wooden crown
 
 **Free Roam** lets you just drive. The **Daily** challenge changes every day.
 
-## FAQ
+## Quick questions
 
 ### Is Haulway Heroes good for kids?
 Yes for older children who like driving games. There is no violence, and the guided delivery teaches everything step by step.
@@ -116,5 +116,5 @@ Yes for older children who like driving games. There is no violence, and the gui
 ### Can I steer by tilting my phone?
 Yes. Choose wheel, tilt or arrow buttons in Settings.
 
-### Is my progress saved?
-Yes, on your device.
+### Is my truck saved, with all its upgrades?
+Yes. Your money, level, trucks with their upgrades and paint, trailers and delivery record are kept on this device, so your trucking career carries on where you parked.
