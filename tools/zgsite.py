@@ -162,7 +162,7 @@ class Site:
 <h1>Game guides</h1>
 <p class="lead">Friendly, detailed guides for every game on Games by Zaib: how to play on a phone or computer, what each world and level holds, and tips for beginners and experts.</p>
 <p>The guides are written by Zaib, who makes the games, so the level names, items and tricks match what you will see on screen. Pick a game below to read its guide, or tap Play to jump straight in. {'Looking for ideas instead? Our <a href="/news/">Tips &amp; News</a> page has beginner walkthroughs and round-ups of our games.' if self.posts else ''}</p>
-<p class="small">{len(self.order)} games · updated {fmt_date(self.today)}</p>
+<p class="small">{len(self.order)} games · updated {fmt_date(max([g.get("updated", self.today) for g in self.guides.values()] or [self.today]))}</p>
 <div class="gcards">{cards}</div>"""
         ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Game guides", "url": self.SITE + "/guides/",
                "hasPart": [{"@type": "Article", "headline": self.guides[s]["title"], "url": f"{self.SITE}/guides/{s}/"} for s in self.order if s in self.guides]}]

@@ -907,6 +907,32 @@ def terms():
 <p>Please {contact_line()}.</p>"""
     page("/terms/", "Terms of Use | Games by Zaib", "The rules for using Games by Zaib: free personal play, ownership of the games, in-game coins, advertising and health notes.", body)
 
+# ---------------------------------------------------------------- 404 page
+def notfound():
+    """Friendly 'page not found' screen with the full site nav and footer (served for any missing address)."""
+    popular = [g for g in GAME_INFO][:6]
+    games = "".join(f'<li><a href="/{g["slug"]}/">{e(g["name"])}</a> · <a href="{SITEGEN.guide_url(g["slug"])}">guide</a></li>' for g in popular)
+    body = f"""<h1>Oops, this page wandered off</h1>
+<p class="lead">We looked everywhere, even under the sofa with Kedim the cat, but there is nothing at this address. It may have moved, or the link may have a small typo.</p>
+<p><a class="play" href="/">Back to all games</a></p>
+<h2>Where would you like to go?</h2>
+<ul>
+<li><a href="/">Home</a>: all {len(GAME_INFO)} free games, ready to play straight away</li>
+<li><a href="/guides/">Game guides</a>: controls, levels and tips for every game</li>
+<li><a href="/news/">Tips &amp; News</a>: round-ups, beginner tips and what is new</li>
+<li><a href="/games/">Game categories</a>: puzzle, idle, racing, action, kids and sports</li>
+</ul>
+<h2>Popular right now</h2>
+<ul>{games}</ul>
+<p>Still stuck? Visit our <a href="/contact/">Contact</a> page and tell us which link brought you here, so we can fix it.</p>"""
+    page("/404/", "Page not found | Games by Zaib", "This page could not be found. Find all free games, guides and tips on Games by Zaib.", body)
+    src = os.path.join(ROOT, "404", "index.html")
+    h = open(src).read()
+    h = re.sub(r'<link rel="canonical"[^>]*>\n?', "", h)
+    h = re.sub(r'<meta property="og:url"[^>]*>\n?', "", h)
+    open(os.path.join(ROOT, "404.html"), "w").write(h)
+    os.remove(src); os.rmdir(os.path.dirname(src))
+
 # ---------------------------------------------------------------- sitemap/robots
 def game_paths():
     """Game paths from the GAMES array in index.template.html (plus GAME_INFO)."""
@@ -930,7 +956,7 @@ def sitemap():
     pages += SITEGEN.urls()
     pages += [(u, TODAY, "0.7") for u in CAT_URLS]
     pages += [(f"/games/{g['slug']}/", LASTMOD, "0.5") for g in GAME_INFO if g['slug'] not in SITEGEN.guides]
-    pages += [(p, live_lastmod(p.strip("/")), "0.9") for p in game_paths()]
+    # Game play screens (/<slug>/) stay crawlable and linked, but are left out of the sitemap so it lists the content pages.
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     xml += [f"  <url><loc>{SITE}{p}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>" for p, d, pr in pages]
     xml.append("</urlset>")
@@ -993,5 +1019,5 @@ SITEGEN = zgsite.Site(ROOT, page, SITE, OWNER, GAME_INFO, IMG_V, TODAY)
 if __name__ == "__main__":
     for g in GAME_INFO: game_page(g)
     games_index(); about(); contact(); privacy(); terms()
-    SITEGEN.build(); CAT_URLS[:] = categories.build(page, SITEGEN, SITE, {p["slug"] for p in SITEGEN.posts}); sitemap(); hub_home()
+    SITEGEN.build(); CAT_URLS[:] = categories.build(page, SITEGEN, SITE, {p["slug"] for p in SITEGEN.posts}); sitemap(); hub_home(); notfound()
     print("info pages, guides, news, sitemap.xml and robots.txt built")
