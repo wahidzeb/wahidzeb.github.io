@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /content/
+Disallow: /tools/
+Disallow: /index.template.html
+Disallow: /README.md
 
 Sitemap: https://zaibgames.com/sitemap.xml

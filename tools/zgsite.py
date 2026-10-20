@@ -173,7 +173,7 @@ class Site:
     # ------------------------------------------------------------ news
     def post_page(self, p):
         slug = p["slug"]; url = f"{self.SITE}/news/{slug}/"
-        ctx = {"shots": lambda: "", "play": lambda: "", "card": self.card}
+        ctx = {"shots": lambda: self.shots(p), "play": lambda: "", "card": self.card}
         img_slug = p.get("image", "")
         img = self.thumb(img_slug) if img_slug in self.games else "/img/og.jpg"
         body = f"""<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Games</a> › <a href="/news/">Tips &amp; News</a> › <span>{e(p['title'])}</span></nav>

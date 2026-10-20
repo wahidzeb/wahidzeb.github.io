@@ -961,7 +961,7 @@ def sitemap():
     xml += [f"  <url><loc>{SITE}{p}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>" for p, d, pr in pages]
     xml.append("</urlset>")
     open(os.path.join(ROOT, "sitemap.xml"), "w").write("\n".join(xml) + "\n")
-    open(os.path.join(ROOT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+    open(os.path.join(ROOT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nDisallow: /content/\nDisallow: /tools/\nDisallow: /index.template.html\nDisallow: /README.md\n\nSitemap: {SITE}/sitemap.xml\n")
 
 def sort_by_hub_order():
     """Keep the guides list / about page in the same ranked order as the hub's GAMES array."""
