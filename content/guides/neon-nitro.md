@@ -1,7 +1,7 @@
 title: Neon Nitro Guide: Win Every Event, Fill Nitro Fast and Escape the Patrol
 seo_title: Neon Nitro Guide: Racing Tips, Stars, Cars, Upgrades and Patrol Escapes | Games by Zaib
 description: A Neon Nitro guide: how steering, nitro and drift work, how stars are earned in each event type, how to shake off patrol cars, which car to buy next and what each upgrade costs.
-lead: Neon Nitro is a street racing game across a neon city, a sunset highway and a coast road. Your car accelerates by itself, so racing is all about steering through traffic, timing your nitro and choosing the right upgrades. This guide covers all five event types and how to earn three stars in each.
+lead: Neon Nitro is a cartoon street racing game across a city under a pink sunset sky, a sunny highway and a coast road. Your car accelerates by itself, so racing is all about steering through traffic, timing your nitro and choosing the right upgrades. This guide covers all five event types and how to earn three stars in each.
 related: moto-mayhem, zaib-city, haulway-heroes
 updated: 2026-10-23
 shots: neon-nitro-nitro.webp|A blue sports car firing its nitro flames down a city street, leading by 131 metres at 296 km/h|Nitro on a straight: leading by 131 m at 296 km/h ; neon-nitro-tunnel.webp|The car approaching a tunnel on the sunset highway behind a truck|Sunset Highway: tunnels and trucks to weave around ; neon-nitro-patrol.webp|A patrol car pulling alongside the player in a Patrol Escape with 1,158 metres to the finish|Patrol Escape: two patrol cars are trying to box you in ; neon-nitro-garage.webp|The Garage upgrade tab for the Comet GT showing Engine, Nitro and Handling upgrades with prices|The Garage: three upgrades per car, five levels each ; neon-nitro-results.webp|A results card for second place with two stars, near misses, top speed and coins earned|Second place in a sprint is worth two stars and still pays well
@@ -10,7 +10,7 @@ shots: neon-nitro-nitro.webp|A blue sports car firing its nitro flames down a ci
 
 Neon Nitro is an arcade street racer with bright, chunky cartoon cars. There is no gas pedal to hold: your car speeds up on its own, and you spend each race steering between lanes of traffic, sliding through bends and saving nitro for the right moment. Races are short, usually a minute or two, which makes them easy to replay for a better result.
 
-The career has **18 events in three districts**: Neon City at night, Sunset Highway at golden hour and Coast Road by the ocean. Every event can give up to three stars, so there are **54 stars** to collect in total.
+The career has **18 events in three districts**: Neon City under a pink sunset sky, Sunset Highway in bright sunshine and Coast Road by the ocean. Every event can give up to three stars, so there are **54 stars** to collect in total.
 
 {{play}}
 
