@@ -66,7 +66,8 @@ color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
 @media (orientation:landscape) and (max-height:540px){.zg-inst{left:auto;right:max(10px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom));transform:translateY(140%);
 width:auto;max-width:min(360px,calc(100% - 20px));gap:8px;padding:6px 6px 6px 8px;border-radius:14px;font-size:13px}
 .zg-inst.on{transform:none}.zg-inst img{width:30px;height:30px;border-radius:8px}.zg-inst b{font-size:13px;white-space:nowrap}.zg-inst.and .t>span{display:none}
-.zg-inst .go{padding:6px 12px;border-radius:10px;box-shadow:0 3px 0 #4c1d95}.zg-inst .x{width:26px;height:26px;margin:0;align-self:center;font-size:18px}}
+.zg-inst .go{padding:6px 12px;border-radius:10px;box-shadow:0 3px 0 #4c1d95}.zg-inst .x{width:26px;height:26px;margin:0;align-self:center;font-size:18px}
+.zg-inst.lft{right:auto;left:max(10px,env(safe-area-inset-left))}.zg-inst.on.tuck{transform:translateY(140%);opacity:0;pointer-events:none}}
 @media (prefers-reduced-motion:reduce){.zg-inst{transition:none}}`;
   const SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg>';
   const ADD = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>';
@@ -99,9 +100,29 @@ width:auto;max-width:min(360px,calc(100% - 20px));gap:8px;padding:6px 6px 6px 8p
       try { const r = await d.userChoice; zt("pwa_install_choice", { outcome: (r && r.outcome) || "unknown" }); if (r && r.outcome === "dismissed") ls.set("zg_install_snooze", String(Date.now() + 30 * DAY)); } catch (e) {}
       updateLink();
     };
-    requestAnimationFrame(() => requestAnimationFrame(() => { if (!card) return; card.classList.add("on"); pad(); }));
-    addEventListener("resize", pad);
+    requestAnimationFrame(() => requestAnimationFrame(() => { if (!card) return; card.classList.add("on"); pad(); spot(); }));
+    addEventListener("resize", pad); addEventListener("resize", spot); addEventListener("scroll", onScroll, { passive: true });
   }
+  /* short landscape: the corner pill never sits on a card's genre / New label - it slides away while scrolling,
+     then comes back (bottom-right, else bottom-left) only where it does not cover a label */
+  const SL = matchMedia("(orientation:landscape) and (max-height:540px)");
+  let tk = 0;
+  function clash(lft) {
+    const w = card.offsetWidth, h = card.offsetHeight, W = innerWidth, H = innerHeight, m = 10, t = H - 8 - h, l = lft ? m : W - m - w, r = l + w, b = t + h;
+    const L = document.querySelectorAll(".thumb .genre,.thumb .new");
+    for (let i = 0; i < L.length; i++) { const q = L[i].getBoundingClientRect(); if (q.width && q.bottom > t - 6 && q.top < b + 6 && q.right > l - 6 && q.left < r + 6) return true; }
+    return false;
+  }
+  function spot() {
+    try {
+      if (!card) return;
+      if (!SL.matches) { card.classList.remove("tuck", "lft"); return; }
+      if (!clash(false)) { card.classList.remove("lft", "tuck"); return; }
+      if (!clash(true)) { card.classList.add("lft"); card.classList.remove("tuck"); return; }
+      card.classList.add("tuck");
+    } catch (e) {}
+  }
+  function onScroll() { if (!card || !SL.matches) return; card.classList.add("tuck"); clearTimeout(tk); tk = setTimeout(spot, 900); }
   /* reserve room at the bottom of the page for the card, so it never sits on top of content you can't scroll past */
   let padded = null;
   function pad() {
