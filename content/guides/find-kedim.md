@@ -32,6 +32,8 @@ Look around the picture and tap a cat when you see one. Each cat you find gives 
 
 Your finds are saved after every cat, so you can stop in the middle of a picture and come back to it later.
 
+{{shots}}
+
 ## How many cats are there?
 
 The first picture has **10 cats**, all out in the open and easy to see. Each new picture adds a few more, and the last picture has **36**. As the pictures get bigger and busier, more cats hide behind things with only their ears, tail or face showing.

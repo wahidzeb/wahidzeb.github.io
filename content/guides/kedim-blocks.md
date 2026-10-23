@@ -30,6 +30,8 @@ There is nothing to buy and no timer. Your progress, best scores and stars are s
 
 Each level gives one to three stars. Win in fewer moves for more stars. You can always go back and play a level again to improve your stars.
 
+{{shots}}
+
 ## How the fish levels get harder
 
 The early fish levels are made to be gentle. Up to level 10 the fish wait on rows near the bottom that are already almost full, so a single well placed block pops the row and frees the fish. You only need two or three fish, the blocks stay small, and if you get stuck Kedim's paw sweeps away a couple of rows that have no fish in them so you can keep playing. Young children who place blocks almost anywhere can still get through these first levels.
