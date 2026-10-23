@@ -63,6 +63,10 @@ background:linear-gradient(180deg,#c084fc,#9333ea 55%,#7e22ce);box-shadow:0 4px 
 .zg-inst .x{flex:none;align-self:flex-start;width:30px;height:30px;margin:-4px -4px 0 0;border:0;border-radius:50%;background:rgba(255,255,255,.08);
 color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
 .zg-inst button:focus-visible{outline:3px solid #22d3ee;outline-offset:2px}
+@media (orientation:landscape) and (max-height:540px){.zg-inst{left:auto;right:max(10px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom));transform:translateY(140%);
+width:auto;max-width:min(360px,calc(100% - 20px));gap:8px;padding:6px 6px 6px 8px;border-radius:14px;font-size:13px}
+.zg-inst.on{transform:none}.zg-inst img{width:30px;height:30px;border-radius:8px}.zg-inst b{font-size:13px;white-space:nowrap}.zg-inst.and .t>span{display:none}
+.zg-inst .go{padding:6px 12px;border-radius:10px;box-shadow:0 3px 0 #4c1d95}.zg-inst .x{width:26px;height:26px;margin:0;align-self:center;font-size:18px}}
 @media (prefers-reduced-motion:reduce){.zg-inst{transition:none}}`;
   const SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg>';
   const ADD = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>';
@@ -71,7 +75,7 @@ color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
 
   function hide(snooze) {
     if (snooze) ls.set("zg_install_snooze", String(Date.now() + 30 * DAY));
-    if (card) { const c = card; card = null; c.classList.remove("on"); setTimeout(() => c.remove(), 500); }
+    if (card) { const c = card; card = null; c.classList.remove("on"); setTimeout(() => c.remove(), 500); pad(); }
   }
   function show(trigger) {
     if (card || standalone) return;
@@ -80,7 +84,7 @@ color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
       const s = document.createElement("style"); s.id = "zg-inst-css"; s.textContent = css; document.head.appendChild(s);
     }
     card = document.createElement("div");
-    card.className = "zg-inst"; card.setAttribute("role", "dialog"); card.setAttribute("aria-label", "Install Zaib Games");
+    card.className = deferred ? "zg-inst and" : "zg-inst"; card.setAttribute("role", "dialog"); card.setAttribute("aria-label", "Install Zaib Games");
     card.innerHTML = deferred
       ? `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Get the Zaib Games app</b><span>One tap from your home screen. Games you've played work offline.</span></div><button class="go" type="button">Install</button><button class="x" type="button" aria-label="Not now">×</button>`
       : `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Add Zaib Games to your Home Screen</b><span>Tap ${SHARE} <b style="display:inline">Share</b>, then ${ADD} <b style="display:inline">Add to Home Screen</b>.</span></div><button class="x" type="button" aria-label="Close">×</button>`;
@@ -95,7 +99,18 @@ color:#d9ccff;font:20px/1 system-ui,sans-serif;cursor:pointer}
       try { const r = await d.userChoice; zt("pwa_install_choice", { outcome: (r && r.outcome) || "unknown" }); if (r && r.outcome === "dismissed") ls.set("zg_install_snooze", String(Date.now() + 30 * DAY)); } catch (e) {}
       updateLink();
     };
-    requestAnimationFrame(() => requestAnimationFrame(() => card && card.classList.add("on")));
+    requestAnimationFrame(() => requestAnimationFrame(() => { if (!card) return; card.classList.add("on"); pad(); }));
+    addEventListener("resize", pad);
+  }
+  /* reserve room at the bottom of the page for the card, so it never sits on top of content you can't scroll past */
+  let padded = null;
+  function pad() {
+    try {
+      if (!card) { if (padded !== null) { document.body.style.paddingBottom = padded; padded = null; } return; }
+      if (padded === null) padded = document.body.style.paddingBottom || "";
+      const h = card.getBoundingClientRect().height + 20;
+      document.body.style.paddingBottom = Math.max(h, parseFloat(padded) || 0) + "px";
+    } catch (e) {}
   }
   function updateLink() {
     const nav = document.querySelector("footer nav");

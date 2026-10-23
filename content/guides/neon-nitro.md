@@ -51,7 +51,7 @@ One more trick: press NITRO the moment the start lights say **GO** for a **PERFE
 
 Every event shows **Your car** and **Suggested** ratings before you start. When your number is lower than the suggested one, the race is possible but hard, and an upgrade usually helps more than another try.
 
-Events open one at a time: finish an event with at least one star to open the next. The first event of each district also needs stars in total: **10 stars** opens Sunset Highway and **24 stars** opens Coast Road. Each district ends with a boss: Vex "Night Owl", Sunny "Afterburner" and Marina "Tide".
+Events open one at a time: finish an event with at least one star to open the next. The first event of each district also needs stars in total: **9 stars** opens Sunset Highway and **21 stars** opens Coast Road. Each district ends with a boss: Vex "Night Owl", Sunny "Afterburner" and Marina "Tide".
 
 ## How to escape the patrol
 

@@ -27,7 +27,7 @@
 <meta name="apple-mobile-web-app-title" content="Zaib Games">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="application-name" content="Zaib Games">
-<script src="/pwa.js?v=2026101401" defer></script>
+<script src="/pwa.js?v=2026102301" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Games by Zaib">
 <meta property="og:title" content="Games by Zaib — Free Arcade Games">
@@ -550,11 +550,13 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">
 const GUIDES = /*GUIDES*/[]/*/GUIDES*/;
 const guideUrl = u => { const s = String(u).replace(/^\/+|\/+$/g, ""); return (GUIDES.includes(s) ? "/guides/" : "/games/") + s + "/"; };
 const FEATURED_N = 6, CATS = ["All", "Kids", "Action", "Racing", "Puzzle", "Sports", "Casual"];
+/* card image alt: game name + a short description (first clause of the blurb) */
+const cardAlt = g => { let d = String(g.desc || "").split(/[:.—]| - /)[0].trim(); if (d.length > 90) d = d.slice(0, 87).replace(/\s+\S*$/, "") + "…"; return d ? `${g.name}: ${d}` : `${g.name} game`; };
 const card = (g, i) => {
   const soon = !g.url;
   const thumb = soon
     ? `<div class="thumb">${SHUTTLE}<span class="genre" style="--gc:${g.color}">${esc(g.genre)}</span></div>`
-    : `<a class="thumb" href="${esc(g.url)}" tabindex="-1" aria-hidden="true"><img src="${esc(g.img)}" alt="" width="600" height="375" loading="${i < 2 ? "eager" : "lazy"}"${i < 2 ? ' fetchpriority="high"' : ""} decoding="async"><span class="genre" style="--gc:${g.color}">${esc(g.genre)}</span>${g.isNew ? '<span class="new">New</span>' : ""}</a>`;
+    : `<a class="thumb" href="${esc(g.url)}" tabindex="-1" aria-hidden="true"><img src="${esc(g.img)}" alt="${esc(cardAlt(g))}" width="600" height="375" loading="${i < 2 ? "eager" : "lazy"}"${i < 2 ? ' fetchpriority="high"' : ""} decoding="async"><span class="genre" style="--gc:${g.color}">${esc(g.genre)}</span>${g.isNew ? '<span class="new">New</span>' : ""}</a>`;
   const btn = soon
     ? `<span class="play" aria-disabled="true">COMING SOON</span>`
     : `<div class="prow"><a class="play" href="${esc(g.url)}" aria-label="Play ${esc(g.name)}">${PLAY_ICON}PLAY</a><a class="glink" href="${guideUrl(g.url)}" aria-label="${esc(g.name)} guide">Guide</a></div>`;

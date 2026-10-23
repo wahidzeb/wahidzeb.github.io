@@ -95,7 +95,7 @@ class Site:
         return (f'<p class="playrow"><a class="play" href="/{slug}/">{PLAY}{e(label or ("PLAY " + self.name(slug).upper()))}</a></p>')
     def card(self, slug):
         g = self.games[slug]; gl = f'<a class="ghost" href="{self.guide_url(slug)}" aria-label="{e(g["name"])} guide">Guide</a>'
-        return (f'<div class="gcard"><a href="/{slug}/" tabindex="-1" aria-hidden="true"><img src="{self.thumb(slug)}" alt="" width="600" height="375" loading="lazy" decoding="async"></a>'
+        return (f'<div class="gcard"><a href="/{slug}/" tabindex="-1" aria-hidden="true"><img src="{self.thumb(slug)}" alt="{e(g["name"] + ": " + g["tagline"])}" width="600" height="375" loading="lazy" decoding="async"></a>'
                 f'<div><b>{e(g["name"])}</b><span class="small">{e(g["tagline"])}</span>'
                 f'<span class="btns"><a class="mini" href="/{slug}/" aria-label="Play {e(g["name"])}">Play</a>{gl}</span></div></div>')
     def shots(self, meta):
@@ -125,7 +125,7 @@ class Site:
 <h1>{e(gd['title'])}</h1>
 <p class="lead">{inline(gd.get('lead', g['tagline']), ctx)}</p>
 <p class="small">By {self.OWNER} · Updated {fmt_date(upd)}</p>
-<a href="/{slug}/" tabindex="-1" aria-hidden="true"><img class="hero" src="{self.thumb(slug)}" alt="" width="600" height="375"></a>
+<a href="/{slug}/" tabindex="-1" aria-hidden="true"><img class="hero" src="{self.thumb(slug)}" alt="{e(g["name"] + ": " + g["tagline"])}" width="600" height="375"></a>
 {self.play_btn(slug)}
 {body_html}
 {self.play_btn(slug, "PLAY NOW")}
