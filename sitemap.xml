@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zaibgames.com/</loc><lastmod>2026-10-21</lastmod><priority>1.0</priority></url>
-  <url><loc>https://zaibgames.com/about/</loc><lastmod>2026-10-21</lastmod><priority>0.5</priority></url>
-  <url><loc>https://zaibgames.com/contact/</loc><lastmod>2026-10-21</lastmod><priority>0.4</priority></url>
-  <url><loc>https://zaibgames.com/privacy/</loc><lastmod>2026-10-21</lastmod><priority>0.3</priority></url>
-  <url><loc>https://zaibgames.com/terms/</loc><lastmod>2026-10-21</lastmod><priority>0.3</priority></url>
-  <url><loc>https://zaibgames.com/guides/</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://zaibgames.com/news/</loc><lastmod>2026-10-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zaibgames.com/</loc><lastmod>2026-10-23</lastmod><priority>1.0</priority></url>
+  <url><loc>https://zaibgames.com/about/</loc><lastmod>2026-10-23</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zaibgames.com/contact/</loc><lastmod>2026-10-23</lastmod><priority>0.4</priority></url>
+  <url><loc>https://zaibgames.com/privacy/</loc><lastmod>2026-10-23</lastmod><priority>0.3</priority></url>
+  <url><loc>https://zaibgames.com/terms/</loc><lastmod>2026-10-23</lastmod><priority>0.3</priority></url>
+  <url><loc>https://zaibgames.com/guides/</loc><lastmod>2026-10-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zaibgames.com/news/</loc><lastmod>2026-10-23</lastmod><priority>0.8</priority></url>
   <url><loc>https://zaibgames.com/guides/boss-town/</loc><lastmod>2026-10-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://zaibgames.com/guides/kedim-therapist/</loc><lastmod>2026-10-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://zaibgames.com/guides/meowstronauts/</loc><lastmod>2026-10-20</lastmod><priority>0.8</priority></url>
@@ -45,6 +45,7 @@
   <url><loc>https://zaibgames.com/guides/noodle-clash/</loc><lastmod>2026-10-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://zaibgames.com/guides/horizon-pilot/</loc><lastmod>2026-10-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://zaibgames.com/guides/haulway-heroes/</loc><lastmod>2026-10-20</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zaibgames.com/news/first-coins-what-to-buy/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://zaibgames.com/news/whats-new-october-2026/</loc><lastmod>2026-10-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://zaibgames.com/news/two-player-games-one-phone/</loc><lastmod>2026-10-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://zaibgames.com/news/idle-games-compared/</loc><lastmod>2026-10-20</lastmod><priority>0.7</priority></url>
@@ -53,12 +54,12 @@
   <url><loc>https://zaibgames.com/news/first-try-lessons/</loc><lastmod>2026-10-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://zaibgames.com/news/driving-games-guide/</loc><lastmod>2026-10-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://zaibgames.com/news/cat-games-meet-kedim/</loc><lastmod>2026-10-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/idle/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/puzzle/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/racing/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/kids/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/action/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/arcade/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://zaibgames.com/games/sports/</loc><lastmod>2026-10-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/idle/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/puzzle/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/racing/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/kids/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/action/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/arcade/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zaibgames.com/games/sports/</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
 </urlset>
