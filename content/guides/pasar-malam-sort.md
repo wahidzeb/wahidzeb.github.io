@@ -46,7 +46,7 @@ Each level gives one to three stars, based on how many moves you used. Every lev
 
 ## The snack book
 
-The first time you sell a new kind of snack, it goes into your **snack book** with a short line about it, for example that teh tarik is poured from high up to make it frothy. Each market brings its own treats, so keep playing all three to fill the book. Tap **Snacks** on the title screen to look through the ones you have found.
+The first time you sell a new kind of snack, it goes into your **snack book** with a short line about it, for example that teh tarik is poured from high up to make it frothy. There are 27 snacks to find. Each market brings its own treats, so keep playing all three to fill the book. If you finished levels before a snack was added, replay them or carry on into later levels and it will turn up. Tap **Snacks** on the title screen to look through the ones you have found.
 
 ## Hard mode
 
