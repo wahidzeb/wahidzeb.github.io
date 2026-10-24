@@ -3,12 +3,12 @@ from html import escape as e
 
 CATEGORIES = [
  ("idle", "Idle and Tycoon Games", "Idle & tycoon",
-  "Free idle and tycoon games: Boss Town Tycoon, Chai Tycoon and Corner Office. Build a business, buy upgrades and watch your money grow, in your browser with no download.",
-  ["Idle games are the ones where you tap a little, buy a lot and watch the numbers climb, even when you put the phone down for a while. We have three of them, and they are more different than they look.",
-   "<b>Boss Town Tycoon</b> starts you with $10 and one empty lot and grows into a whole town of businesses, with investors to sell to, stars, ranks and perks that make every new run faster. <b>Chai Tycoon</b> begins with one chaiwala and one kettle and grows into a whole bazaar of shops run by managers, and <b>Corner Office</b> climbs the career ladder from Intern on floor 2 to the CEO's office on floor 60, with quick office minigames along the way.",
+  "Free idle and tycoon games: Mamak Mart, Boss Town Tycoon, Chai Tycoon and Corner Office. Build a business, buy upgrades and watch your money grow, in your browser with no download.",
+  ["Idle games are the ones where you tap a little, buy a lot and watch the numbers climb, even when you put the phone down for a while. We have four of them, and they are more different than they look.",
+   "<b>Mamak Mart</b>, our newest, is the most hands-on: you walk around your own 3D mamak shop, make teh tarik and roti canai, serve customers and spend the coins on new tables, food and helpers. <b>Boss Town Tycoon</b> starts you with $10 and one empty lot and grows into a whole town of businesses, with investors to sell to, stars, ranks and perks that make every new run faster. <b>Chai Tycoon</b> begins with one chaiwala and one kettle and grows into a whole bazaar of shops run by managers, and <b>Corner Office</b> climbs the career ladder from Intern on floor 2 to the CEO's office on floor 60, with quick office minigames along the way.",
    "Each one has its own long-term goal. In Boss Town Tycoon, selling your town to investors starts you over, but every investor makes all your shops earn 2% more on the next run. In Chai Tycoon, shops with a manager keep earning while you are away, up to an offline limit. In Corner Office, funny coworkers help you climb from floor to floor toward the top.",
-   "All three save your progress on your device, so short sessions are fine. If you are not sure where to start, our comparison post explains how they differ, how long each one takes and which one suits you."],
-  ["boss-town", "chai-tycoon", "corner-office"], "/news/idle-games-compared/", "Boss Town, Chai Tycoon or Corner Office? Our three idle games compared"),
+   "All four save your progress on your device, so short sessions are fine. If you are not sure where to start, our comparison post explains how they differ, how long each one takes and which one suits you."],
+  ["mamak-mart", "boss-town", "chai-tycoon", "corner-office"], "/news/idle-games-compared/", "Boss Town, Chai Tycoon or Corner Office? Our three idle games compared"),
  ("puzzle", "Puzzle and Brain Games", "Puzzle",
   "Free puzzle games for phone and computer: Pasar Malam Sort, Kedim Blocks, Bus Bonanza, Rail Rush, Juicy Merge, Block Glide, Number Dash and Kedim's Snack Swing. Think first, then tap. No download.",
   ["These are the games where thinking ahead matters more than fast fingers. Each one is built around a single clear idea, and the levels slowly ask you to plan a little further.",
