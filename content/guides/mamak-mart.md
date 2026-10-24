@@ -19,8 +19,9 @@ Everything happens in a small 3D shop that you walk around in with one thumb. Th
 1. **Walk.** Put your thumb anywhere on the screen and slide it the way you want to go. Let go to stop. On a computer you can also use the arrow keys or W, A, S and D.
 2. **Make food.** Stand on the yellow mat in front of a counter. Food appears in your hands one piece at a time and piles up until your hands are full.
 3. **Serve.** Walk up to a customer. The bubble over their head shows what they want and how many. Stand next to them and the right food jumps onto their table.
-4. **Pick up the coins.** When a customer finishes eating, they leave coins on the table. Walk next to the table to collect them.
-5. **Grow the shop.** Stand still on a green coin circle to pay for what it shows: a new table, a new food, a helper or an upgrade. You can pay a little at a time and come back later to finish.
+4. **Put food back.** Picked up food nobody wants? Walk back onto its yellow mat and it goes back on the counter, ready for later.
+5. **Pick up the coins.** When a customer finishes eating, they leave coins on the table. Walk next to the table to collect them.
+6. **Grow the shop.** Stand still on a green coin circle to pay for what it shows: a new table, a new food, a helper or an upgrade. You can pay a little at a time and come back later to finish.
 
 {{shots}}
 
