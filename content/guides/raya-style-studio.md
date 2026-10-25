@@ -64,7 +64,7 @@ To keep a photo on your phone, tap **📷 Save picture** on the photo screen or 
 
 1. **Read all three wishes first.** Some wishes are about Aisyah, some about Safwan and some about both or the place.
 2. **Change the style before the colours.** A new style can add or remove parts, like the songkok or the sampin, so choose it first.
-3. **Check whose clothes a wish means.** "A gold sampin" is Safwan's, "a soft pink tudung" is Aisyah's.
+3. **Check whose clothes a wish means.** "A gold sampin" is Safwan's, "a pink tudung" is Aisyah's.
 4. **Use the Sedondon button last.** Set the colour on one child, then tap Sedondon so both match.
 5. **Do not forget the place and the extras.** Many wishes ask for a backdrop, the kitten or something to hold.
 6. **Missed a star?** Play the request again. Your best result is the one that counts.
