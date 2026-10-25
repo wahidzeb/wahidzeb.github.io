@@ -1,10 +1,10 @@
 title: Raya Style Studio Guide: Dress Aisyah and Safwan and Earn Every Star
 seo_title: Raya Style Studio Guide: Hari Raya Dress Up Tips, Sedondon and Unlocks | Games by Zaib
-description: A Raya Style Studio guide in plain words: how to dress Aisyah and Safwan, how the three wishes and stars work, what sedondon means, when new styles, colours, places and chapters open, and the Free Studio album.
+description: A Raya Style Studio guide in plain words: how to dress Aisyah and Safwan, how the three wishes and stars work, what sedondon means, when new styles, colours, places and chapters open, and the Free Studio album, and how to save a photo to your phone.
 lead: Raya Style Studio is a cheerful Hari Raya dress-up game. You get Aisyah and her little brother Safwan ready for Raya morning, the open house and the family photo, and every wish from the family that you meet earns a star. This guide explains the controls, the stars, the unlocks and a few tricks for a perfect photo.
 related: dream-room, betta-bestie, pasar-malam-sort
 updated: 2026-10-25
-shots: raya-style-studio-title.webp|The Raya Style Studio title screen with Aisyah in a green baju kurung and white tudung and Safwan in a green baju Melayu with a gold songket sampin in front of a kampung house|The title screen: Aisyah and Safwan ready for Raya ; raya-style-studio-brief2.webp|A Raya request card from Mak with three wishes: a green baju for Aisyah, the kampung house and a ketupat|A request: three wishes, three stars ; raya-style-studio-style.webp|The styling room with Aisyah and Safwan side by side and a row of colour buttons under the Baju tab|Styling: pick a tab, then tap a colour or pattern ; raya-style-studio-photo2.webp|The Raya photo with three gold stars after meeting all three wishes|The photo: one star for every wish you meet
+shots: raya-style-studio-title.webp|The Raya Style Studio title screen with Aisyah in a green baju kurung and white tudung and Safwan in a green baju Melayu with a gold songket sampin in front of a kampung house|The title screen: Aisyah and Safwan ready for Raya ; raya-style-studio-brief2.webp|A Raya request card from Mak with three wishes: a green baju for Aisyah, the kampung house and a ketupat|A request: three wishes, three stars ; raya-style-studio-style.webp|The styling room with Aisyah and Safwan side by side and a row of colour buttons under the Baju tab|Styling: pick a tab, then tap a colour or pattern ; raya-style-studio-photo3.webp|The Raya photo with three gold stars after meeting all three wishes|The photo: one star for every wish you meet
 ---
 ## What is Raya Style Studio?
 
@@ -57,6 +57,8 @@ Sedondon is a Malay Raya tradition where the whole family wears the same colour.
 ## The Free Studio and your album
 
 Tap **Free Studio** on the title screen to dress Aisyah and Safwan any way you like, with no wishes to follow. Tap **Surprise me** for a fresh random look, then change one piece at a time. Every photo you take goes into your **Album**, which keeps your 12 newest photos. Open the album from the title screen to look at them again or remove one.
+
+To keep a photo on your phone, tap **📷 Save picture** on the photo screen or on any photo in the album. You get a picture of the outfit with a Selamat Hari Raya card. On most phones it opens the share menu, so you can save it to your photos or send it to family. If your phone or browser can't save it, take a screenshot instead.
 
 ## Tips for three stars
 
