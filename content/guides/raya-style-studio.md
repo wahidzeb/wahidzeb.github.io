@@ -4,7 +4,7 @@ description: A Raya Style Studio guide in plain words: how to dress Aisyah and S
 lead: Raya Style Studio is a cheerful Hari Raya dress-up game. You get Aisyah and her little brother Safwan ready for Raya morning, the open house and the family photo, and every wish from the family that you meet earns a star. This guide explains the controls, the stars, the unlocks and a few tricks for a perfect photo.
 related: dream-room, betta-bestie, pasar-malam-sort
 updated: 2026-10-25
-shots: raya-style-studio-title.webp|The Raya Style Studio title screen with Aisyah in a green baju kurung and white tudung and Safwan in a green baju Melayu with a gold songket sampin in front of a kampung house|The title screen: Aisyah and Safwan ready for Raya ; raya-style-studio-brief.webp|A Raya request card from Mak with three wishes: a green baju for Aisyah, the kampung house and a ketupat|A request: three wishes, three stars ; raya-style-studio-style.webp|The styling room with Aisyah and Safwan side by side and a row of colour buttons under the Baju tab|Styling: pick a tab, then tap a colour or pattern ; raya-style-studio-photo.webp|The Raya photo with three gold stars after meeting all three wishes|The photo: one star for every wish you meet
+shots: raya-style-studio-title.webp|The Raya Style Studio title screen with Aisyah in a green baju kurung and white tudung and Safwan in a green baju Melayu with a gold songket sampin in front of a kampung house|The title screen: Aisyah and Safwan ready for Raya ; raya-style-studio-brief2.webp|A Raya request card from Mak with three wishes: a green baju for Aisyah, the kampung house and a ketupat|A request: three wishes, three stars ; raya-style-studio-style.webp|The styling room with Aisyah and Safwan side by side and a row of colour buttons under the Baju tab|Styling: pick a tab, then tap a colour or pattern ; raya-style-studio-photo2.webp|The Raya photo with three gold stars after meeting all three wishes|The photo: one star for every wish you meet
 ---
 ## What is Raya Style Studio?
 
@@ -16,7 +16,7 @@ There is no timer and nothing to lose. Stars are earned only by meeting the fami
 
 ## How to play
 
-1. **Choose who to dress.** Tap **Aisyah** or **Safwan** at the top of the styling room.
+1. **Choose who to dress.** Tap the **Aisyah** or **Safwan** button at the bottom of the picture, just under the two of them.
 2. **Pick a tab.** **Style** changes the whole outfit, and tabs like **Baju**, **Kain**, **Tudung**, **Trousers**, **Songkok** and **Sampin** change one part.
 3. **Tap a colour or pattern.** The clothes change straight away, with a little sparkle.
 4. **Add the extras.** The **Extras** tab has things to hold, like a ketupat or a pelita lamp, plus the kitten, a brooch for Aisyah and the **Sedondon** button. The **Place** tab picks the photo backdrop.
@@ -48,7 +48,7 @@ Stars also open new things to wear. You start with baju kurung for Aisyah, a cek
 - **New extras:** the pelita lamp, a kuih basket, a bunga raya, a Raya packet, the kitten, a brooch and a handbag.
 - **More colours,** up to 22, from emerald and teal to maroon and gold.
 
-When a request opens, everything it asks for is already open too, so every request can get three stars. A locked button shows a small lock and how many stars it needs.
+A few wishes ask for something you open with stars along the way. In Raya Morning, Kak Long's batik flowers open at 2 stars and the pelita lamp for Mak's red and gold look opens at 5 stars. If a wish is still locked, play other requests first and come back: you can play any request again, and every request can get three stars in the end. A locked button shows a small lock and how many stars it needs.
 
 ## What does sedondon mean?
 

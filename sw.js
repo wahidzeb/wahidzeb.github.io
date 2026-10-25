@@ -6,7 +6,7 @@
      stale-while-revalidate, so updated thumbnails show up on the next visit.
    - Cross-origin requests (Google Analytics, AdSense, etc.) are never touched.
    Bump VERSION to drop old caches. */
-const VERSION = "zg-2026-10-25-2";
+const VERSION = "zg-2026-10-25-3";
 const STATIC = VERSION + "-static";   // precache + cache-first assets
 const PAGES = VERSION + "-pages";     // HTML pages (hub, guides, games)
 const RUNTIME = VERSION + "-runtime"; // other same-origin files
