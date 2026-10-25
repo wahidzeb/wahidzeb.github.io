@@ -1,14 +1,14 @@
 title: Boss Town Tycoon Guide: From Lemonade Stand to Galaxy Boss
 seo_title: Boss Town Tycoon Guide: Businesses, Investors, Ranks and Tips | Games by Zaib
-description: How to grow fast in Boss Town Tycoon: every business in order, when to hire managers, when selling to investors is worth it, the best Board perks and how Boss Ranks work.
+description: How to grow fast in Boss Town Tycoon: every business in order up to the new Dream Worlds, when to hire managers, when selling to investors is worth it, the best Board perks and how Boss Ranks work.
 lead: Boss Town Tycoon starts with $10 and one empty lot. This guide explains what to buy first, when to sell your town to investors, and how stars, ranks and perks keep making you richer.
 related: chai-tycoon, corner-office, sunny-acres
-updated: 2026-10-20
+updated: 2026-10-26
 shots: boss-town-shops.webp|The Shops list after five minutes, with Lemonade Stand, Tea Stall, Bakery and Pizza Place running|Five minutes in: four shops with managers and about $540K a second ; boss-town-missions.webp|The Missions tab with a ready-to-claim mission and two in progress|Missions pay stars and cash. Green Claim buttons are ready ; boss-town-daily-gift.webp|The Daily Town Gift card showing seven stamps from 10 minutes of money to flower beds|The daily gift card shows all seven prizes in advance ; boss-town-investors.webp|The Investors screen offering x1.22 earnings for 11 investors|After six minutes, selling only gives x1.22. Too early!
 ---
 ## What kind of game is this?
 
-Boss Town Tycoon is an idle business game. You open shops, they make money on their own, and you spend that money on more shops. The fun is in watching a quiet street turn into a busy town: buses drive past, customers queue at the counters, and every new business appears as a building in the scene above your list. Later the town grows past airlines and rockets into a Moon Base, a Mars Colony and finally a Galaxy Network.
+Boss Town Tycoon is an idle business game. You open shops, they make money on their own, and you spend that money on more shops. The fun is in watching a quiet street turn into a busy town: buses drive past, customers queue at the counters, and every new business appears as a building in the scene above your list. Later the town grows past airlines and rockets into a Moon Base, a Mars Colony and a Galaxy Network, and then over the rainbow into the **Dream Worlds**: a Rainbow Railway, a Dino Time Park, Candy Planet, Dragon Delivery and a Wish Star Factory.
 
 It suits short visits. The game keeps earning while you are away (up to 8 hours), so a few minutes in the morning and a few in the evening is plenty. Mayor Mo, the friendly mayor in a top hat, pops up with a tip whenever something new unlocks, so younger players are never lost.
 
@@ -52,8 +52,29 @@ When we played from a fresh start, the opening went like this. Your times will b
 | 14 | Asteroid Mining | Rocky Rae |
 | 15 | Space Hotel | Stella Star |
 | 16 | Galaxy Network | Nova Nix |
+| 17 | 🌈 Rainbow Railway | Ruby Rails |
+| 18 | 🦕 Dino Time Park | Tia Tops |
+| 19 | 🍭 Candy Planet | Coco Swirl |
+| 20 | 🐉 Dragon Delivery | Drake Dash |
+| 21 | ⭐ Wish Star Factory | Wanda Wish |
 
 Each business gets faster or richer when you own enough of it. At 10 you get double profit, at 25, 50 and 100 it works twice as fast, and bigger bonuses wait at 150, 250, 500 and all the way up to 1,000. The small bar under each shop shows how close the next bonus is, so it is often worth buying a few more of an old shop just to reach that line.
+
+## The Dream Worlds: after the Galaxy
+
+Past the Galaxy Network the sky turns into a rainbow and five dreamy new businesses wait. Each has its own manager, its own upgrades (Sparkle Tracks, Time Portal, Sugar Clouds, Golden Saddles and Wish Dust) and an upgrade that boosts every shop at once.
+
+| Business | Opens at | What you see |
+|---|---|---|
+| 🌈 Rainbow Railway | $30Vg | A candy-striped station with a train riding a rainbow bridge |
+| 🦕 Dino Time Park | $100DVg | A friendly long-neck dino, palm trees and a volcano |
+| 🍭 Candy Planet | $10QaVg | A giant smiling candy planet floating over a sweet shop |
+| 🐉 Dragon Delivery | $10SxVg | A castle post office and a little dragon flying parcels |
+| ⭐ Wish Star Factory | $1OcVg | A star tower with a telescope and jars of wishes |
+
+These prices are huge, so the way there is through investors. A town that has everything up to the Galaxy reaches the Rainbow Railway the same day after selling, and with a sell every day or two the other four follow over about the next week and a half.
+
+The numbers get very big here. In **Settings**, the **🔢 Big numbers** button lists every short name, from K (thousand) all the way up to Ce, so you can always tell which number is bigger.
 
 ## Managers, upgrades and Rush Hour
 
@@ -77,7 +98,7 @@ The **Town** tab holds the Daily Town Gift. Open it once a day to stamp your car
 
 ## Missions, stars and Boss Ranks
 
-The Missions tab lists town missions such as "Open a Toy Shop" or "Catch 3 lucky surprises". Each one pays cash and stars. Stars raise your Boss Rank, and every rank adds 5% to all your money forever and usually gives your town something new to look at.
+The Missions tab lists town missions such as "Open a Toy Shop" or "Catch 3 lucky surprises". Each one pays cash and stars. The Dream Worlds add a new set: open each new business, hire its manager, own 25 and 50 of it, sell your town 50 and then 60 times, own 100 and later 200 of every Dream shop, and finally the biggest one of all, **Earn $1 googol in total**. Stars raise your Boss Rank, and every rank adds 5% to all your money forever and usually gives your town something new to look at.
 
 | Rank | Stars needed | Reward |
 |---|---|---|
@@ -91,11 +112,15 @@ The Missions tab lists town missions such as "Open a Toy Shop" or "Catch 3 lucky
 
 After Galaxy Boss, every 150 more stars gives a new Galaxy Boss level and another 3%.
 
+Six new badges come with the Dream Worlds: **Over the Rainbow**, **Dino Pal**, **Sweet Tooth**, **Dragon Rider** and **Wish Maker** for opening each new business, and **Dream Boss** for owning 100 of every Dream shop.
+
 ## When to sell to investors
 
-The Investors tab lets you sell your whole town and start again from a stall. You lose your cash, shops, managers and upgrades. You keep your investors, Board perks, stars, rank and decorations, and every investor makes all shops earn 2% more.
+The Investors tab lets you sell your town to investors for a fresh start with a small stall. Your cash, shops, managers and upgrades start fresh. You keep your investors, Board perks, stars, rank and decorations, and every investor makes all shops earn 2% more.
 
 The screen shows "now earning" and "after selling" side by side. In our first game it offered only **x1.22** after six minutes. Selling then would have thrown away a lot of progress for very little. The game's own advice is right: wait until the new number is at least double the current one. For most players that means letting the first town grow over a day or two, with a few long away sessions in between.
+
+The game also tells you when the time is right. When nothing on your list is worth buying anymore and selling would at least double your money, a **"Your town is maxed out!"** card appears at the top of the Shops tab. It shows how much more your new town will earn, for example ×7, and its **Sell & earn** button takes you straight to the sell screen. If you have everything up to the Galaxy Network, that card is your road to the Dream Worlds.
 
 ## The Board Room: perks that last forever
 
@@ -113,11 +138,12 @@ New investor totals open seats on your Board: the first at 25 investors, then 15
 - Hire the manager for a new business before you close the game. Away money only counts managed shops (unless you own Sleepy Shops).
 - Stack boosts. A rainbow balloon during Rush Hour means 14 times the speed for a few seconds.
 - Claim missions as they finish. Stars are permanent, and the rank bonus applies to every future town.
+- When the "Your town is maxed out!" card shows, sell. Waiting longer rarely helps.
 - The space businesses are a long project. Each one costs vastly more than the last, so treat Mars and beyond as something you work toward over many days.
 
 ## What changed after testing
 
-Boss Town Tycoon is played for long sessions before and after every update. Early tests showed that the middle of the game could feel quiet once the first big shops were open, so an update added the daily gift card (which never resets), Mayor Mo's tips, lucky surprises in the street, town missions with stars and the Board Room perks. The latest update made sure big numbers always fit on screen: your cash is shown in full on small phones, and the Rush Hour multiplier now sits in its own little x2 badge.
+Boss Town Tycoon is played for long sessions before and after every update. Early tests showed that the middle of the game could feel quiet once the first big shops were open, so an update added the daily gift card (which never resets), Mayor Mo's tips, lucky surprises in the street, town missions with stars and the Board Room perks. Another update made sure big numbers always fit on screen. The newest update came after testing a fully grown town: players who owned everything up to the Galaxy had nothing left to aim for, so we added the five Dream Worlds businesses with new missions and badges, the "Your town is maxed out!" card that says when to sell, friendlier names for really big numbers and friendlier words on the sell screen.
 
 ## Frequently asked questions
 
@@ -125,7 +151,10 @@ Boss Town Tycoon is played for long sessions before and after every update. Earl
 Yes, for up to 8 hours (12 with the Night Shift perk). Only shops with a manager earn while you are away, so hire managers before you leave.
 
 ### Do I lose everything when I sell to investors?
-You lose cash, shops, managers and upgrades. You keep investors, Board perks, stars, Boss Rank and decorations, so each new town grows faster.
+No. Cash, shops, managers and upgrades start fresh, but you keep investors, Board perks, stars, Boss Rank, decorations and badges, so each new town grows faster.
+
+### What comes after the Galaxy Network?
+The Dream Worlds: Rainbow Railway, Dino Time Park, Candy Planet, Dragon Delivery and the Wish Star Factory. Sell to investors when the "Your town is maxed out!" card shows to get there sooner.
 
 ### What happens if I miss a day of the daily gift?
 Nothing bad. The card simply waits for you and the next stamp is still there.
