@@ -40,7 +40,7 @@ Villagers like Farmer Joe post orders on a board. When a green tick shows you ha
 
 In Dream Room each level is a client with a wish. Our first was Mia: "My very first flat! Can you make the bedroom calm and cosy?" The brief shows her style, her favourite colours, a budget and a list of must-haves. You tap the glowing + signs in the room, pick a piece of furniture and choose its colour.
 
-A little **♥** next to an item means this client will like it, which gives younger players an easy rule to follow. When the room is done you see a before-and-after reveal and the client's reaction. Ours earned 100% mood and three stars. There are 32 levels across five chapters, ending with multi-room Dream Estates.
+In the first rooms a little **♥** next to an item means this client will like it, which gives younger players an easy rule to follow, and later a tap on the client's face brings the hearts back. When the room is done you see a before-and-after reveal and the client's reaction. Ours earned 100% mood and three stars. There are 32 levels across five chapters, ending with multi-room Dream Estates.
 
 **Why kids like it:** making things look nice, and the big reveal at the end. **What it practises:** reading a short brief, matching colours and keeping to a budget, which is a sneaky bit of maths.
 

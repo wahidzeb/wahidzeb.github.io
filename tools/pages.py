@@ -28,7 +28,7 @@ e = html.escape
 
 # ---------------------------------------------------------------- game info
 # cache-bust query for replaced thumbnails (bump when an img/<slug>.webp changes)
-IMG_V = {'kedim-therapist': '?v=3', 'baby-kedim': '?v=1'}
+IMG_V = {'kedim-therapist': '?v=3', 'baby-kedim': '?v=1', 'dream-room': '?v=2'}
 
 GAME_INFO = [
  dict(slug="moto-mayhem", name="Moto Mayhem", genre="Racing", color="#f97316",
@@ -593,11 +593,11 @@ dict(slug='corner-office', name='Corner Office', genre='Idle', color='#6366f1',
   controls=[('Work', 'Tap your desk', 'Click your desk'), ('Tasks and office', 'Tasks / Office tabs', 'Click')],
   features=['Climb 10 ranks from Intern to CEO', 'Quick office mini-tasks', 'Hire funny coworkers for idle income', 'Your office grows fancier with every rank', 'Cartoon art, music and sound effects', 'Progress saved on your device']),
 dict(slug='dream-room', name='Dream Room', genre='Design', color='#ff7a59',
-  tagline='An interior design makeover game: design dream rooms for happy clients.',
-  about=['Dream Room is an interior design game for phones and desktop browsers. Fun clients ask you to make over their rooms, and you pick the furniture, colours, rugs, lights and walls.', "Match each client's style, colour palette and budget, then watch the big before and after reveal. There are 32 levels, multi-room homes and hundreds of decor pieces."],
-  how=["Read the client's brief: their style, palette and budget.", 'Tap a glowing + in the room to choose a piece, or pick a category such as Sofa or Walls.', "Keep within the budget and match the client's taste for a better score.", 'Tap Done when every spot is filled to see the before and after reveal.'],
-  controls=[('Place or change a piece', 'Tap a + or an item', 'Click'), ('Finish the room', 'Done button', 'Click')],
-  features=['32 levels with multi-room homes', 'Hundreds of furniture and decor pieces', 'Client styles, palettes and budgets to match', 'Big before and after reveals', 'Soft cartoon art, music and sound effects', 'Progress saved on your device']),
+  tagline='An interior design makeover game: design dream rooms for happy clients, drag every piece into place and see the big reveal.',
+  about=['Dream Room is an interior design game for phones and desktop browsers. Fun clients ask you to make over their rooms, and you pick the furniture, colours, rugs, lights and walls, then drag, flip and arrange every piece.', "Match each client's style, colour palette and budget, then watch the big before and after reveal. There are 32 client rooms, a new Daily Brief every day, your own room and sticker scenes to decorate, a Design Journal, a Style Book and a studio to upgrade with the coins you earn."],
+  how=["Read the client's brief: their style, colours, budget and must-haves.", 'Tap a glowing + in the room, pick a piece, then pick a colour.', 'Drag a piece to move it. Tap the flip button to turn it, or the bin to take it away.', 'Stay in the client\'s style and colours and keep within the budget for a better score.', 'Tap Done when every spot is filled to see the reveal, your stars and your coins.'],
+  controls=[('Place or change a piece', 'Tap a + then a card', 'Click a + then a card'), ('Move a piece', 'Drag it', 'Drag it with the mouse'), ('Zoom in', 'Pinch with two fingers', 'Mouse wheel'), ('Finish the room', 'Done button', 'Click Done')],
+  features=['32 client rooms with multi-room homes', 'Drag, flip and arrange every piece', 'A new Daily Brief every day', 'My Room, sticker scenes and a Portfolio', 'Design Journal goals and a Style Book', 'A design studio to upgrade with coins', 'Progress saved on your device']),
 dict(slug='boss-town', name='Boss Town Tycoon', genre='Idle', color='#ffb52e',
   tagline='An idle business tycoon game: grow a lemonade stand into an empire of hotels, studios, airlines and space rockets.',
   about=['Boss Town Tycoon is an idle business tycoon game for phones and desktop browsers. Start with a tiny lemonade stand, earn money and open bigger businesses: a tea stall, bakery, pizza place, toy shop, supermarket, grand hotel, movie studio, tech company, airline, space rockets and finally a Galaxy Network in outer space.', 'Hire managers to run your businesses, keep earning while you are away and attract investors. Finish town missions to earn stars and go from Stall Kid to Galaxy Boss, open a free gift every day, tap lucky surprises like the rainbow balloon, and decorate your town. Your town grows on screen as your empire gets bigger.'],
