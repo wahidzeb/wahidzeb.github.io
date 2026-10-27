@@ -407,7 +407,7 @@ dict(slug="kedim-snack-swing", name="Kedim's Snack Swing", genre="Puzzle", color
 dict(slug="fortress-frontline", name="Fortress Frontline", genre="Strategy", color="#d4a017",
   tagline="A fantasy tower defense game: build, upgrade and hold the line against goblins, flyers and bosses.",
   about=["Fortress Frontline is a tower defense game for phones and desktop browsers, inspired by Kingdom Rush. Build towers on stone spots beside winding roads and stop waves of monsters before they reach your castle gate. It has a rich top-down cartoon look with spell effects, explosions and lightning, and it plays in both portrait and landscape.",
-         "There are 30 handcrafted levels across 4 worlds: Greenvale, Sandspire Dunes, Frostpeak Pass and Ashen Wastes. Every world ends with a boss: the Gorehorn Warlord, the Sandmaw Worm, Varkoth the Lich King and Infernax the Fire Drake. You earn up to 3 stars per level and spend them in a permanent upgrade tree, and endless mode tests how many waves you can survive."],
+         "There are 30 handcrafted levels across 4 worlds: Greenvale, Sandspire Dunes, Frostpeak Pass and Ashen Wastes. Every world ends with a boss: the Gorehorn Warlord, the Sandmaw Worm, Varkoth the Frost Wizard and Infernax the Fire Drake. You earn up to 3 stars per level and spend them in a permanent upgrade tree, and endless mode tests how many waves you can survive."],
   how=["Tap an empty stone spot to open the build menu. Tap a tower once to see its stats, then tap again to build it.",
        "Archers hit ground and air, Artillery deals splash damage to ground troops, Mages pierce armour and Frost towers slow enemies.",
        "Tap a tower to upgrade it. After 3 tiers, choose 1 of 2 specialised branches, such as the Ranger Lodge or the Volley Bastion, or the Storm Spire or the Void Obelisk.",
@@ -492,7 +492,7 @@ dict(slug='burger-rush', name='Burger Rush', genre='Cooking', color='#ff8a3a',
   features=['Burgers with 4 patties, cheeses, toppings and sauces', 'Fries and juice side orders', '12 animal customers with patience bars', 'Tips for speed, perfect cooking and accuracy', 'Kitchen upgrades, decorations and new ingredients', 'Days you can replay for three stars', 'Progress saved on your device']),
 dict(slug='mamak-mart', name='Mamak Mart', genre='Shop', color='#e2384d',
   tagline='Run your own 3D Malaysian mamak shop with one thumb: make teh tarik, roti canai and nasi lemak, serve hungry customers and grow the shop with tables, food and helpers.',
-  about=['Mamak Mart is a shop game set in a Malaysian mamak. You walk around your own little 3D shop with one thumb, stand at the counters to make food, carry it to hungry customers and pick up the coins they leave.', 'Start with one teh tarik counter and two tables, then open roti canai, nasi lemak, Milo ais, mee goreng, murtabak and cendol, more tables, four helpers, a cashier and upgrades. Each day runs from early morning to late at night, with a breakfast rush and an after-Maghrib rush.'],
+  about=['Mamak Mart is a shop game set in a Malaysian mamak. You walk around your own little 3D shop with one thumb, stand at the counters to make food, carry it to hungry customers and pick up the coins they leave.', 'Start with one teh tarik counter and two tables, then open roti canai, nasi lemak, chocolate malt ais, mee goreng, murtabak and cendol, more tables, four helpers, a cashier and upgrades. Each day runs from early morning to late at night, with a breakfast rush and an after-Maghrib rush.'],
   how=['Put your thumb anywhere and slide to walk. Let go to stop.', 'Stand on the yellow mat by a counter to make food. It piles up in your hands.', 'Walk next to a customer to serve the food in their bubble.', 'Walk next to a table to pick up the coins when they finish eating.', 'Stand still on a green coin circle to pay for new tables, new food, helpers and upgrades.'],
   controls=[('Walk', 'Slide your thumb anywhere', 'Arrow keys or W A S D'), ('Make, serve and collect', 'Walk to the counter, customer or table', 'Walk to the counter, customer or table'), ('Pause', 'Tap the pause button', 'Click the pause button or press P')],
   features=['A 3D mamak shop you walk around in', '7 foods from teh tarik to murtabak', '12 tables, 4 helpers and a cashier to open', 'Breakfast and after-Maghrib rushes every day', 'Tips for quick service', 'Upgrades for carrying, walking and cooking', 'Progress saved on your device']),
@@ -711,7 +711,7 @@ def page(path, title, desc, body, og_image="/img/og.jpg", ld=None, og_type="webs
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Zaib Games">
+<meta name="apple-mobile-web-app-title" content="Games by Zaib">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <script src="/pwa.js" defer></script>
 <meta property="og:type" content="{og_type}">

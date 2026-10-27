@@ -40,7 +40,7 @@ During a rush customers arrive much faster and have a bit less patience. At 11pm
 |---|---|
 | Teh tarik | 3 coins |
 | Roti canai | 4 coins |
-| Milo ais | 5 coins |
+| Choc malt ais | 5 coins |
 | Nasi lemak | 6 coins |
 | Cendol | 6 coins |
 | Mee goreng | 7 coins |
@@ -53,7 +53,7 @@ A customer pays for everything they ordered. If they get their food while their 
 New things open one after another, and the next coin circles appear on the floor as you go. The order is always the same:
 
 1. New table (20), Roti canai (50), New table (45), Nasi lemak (90)
-2. Your first helper (110), Milo ais (150), New table (70), Carry more (80)
+2. Your first helper (110), Choc malt ais (150), New table (70), Carry more (80)
 3. Mee goreng (170), New table (110), Second helper (160), Murtabak (220)
 4. Cashier (220), New table (150), Cendol (290), Faster shoes (300)
 5. New table (260), Third helper (400), Faster cooking (420), New table (360)

@@ -70,7 +70,7 @@ There are **30 levels** across four worlds, each ending with a boss:
 |---|---|
 | Greenvale | Gorehorn the Ogre King |
 | Sandspire Dunes | Sandmaw the Dune Wyrm |
-| Frostpeak Pass | Lich King Varkoth |
+| Frostpeak Pass | Frost Wizard Varkoth |
 | Ashen Wastes | Infernax the Pyre Colossus |
 
 Along the way you meet 17 kinds of enemy, including fast ones, armoured knights, flyers that Cannons cannot hit, healers, splitters that break into smaller monsters, burrowers that tunnel underground, and summoners.

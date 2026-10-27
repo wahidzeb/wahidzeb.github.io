@@ -86,10 +86,10 @@ width:auto;max-width:min(360px,calc(100% - 20px));gap:8px;padding:6px 6px 6px 8p
       const s = document.createElement("style"); s.id = "zg-inst-css"; s.textContent = css; document.head.appendChild(s);
     }
     card = document.createElement("div");
-    card.className = deferred ? "zg-inst and" : "zg-inst"; card.setAttribute("role", "dialog"); card.setAttribute("aria-label", "Install Zaib Games");
+    card.className = deferred ? "zg-inst and" : "zg-inst"; card.setAttribute("role", "dialog"); card.setAttribute("aria-label", "Install Games by Zaib");
     card.innerHTML = deferred
-      ? `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Get the Zaib Games app</b><span>One tap from your home screen. Games you've played work offline.</span></div><button class="go" type="button">Install</button><button class="x" type="button" aria-label="Not now">×</button>`
-      : `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Add Zaib Games to your Home Screen</b><span>Tap ${SHARE} <b style="display:inline">Share</b>, then ${ADD} <b style="display:inline">Add to Home Screen</b>.</span></div><button class="x" type="button" aria-label="Close">×</button>`;
+      ? `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Get the Games by Zaib app</b><span>One tap from your home screen. Games you've played work offline.</span></div><button class="go" type="button">Install</button><button class="x" type="button" aria-label="Not now">×</button>`
+      : `<img src="/img/pwa/icon-192.png" alt=""><div class="t"><b>Add Games by Zaib to your Home Screen</b><span>Tap ${SHARE} <b style="display:inline">Share</b>, then ${ADD} <b style="display:inline">Add to Home Screen</b>.</span></div><button class="x" type="button" aria-label="Close">×</button>`;
     document.body.appendChild(card);
     card.querySelector(".x").onclick = () => { zt("pwa_prompt_dismiss", { platform: deferred ? "android" : "ios" }); hide(true); };
     const go = card.querySelector(".go");
