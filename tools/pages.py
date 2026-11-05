@@ -1007,6 +1007,10 @@ def sitemap():
     pages = [("/", TODAY, "1.0"), ("/about/", TODAY, "0.5"), ("/contact/", UNCHANGED, "0.4"), ("/privacy/", UNCHANGED, "0.3"), ("/terms/", UNCHANGED, "0.3")]
     pages += [(u, (UNCHANGED if u == "/guides/" else d), pr) for u, d, pr in SITEGEN.urls()]
     pages += [(u, UNCHANGED, "0.7") for u in CAT_URLS]
+    # play pages: they now carry the About text in their own HTML, so list them with the build date
+    import glob as _g
+    _slugs = sorted(os.path.splitext(os.path.basename(f))[0] for f in _g.glob(os.path.join(ROOT, "content", "guides", "*.md")))
+    pages += [("/" + s + "/", TODAY, "0.6") for s in _slugs]
     pages += [(f"/games/{g['slug']}/", LASTMOD, "0.5") for g in GAME_INFO if g['slug'] not in SITEGEN.guides]
     # Game play screens (/<slug>/) stay crawlable and linked, but are left out of the sitemap so it lists the content pages.
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
