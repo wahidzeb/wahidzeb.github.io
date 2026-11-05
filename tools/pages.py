@@ -799,6 +799,8 @@ def about():
     for g in GAME_INFO: cats.setdefault(g["genre"], []).append(g)
     body = f"""<h1>About Games by Zaib</h1>
 <p class="lead">Games by Zaib is a home for free, colourful games that you can play straight away on a phone, tablet or computer. There is nothing to install, no account to make and nothing to buy.</p>
+<h2 id="who-makes-these-games">Who makes these games</h2>
+<p>Games by Zaib is made by Jahan Zaib, an independent game maker based in Malaysia. Zaib builds free games that play on any device, from a small phone to a wide computer screen, with no download and no sign-up. Every game, guide and post on this site comes from Zaib, and you can reach Zaib any time from the <a href="/contact/">contact page</a>.</p>
 <h2>What you will find here</h2>
 <p>The site has {n} games right now, and they cover a lot of ground. Some are quick: a one-tap runner, a fruit-merging puzzle or a five-minute football match. Others are longer projects that you return to over days, like building a town from a single lemonade stand, raising a baby cat, running a farm or exploring a 3D city with a 22-mission story. Every game saves your progress on your device, so you can close it and carry on later.</p>
 <p>Alongside the games there are <a href="/guides/">guides</a> for each one{' and a <a href="/news/">Tips &amp; News</a> section with beginner walkthroughs, round-ups and notes on what has changed' if SITEGEN.posts else ''}. The guides explain the controls, the worlds and levels, and the tricks that help when you get stuck.</p>
@@ -829,7 +831,8 @@ def about():
 <p>Stuck on a level or wondering how saving works? Every game has a full <a href="/guides/">guide</a>, and you can reach Zaib with the Contact us button on the <a href="/contact/">contact page</a>.</p>"""
     ld = [{"@context": "https://schema.org", "@type": "AboutPage", "name": "About Games by Zaib", "url": SITE + "/about/",
            "mainEntity": {"@type": "Organization", "name": "Games by Zaib", "url": SITE + "/", "logo": SITE + "/img/icon-512.png",
-                          "founder": {"@type": "Person", "name": OWNER}}}]
+                          "address": {"@type": "PostalAddress", "addressCountry": "MY"},
+                          "founder": {"@type": "Person", "name": "Jahan Zaib", "alternateName": OWNER, "jobTitle": "Independent game maker"}}}]
     page("/about/", "About Games by Zaib: Free Family-Friendly Games Made by Zaib",
          "Who makes Games by Zaib, how each game is designed and tested, why the games are safe for kids, and how the site stays free with no ads during play.", body, ld=ld)
 
@@ -1000,9 +1003,10 @@ def live_lastmod(slug):
     return GAME_LASTMOD.get(slug, LASTMOD)
 
 def sitemap():
-    pages = [("/", TODAY, "1.0"), ("/about/", TODAY, "0.5"), ("/contact/", TODAY, "0.4"), ("/privacy/", TODAY, "0.3"), ("/terms/", TODAY, "0.3")]
-    pages += SITEGEN.urls()
-    pages += [(u, TODAY, "0.7") for u in CAT_URLS]
+    UNCHANGED = "2026-10-27"  # pages whose text did not change in the 2026-11-05 update keep their last real change date
+    pages = [("/", TODAY, "1.0"), ("/about/", TODAY, "0.5"), ("/contact/", UNCHANGED, "0.4"), ("/privacy/", UNCHANGED, "0.3"), ("/terms/", UNCHANGED, "0.3")]
+    pages += [(u, (UNCHANGED if u == "/guides/" else d), pr) for u, d, pr in SITEGEN.urls()]
+    pages += [(u, UNCHANGED, "0.7") for u in CAT_URLS]
     pages += [(f"/games/{g['slug']}/", LASTMOD, "0.5") for g in GAME_INFO if g['slug'] not in SITEGEN.guides]
     # Game play screens (/<slug>/) stay crawlable and linked, but are left out of the sitemap so it lists the content pages.
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

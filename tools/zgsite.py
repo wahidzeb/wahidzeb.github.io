@@ -129,7 +129,7 @@ class Site:
 {self.play_btn(slug)}
 {body_html}
 {self.play_btn(slug, "PLAY NOW")}
-<h2 id="related">More games you might like</h2>
+<h2 id="related">{related_heading(slug, g["name"])}</h2>
 <div class="gcards">{''.join(self.card(r) for r in rel)}</div>
 <p class="small"><a href="/guides/">All game guides</a> · <a href="/news/">Tips &amp; News</a> · <a href="/contact/">Send feedback</a></p>"""
         img = self.SITE + self.thumb(slug)
@@ -200,7 +200,7 @@ class Site:
             f'<p>{e(p["description"])}</p><a class="more" href="/news/{p["slug"]}/">Read more →</a></div></article>' for p in self.posts)
         body = f"""<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Games</a> › <span>Tips &amp; News</span></nav>
 <h1>Tips &amp; News</h1>
-<p class="lead">Game tips, round-ups and updates from Games by Zaib. New posts arrive every week.</p>
+<p class="lead">Game tips, round-ups and updates from Games by Zaib. New posts twice a week.</p>
 <p>Here you will find beginner guides for our bigger games, lists of the best games for a quick break or a long session, picks for families, and a monthly look at what has changed on the site. Every post is written by playing the games, and every game it mentions is one click away.</p>
 <div class="posts">{items}</div>"""
         ld = [{"@context": "https://schema.org", "@type": "Blog", "name": "Tips & News from Games by Zaib", "url": self.SITE + "/news/",
@@ -220,6 +220,12 @@ class Site:
         out += [(f"/guides/{s}/", self.guides[s].get("updated", self.today), "0.8") for s in self.order if s in self.guides]
         out += [(f"/news/{p['slug']}/", p.get("updated", p["date"]), "0.7") for p in self.posts]
         return out
+
+
+import hashlib as _hl
+_REL_HEADS = ["More games you might like", "If you like {n}, try these", "Play something similar", "Next up on Games by Zaib", "Games in the same spirit", "Your next game could be one of these"]
+def related_heading(slug, name):
+    return _REL_HEADS[int(_hl.md5(slug.encode()).hexdigest(), 16) % len(_REL_HEADS)].format(n=html.escape(name))
 
 PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.53.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>'
 
