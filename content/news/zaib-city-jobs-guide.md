@@ -24,19 +24,21 @@ A job ends with no pay if the clock hits zero, if you stay out of the job vehicl
 
 ## All 11 jobs at a glance
 
-| Job | Normal pay | XP | Vehicle | Bonus per second left |
-|---|---|---|---|---|
-| Taxi Fares | $300 | 90 | City Cab | $8 |
-| Pizza Delivery | $250 | 80 | Pizza Scooter | $6 |
-| Parcel Run | $400 | 100 | ZipBox Van | $5 |
-| Ambulance Run | $450 | 110 | Rescue Van | $6 |
-| Fire Response | $500 | 120 | Fire Engine | $4 |
-| Speed Patrol | $450 | 110 | Patrol Cruiser | none |
-| Bus Route | $600 | 130 | City Bus | $3 |
-| Street Race | $900 | 160 | Your own car | none |
-| Time Trial | $500 | 100 | Your own car | $10 |
-| Parking Challenge | $350 | 90 | Your own car | $5 |
-| Stunt Showcase | $600 | 140 | Your own car | none |
+| Job | Pay | Vehicle | Extra per second left |
+|---|---|---|---|
+| Taxi Fares | $300 | City Cab | $8 |
+| Pizza Delivery | $250 | Pizza Scooter | $6 |
+| Parcel Run | $400 | ZipBox Van | $5 |
+| Ambulance Run | $450 | Rescue Van | $6 |
+| Fire Response | $500 | Fire Engine | $4 |
+| Speed Patrol | $450 | Patrol Cruiser | none |
+| Bus Route | $600 | City Bus | $3 |
+| Street Race | $900 | Your own car | none |
+| Time Trial | $500 | Your own car | $10 |
+| Parking Challenge | $350 | Your own car | $5 |
+| Stunt Showcase | $600 | Your own car | none |
+
+Jobs also give XP, from 80 for Pizza Delivery up to 160 for the Street Race.
 
 "Your own car" means the job uses whatever you are driving when you start it. If you start on foot, the Race, Time Trial and Stunt Showcase give you the **Velo GT** sports car, and the Parking Challenge gives you the little **Zippy Hatch**.
 
