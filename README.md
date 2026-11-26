@@ -43,7 +43,14 @@ Each game lives in its own repo (project site); this repo is only the root user 
 plus `sitemap.xml` and `robots.txt`. To add a guide for a new game, add an entry to `GAME_INFO` in
 `tools/pages.py`; it also appears in the hub's "About the games" section after you copy the block
 pattern in `index.template.html`. Game URLs in the `GAMES` array are added to the sitemap automatically.
-`ads.txt` (AdSense) and the `google-adsense-account` verification meta tag are present; no ad units or auto-ads script yet. Keep the `CNAME` and `ads.txt` files.
+`ads.txt` (AdSense) and the `google-adsense-account` verification meta tag are on every page. Keep the `CNAME` and `ads.txt` files.
+
+**AdSense script (added 2026-11-26, approved by Zaib):** the `adsbygoogle.js?client=ca-pub-1924890349431110` loader is in `<head>`
+of the home page (`index.template.html`) and of every content page from `page()` in `tools/pages.py`, which covers `/guides/*`, `/news/*` and `/games/*` (index + categories).
+It is controlled by `ADSENSE_SCRIPT` / `ADSENSE_PATHS` / `adsense_script(path)` in `tools/pages.py`, so new guides and news posts get it automatically.
+It is deliberately **not** on About/Contact/Privacy/Terms, the 404 page, `/games/<slug>/` redirect stubs, or any play page (`/<slug>/`, separate repos), so there are no ads in or over gameplay.
+There are no `<ins class="adsbygoogle">` units yet; add them only after AdSense approves the site and Zaib sends a slot ID, or turn on Auto ads in AdSense.
+To remove it: set `ADSENSE_SCRIPT = ''`, delete the script line from `index.template.html`, run `./build.sh`, bump `VERSION` in `sw.js` and push.
 
 ## Installable app (PWA)
 - `manifest.webmanifest`: name, icons (`img/pwa/`), shortcuts and screenshots.

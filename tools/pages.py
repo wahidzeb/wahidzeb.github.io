@@ -12,6 +12,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://zaibgames.com"
 EMAIL = "wahid.zeb@gmail.com"  # Zaib's decision 2026-10-20: show this address on the Contact page (mailto "Contact us" button)
 ADSENSE_META = '<meta name="google-adsense-account" content="ca-pub-1924890349431110">'  # same as hub home; never remove
+# AdSense loader (approved by Zaib 2026-11-26). Content pages only: home, /guides/*, /news/*, /games/* categories.
+# Never on play pages (/<slug>/, separate repos), info pages, redirect stubs or the 404. No <ins> units yet.
+ADSENSE_SCRIPT = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1924890349431110" crossorigin="anonymous"></script>'
+ADSENSE_PATHS = ("/guides/", "/news/", "/games/")
+def adsense_script(path): return ADSENSE_SCRIPT if (path == "/" or path.startswith(ADSENSE_PATHS)) else ""
 OWNER = "Zaib"
 GA_TAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WE2FDHVM9"></script>
@@ -709,6 +714,7 @@ def page(path, title, desc, body, og_image="/img/og.jpg", ld=None, og_type="webs
 <meta name="description" content="{e(desc)}">
 <meta name="author" content="{OWNER}">
 {ADSENSE_META}
+{adsense_script(path)}
 <meta name="theme-color" content="#0b0820">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="{url}">
