@@ -4,5 +4,6 @@ Disallow: /content/
 Disallow: /tools/
 Disallow: /index.template.html
 Disallow: /README.md
+Disallow: /social/
 
 Sitemap: https://zaibgames.com/sitemap.xml
